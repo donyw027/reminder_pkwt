@@ -92,14 +92,31 @@
                 </div>
 
                 <div class="row form-group">
+                    <label class="col-4 text-md-right" for="jk">jk</label>
+                    <div class="col-md-8">
+                        <input value="<?= set_value('jk'); ?>" type="text" id="jk" name="jk" class="form-control" placeholder=" Masukan jk">
+                        <?= form_error('jk', '<span class="text-danger small">', '</span>'); ?>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <label class="col-4 text-md-right" for="ttl">ttl</label>
+                    <div class="col-md-8">
+                        <input value="<?= set_value('ttl'); ?>" type="text" id="ttl" name="ttl" class="form-control" placeholder=" Masukan ttl">
+                        <?= form_error('ttl', '<span class="text-danger small">', '</span>'); ?>
+                    </div>
+                </div>
+
+                
+                    </div>
+                    <div class="col-6">
+                    <div class="row form-group">
                     <label class="col-4 text-md-right" for="alamat">alamat</label>
                     <div class="col-md-8">
                         <textarea value="<?= set_value('alamat'); ?>" type="text" id="alamat" name="alamat" class="form-control" placeholder=" Masukan alamat"></textarea>
                         <?= form_error('alamat', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
-                    </div>
-                    <div class="col-6">
                     <div class="row form-group">
                     <label class="col-4 text-md-right" for="email">email</label>
                     <div class="col-md-8">
@@ -158,10 +175,10 @@
 
 
                 <div class="row form-group">
-                    <label class="col-4 text-md-right" for="ket">Keterangan</label>
+                    <label class="col-4 text-md-right" for="keterangan">keterangan</label>
                     <div class="col-md-8">
-                        <textarea value="<?= set_value('ket'); ?>" type="text" id="ket" name="ket" class="form-control" placeholder=" Masukan keterangan"></textarea>
-                        <?= form_error('ket', '<span class="text-danger small">', '</span>'); ?>
+                        <textarea value="<?= set_value('keterangan'); ?>" type="text" id="keterangan" name="keterangan" class="form-control" placeholder=" Masukan keterangan"></textarea>
+                        <?= form_error('keterangan', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 

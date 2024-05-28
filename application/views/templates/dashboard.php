@@ -99,6 +99,13 @@
                     <span>Master PKWT</span>
                 </a>
             </li>
+
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('saldo'); ?>">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Master HRD</span>
+                </a>
+            </li>
             
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('karyawan'); ?>">
