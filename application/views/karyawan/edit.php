@@ -158,9 +158,9 @@
 
 
                 <div class="row form-group">
-                    <label class="col-4 text-md-right" for="ket">Keterangan</label>
+                    <label class="col-4 text-md-right" for="keterangan">Keterangan</label>
                     <div class="col-md-8">
-                        <textarea value="<?= set_value('keterangan', $karyawan['keterangan']); ?>" type="text" id="ket" name="ket" class="form-control" placeholder=" Masukan keterangan"><?= set_value('keterangan', $karyawan['keterangan']); ?></textarea>
+                        <textarea value="<?= set_value('keterangan', $karyawan['keterangan']); ?>" type="text" id="keterangan" name="keterangan" class="form-control" placeholder=" Masukan keterangan"><?= set_value('keterangan', $karyawan['keterangan']); ?></textarea>
                         <?= form_error('ket', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>

@@ -107,7 +107,6 @@ class Karyawan extends CI_Controller
                 'bank'       => $input['bank'],
                 'start_kontrak'       => $input['start_kontrak'],
                 'end_kontrak'       => $input['end_kontrak'],
-                'decision_kontrak'       => $input['decision_kontrak'],
                 'status_karyawan'       => $input['status_karyawan'],
                 'keterangan'       => $input['keterangan']
 

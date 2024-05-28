@@ -30,6 +30,8 @@
                     <th>divisi</th>
                     <th>dept</th>
                     <th>post</th>
+                    <th>start_kontrak</th>
+                    <th>end_kontrak</th>
                     <th>gaji</th>
                     <th>nik_kk</th>
                     <th>alamat</th>
@@ -37,8 +39,7 @@
                     <th>bpjstk</th>
                     <th>bpjskes</th>
                     <th>bank</th>
-                    <th>start_kontrak</th>
-                    <th>end_kontrak</th>
+                    
                     <th>status_karyawan</th>
                     <th>keterangan</th>
 
@@ -60,6 +61,8 @@
                             <td><?=$karyawani['divisi'] ?></td>
                             <td><?=$karyawani['dept'] ?></td>
                             <td><?=$karyawani['post'] ?></td>
+                            <td><?=$karyawani['start_kontrak'] ?></td>
+                            <td><?=$karyawani['end_kontrak'] ?></td>
                             <td>Rp. <?= number_format($karyawani['gaji'],0,',','.'); ?> </td>
                             <td><?=$karyawani['nik_kk'] ?></td>
                             <td><?=$karyawani['alamat'] ?></td>
@@ -67,8 +70,7 @@
                             <td><?=$karyawani['bpjstk'] ?></td>
                             <td><?=$karyawani['bpjskes'] ?></td>
                             <td><?=$karyawani['bank'] ?></td>
-                            <td><?=$karyawani['start_kontrak'] ?></td>
-                            <td><?=$karyawani['end_kontrak'] ?></td>
+                            
                             <td><?=$karyawani['status_karyawan'] ?></td>
                             <td><?=$karyawani['keterangan'] ?></td>
                             
