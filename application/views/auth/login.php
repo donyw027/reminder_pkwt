@@ -42,7 +42,7 @@
 
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span style="color:white;font-size:12px;">Copyright 2024 &copy; Reminder PKWT AKT Indonesia | Doni 2024</span>
+            <span style="color:white;font-size:12px;">Copyright 2024 &copy; Reminder PKWT AKT Indonesia | Doni AKTID 2024</span>
         </div>
     </div>
 

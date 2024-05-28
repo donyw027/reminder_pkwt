@@ -257,7 +257,7 @@
             <footer class="sticky-footer bg-light">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Reminder PKWT AKT Indonesia | Doni 2024</span>
+                        <span>Copyright &copy; Reminder PKWT AKT Indonesia | Doni AKTID 2024</span>
                     </div>
                 </div>
             </footer>
