@@ -101,7 +101,7 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('stok'); ?>">
+                <a class="nav-link pb-0" href="<?= base_url('karyawan'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Master Karyawan</span>
                 </a>
@@ -129,6 +129,13 @@
                 <a class="nav-link pb-0" href="<?= base_url('pemasukan'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Reminder PKWT</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('pemasukan'); ?>">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pengumuman</span>
                 </a>
             </li>
            
