@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title><?= $title; ?> | My Simple Gift</title>
+    <title><?= $title; ?> | Reminder PKWT AKT ID</title>
     <link rel="icon" href="<?= base_url('assets/img/xto.ico'); ?>">
 
     <!-- Custom fonts for this template-->
@@ -48,14 +48,13 @@
         <ul class="navbar-nav bg-white sidebar sidebar-light accordion shadow-sm" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex text-white align-items-center bg-primary justify-content-center" href="">
+            <b class="sidebar-brand d-flex text-white align-items-center bg-primary justify-content-center" href="">
                 <div class="sidebar-brand-icon">
                     <!-- <i class="fas fa-school"></i> -->
-                    <img src="<?= base_url('assets/img/xto00.png'); ?>" width="50px" height="50px" alt="">
-
+                    <img src="<?= base_url('assets/img/xto.png'); ?>" width="50px" height="50px" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-1"><font color=black>My Simple Gift</font></div>
-            </a>
+                <div class="sidebar-brand-text mx-1"><font color=black>Reminder PKWT</font></div>
+            </b>
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
@@ -97,23 +96,18 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('saldo'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Saldo / Modal</span>
+                    <span>Master PKWT</span>
                 </a>
             </li>
             
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('stok'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Stok Alat dan Bahan</span>
+                    <span>Master Karyawan</span>
                 </a>
             </li>
             
-            <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('order'); ?>">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>List Order</span>
-                </a>
-            </li><br>
+            <br>
             <?php  ?>
 
             <!-- Divider -->
@@ -128,21 +122,20 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('pemasukan'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pemasukan</span>
+                    <span>Data PKWT</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('pengeluaran'); ?>">
+                <a class="nav-link pb-0" href="<?= base_url('pemasukan'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pengeluaran</span>
+                    <span>Reminder PKWT</span>
                 </a>
             </li>
-
+           
             
             <br>
 
-            <hr class="sidebar-divider">
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 Reporting
             </div>
 
@@ -151,7 +144,7 @@
                     <i class="fas fa-fw fa-print"></i>
                     <span>Laporan Sistem</span>
                 </a>
-            </li><br>
+            </li><br> -->
 
 
             <?php if (is_admin()) : ?>
@@ -264,7 +257,7 @@
             <footer class="sticky-footer bg-light">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; My Simpel Gift | ID 2024</span>
+                        <span>Copyright &copy; Reminder PKWT AKT Indonesia | Doni 2024</span>
                     </div>
                 </div>
             </footer>
