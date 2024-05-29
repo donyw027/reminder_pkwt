@@ -136,4 +136,9 @@ class Admin_model extends CI_Model
         }
         return $hasil;
     }
+
+    public function getNamaHrd() {
+        $query = $this->db->query("SELECT nama_hrd FROM pkwt");
+        return $query->result();
+    }
 }

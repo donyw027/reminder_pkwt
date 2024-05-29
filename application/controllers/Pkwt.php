@@ -48,9 +48,11 @@ class Pkwt extends CI_Controller
 
         if (is_admin() == true) {
             $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$bulan'");
-            $data['karyawan'] = $query_reminder->result_array();
+            $data['karyawan'] = $query_reminder->result_array();    
 
-            $this->template->load('templates/dashboard', 'pkwt/pengumuman', $data);
+            $data['nama_hrd'] = $this->admin->getNamaHrd();
+
+            $this->template->load('templates/pengumuman', 'pkwt/pengumuman', $data);
         }
     }
 

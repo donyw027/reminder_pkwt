@@ -6,19 +6,18 @@
     <title><?= $title; ?></title>
 </head>
 <body>
-    <h3>Berikut nama karyawan yang masa kontrak kerja segera habis</h3><br>
+    <img src="<?= base_url('assets/img/akt.png'); ?>" width="250" alt=""> <br><br>
+    <h4>Bagi karyawan dengan nama-nama berikut, mohon untuk kedatangannya di office menemui HRD untuk penandatanganan kontrak kerja.</h4><br>
 
     <div class="table-responsive">
-        <table class="table table-striped dt-responsive nowrap" id="dataTable122">
+        <table class="table table-striped dt-responsive nowrap" id="dataTable22">
             <thead>
                 <tr>
                     <th width="30">No.</th>
                     <th>nik_akt</th>
                     <th>nama</th>
-                    <th>status_pkwt</th>
                     <th>dept</th>
                     <th>post</th>
-                    <th style="background:#88FA88; color: white;">start_kontrak</th>
                     <th style="background: #F54E49; color: white;">end_kontrak</th>
 
                 </tr>
@@ -33,10 +32,8 @@
                             <td><?= $no++; ?></td>
                             <td><?=$row['nik_akt'] ?></td>
                             <td><?=$row['nama'] ?></td>
-                            <td><?=$row['status_pkwt'] ?></td>
                             <td><?=$row['dept'] ?></td>
                             <td><?=$row['post'] ?></td>
-                            <td style="background: #88FA88; color: white;"><?=$row['start_kontrak'] ?></td>
                             <td style="background: #F54E49; color: white;"><?=$row['end_kontrak'] ?></td>
                          
                         </tr>
@@ -47,7 +44,16 @@
                     </tr>
                 <?php endif; ?>
             </tbody>
-        </table>
+
+            
+        </table><br><br>
+        TTD HRD <br>PT AKT INDONESIA 
+            <br><br><br><br>
+            <?php foreach ($nama_hrd as $hrd) : ?>
+            <?php echo $hrd->nama_hrd; ?>
+        <?php endforeach; ?>  
+             
+
     </div>
 
 

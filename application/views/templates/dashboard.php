@@ -125,7 +125,7 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('karyawan/data_pkwt'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Data PKWT</span>
+                    <span>All Data PKWT</span>
                 </a>
             </li>
             <li class="nav-item">

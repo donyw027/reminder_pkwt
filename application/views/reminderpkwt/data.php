@@ -8,7 +8,7 @@
                 </h4>
             </div>
             <div class="col-auto">
-                <a href="<?= base_url('pkwt/pengumuman') ?>" class="btn btn-sm btn-primary btn-icon-split">
+                <a href="<?= base_url('pkwt/pengumuman') ?>" target="_blank" class="btn btn-sm btn-primary btn-icon-split">
                     <span class="icon">
                         <i class="fa fa-print"></i>
                     </span>
