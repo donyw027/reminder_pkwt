@@ -15,7 +15,7 @@
      <div class="col-xl-12 ">
          <div class="card shadow mb-4">
              <!-- Card Header - Dropdown -->
-             <div class="card-header bg-danger py-3 d-flex flex-row align-items-center justify-content-between">
+             <div class="card-header bg-success py-3 d-flex flex-row align-items-center justify-content-between">
                  <h3 class="m-0 font-weight-bold text-white">Selamat datang <font style="color:yellow;"><?= $yang_login ?></font> <br> di Sistem Reminder PKWT AKT Indonesia </h3>
              </div>
              <!-- Card Body -->

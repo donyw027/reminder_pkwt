@@ -26,6 +26,34 @@ class Pkwt extends CI_Controller
         }
     }
 
+    public function riwayat_pkwt()
+    {
+
+        $data['title'] = "Riwayat PKWT";
+        $role = $this->session->userdata('login_session')['role'];
+
+        if (is_admin() == true) {
+            $data['pkwt'] = $this->admin->get('pkwt');
+
+            $this->template->load('templates/dashboard', 'riwayat_pkwt/data', $data);
+        }
+    }
+
+    public function pengumuman()
+    {
+
+        $data['title'] = "Pengumuman Reminder PKWT";
+        $role = $this->session->userdata('login_session')['role'];
+        $bulan =date('m');
+
+        if (is_admin() == true) {
+            $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$bulan'");
+            $data['karyawan'] = $query_reminder->result_array();
+
+            $this->template->load('templates/dashboard', 'pkwt/pengumuman', $data);
+        }
+    }
+
 
 
     private function _validasi($mode)

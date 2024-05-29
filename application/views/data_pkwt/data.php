@@ -59,10 +59,10 @@
                             
 
                             <td>
-
+                            <a href="<?= base_url('karyawan/edit/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-primary"><i class="fa fa-fw fa-save"></i></a>
                                 <a href="<?= base_url('karyawan/edit/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-danger"><i class="fa fa-fw fa-edit"></i></a>
                                 <a href="<?= base_url('karyawan/edit/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-warning"><i class="fa fa-fw fa-print"></i></a>
-                                <a href="<?= base_url('karyawan/edit/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-success"><i class="fa fa-fw fa-folder"></i></a>
+                                <a href="<?= base_url('pkwt/riwayat_pkwt/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-success"><i class="fa fa-fw fa-folder"></i></a>
                                 
                             </td>
                             
