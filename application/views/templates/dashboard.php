@@ -123,13 +123,13 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('pemasukan'); ?>">
+                <a class="nav-link pb-0" href="<?= base_url('karyawan/data_pkwt'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Data PKWT</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('pemasukan'); ?>">
+                <a class="nav-link pb-0" href="<?= base_url('karyawan/reminder_pkwt'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Reminder PKWT</span>
                 </a>
