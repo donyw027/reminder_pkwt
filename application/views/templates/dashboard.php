@@ -26,6 +26,7 @@
     <link href="<?= base_url(); ?>assets/vendor/datatables/buttons/css/buttons.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/vendor/datatables/responsive/css/responsive.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/vendor/gijgo/css/gijgo.min.css" rel="stylesheet">
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
 
     <style>
         #accordionSidebar,
@@ -94,18 +95,13 @@
             </li> -->
 
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('saldo'); ?>">
+                <a class="nav-link pb-0" href="<?= base_url('pkwt'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Master PKWT</span>
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('saldo'); ?>">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Master HRD</span>
-                </a>
-            </li>
+            
             
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('karyawan'); ?>">
@@ -447,6 +443,17 @@
             table.buttons().container().appendTo('#dataTable_wrapper .col-md-5:eq(0)');
         });
     </script>
+
+<script>
+                        ClassicEditor
+                                .create( document.querySelector( '#editor' ) )
+                                .then( editor => {
+                                        console.log( editor );
+                                } )
+                                .catch( error => {
+                                        console.error( error );
+                                } );
+                </script>
 
 
     <?php if ($this->uri->segment(1) == 'dashboard') : ?>

@@ -174,6 +174,9 @@
                 </div>
 
 
+                <!-- <textarea name="keterangan" id="editor"></textarea> -->
+
+
                 <div class="row form-group">
                     <label class="col-4 text-md-right" for="keterangan">keterangan</label>
                     <div class="col-md-8">
@@ -181,6 +184,8 @@
                         <?= form_error('keterangan', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
+
+                
 
                 <br>
                 <div class="row form-group justify-content-end">
@@ -194,6 +199,10 @@
                         </button>
                     </div>
                 </div>
+
+                
+                
+
                 <?= form_close(); ?>
                     </div>
                 </div>
@@ -201,7 +210,7 @@
 
 
                 
-
+                
                 
 
 
