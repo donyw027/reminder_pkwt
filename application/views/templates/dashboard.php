@@ -106,7 +106,7 @@
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('pkwt'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Master PKWT</span>
+                    <span>Master PKWT & HRD</span>
                 </a>
             </li>
 

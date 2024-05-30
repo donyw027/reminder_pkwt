@@ -7,16 +7,16 @@
                     Data PKWT
                 </h4>
             </div>
-            <div class="col-auto">
+            <!-- <div class="col-auto">
                 <a href="<?= base_url('PKWT/add') ?>" class="btn btn-sm btn-primary btn-icon-split">
                     <span class="icon">
                         <i class="fa fa-user-plus"></i>
                     </span>
                     <span class="text">
-                        Tambah Data PKWT
+                        Edit Data PKWT / HRD
                     </span>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="table-responsive">
