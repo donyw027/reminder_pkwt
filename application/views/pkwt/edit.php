@@ -1,5 +1,5 @@
 <div class="row justify-content-center">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="card shadow-sm mb-4 border-bottom-primary">
             <div class="card-header bg-white py-3">
                 <div class="row">
@@ -24,8 +24,8 @@
                 <?= $this->session->flashdata('pesan'); ?>
                 <?= form_open('', [], ['id' => $pkwt['id']]); ?>
                 <div class="row form-group">
-                    <label class="col-md-4 text-md-right" for="isi_pkwt">isi_pkwt</label>
-                    <div class="col-md-6">
+                    <label class="col-md-2 text-md-right" for="isi_pkwt">isi_pkwt</label>
+                    <div class="col-md-10">
                         <textarea value="<?= set_value('isi_pkwt', $pkwt['isi_pkwt']); ?>" name="isi_pkwt" id="editor" class="form-control">
                         <?= set_value('isi_pkwt', $pkwt['isi_pkwt']); ?>
                     </textarea>
@@ -34,24 +34,24 @@
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-md-4 text-md-right" for="nama_hrd">nama_hrd</label>
-                    <div class="col-md-6">
+                    <label class="col-md-2 text-md-right" for="nama_hrd">nama_hrd</label>
+                    <div class="col-md-10">
                         <input value="<?= set_value('nama_hrd', $pkwt['nama_hrd']); ?>" type="text" id="nama_hrd" name="nama_hrd" class="form-control" placeholder="nama_hrd">
                         <?= form_error('nama_hrd', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-md-4 text-md-right" for="alamat_hrd">alamat_hrd</label>
-                    <div class="col-md-6">
+                    <label class="col-md-2 text-md-right" for="alamat_hrd">alamat_hrd</label>
+                    <div class="col-md-10">
                         <input value="<?= set_value('alamat_hrd', $pkwt['alamat_hrd']); ?>" type="text" id="alamat_hrd" name="alamat_hrd" class="form-control" placeholder="alamat_hrd">
                         <?= form_error('alamat_hrd', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-md-4 text-md-right" for="ttd_hrd">ttd_hrd</label>
-                    <div class="col-md-6">
+                    <label class="col-md-2 text-md-right" for="ttd_hrd">ttd_hrd</label>
+                    <div class="col-md-10">
                         <input value="<?= set_value('ttd_hrd', $pkwt['ttd_hrd']); ?>" type="text" id="ttd_hrd" name="ttd_hrd" class="form-control" placeholder="ttd_hrd">
                         <?= form_error('ttd_hrd', '<span class="text-danger small">', '</span>'); ?>
                     </div>

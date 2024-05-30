@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +25,15 @@
     <link href="<?= base_url(); ?>assets/vendor/datatables/buttons/css/buttons.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/vendor/datatables/responsive/css/responsive.bootstrap4.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>assets/vendor/gijgo/css/gijgo.min.css" rel="stylesheet">
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script> -->
+  <!-- <script src="//cdn.ckeditor.com/4.22.1/basic/ckeditor.js"></script> -->
+  <!-- <script src="//cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script> -->
+  <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+
+
+    <!-- sumer note -->
+    
+    <!-- <script src="https://cdn.ckeditor.com/4.24.0-lts/standard/ckeditor.js"></script> -->
 
     <style>
         #accordionSidebar,
@@ -54,7 +61,9 @@
                     <!-- <i class="fas fa-school"></i> -->
                     <img src="<?= base_url('assets/img/xto.png'); ?>" width="50px" height="50px" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-1"><font color=black>Reminder PKWT</font></div>
+                <div class="sidebar-brand-text mx-1">
+                    <font color=black>Reminder PKWT</font>
+                </div>
             </b>
 
             <!-- Nav Item - Dashboard -->
@@ -101,15 +110,15 @@
                 </a>
             </li>
 
-            
-            
+
+
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('karyawan'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Master Karyawan</span>
                 </a>
             </li>
-            
+
             <br>
             <?php  ?>
 
@@ -135,9 +144,9 @@
                 </a>
             </li>
 
-            
-           
-            
+
+
+
             <br>
 
             <!-- <div class="sidebar-heading">
@@ -439,16 +448,30 @@
         });
     </script>
 
-<script>
-                        ClassicEditor
-                                .create( document.querySelector( '#editor' ) )
-                                .then( editor => {
-                                        console.log( editor );
-                                } )
-                                .catch( error => {
-                                        console.error( error );
-                                } );
-                </script>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script>
+                // Replace the <textarea id="editor1"> with a CKEditor 4
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor' );
+            </script>
+
+    <!-- <script>
+                        CKEDITOR.replace( 'editor1' );
+                </script> -->
+
+  
+
+
 
 
     <?php if ($this->uri->segment(1) == 'dashboard') : ?>
