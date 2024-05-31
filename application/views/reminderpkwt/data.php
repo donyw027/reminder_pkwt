@@ -61,7 +61,7 @@
                             <td>
                                 <a href="<?= base_url('karyawan/edit/') . $row['id'] ?>" class="btn  btn-sm btn-danger">Edit Data Karyawan</a>
                                 <a href="<?= base_url('pkwt/print_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-info" target="_blank">Print PKWT</a>
-                                <a href="<?= base_url('pkwt/print_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-secondary" target="_blank">Print PHL</a>
+                                <a href="<?= base_url('pkwt/print_phl/') . $row['id'] ?>" class="btn  btn-sm btn-secondary" target="_blank">Print PHL</a>
                             <!-- <a href="<?= base_url('pkwt/simpan_pkwt/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-primary"><i class="fa fa-fw fa-save"></i></a>
                                 <a href="<?= base_url('pkwt/riwayat_pkwt/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-success"><i class="fa fa-fw fa-folder"></i></a> -->
                             </td>
