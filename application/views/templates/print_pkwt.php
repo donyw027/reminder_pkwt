@@ -448,7 +448,7 @@ waktu tertentu (PKWT) berdasarkan ketentuan dan syarat-syarat sebagai berikut:</
     <li>
         <h3 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:3.0pt;margin-left:0cm;font-size:10pt;font-family:"Arial",sans-serif;font-weight:normal;'><span style='font-family:"times new roman",sans-serif;font-size:10pt;'>Bahwa terhadap adanya perubahan isi perjanjian ataupun tambahan (adendum) dan lain-lainnya terhadap perjanjian kerja waktu tertentu &nbsp;ini tanpa terlebih dahulu adanya kesepakatan tertulis masing-masing pihak maka berakibat perubahan perjanjian ataupun tambahan (adendum) dan lain-lain tersebut adalah batal demi hukum.</span></h3>
     </li>
-</ol><br><br><br><br><br><br>
+</ol><br><br><br><br><br><br><br><br>
 <p style='margin:0cm;margin-bottom:.0001pt;text-align:justify;font-size:10pt;font-family:"Times New Roman",serif;'><span style='font-size:10pt;font-family:"times new roman",sans-serif;'>&nbsp;</span></p>
 <h3 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;font-size:10pt;font-family:"Arial",sans-serif;font-weight:normal;margin:0cm;text-align:center;'><strong><span style='font-family:"times new roman",sans-serif;'>KESELURUHAN PERJANJIAN</span></strong></h3>
 <h3 style='margin-top:12.0pt;margin-right:0cm;margin-bottom:.0001pt;margin-left:0cm;font-size:10pt;font-family:"Arial",sans-serif;font-weight:normal;margin:0cm;text-align:center;'><span style='font-family:"times new roman",sans-serif;'>Pasal 1</span><span style='font-family:"times new roman",sans-serif;'>4</span></h3>
