@@ -71,10 +71,10 @@
 
 
         body {
-            margin: 50px;
+            margin: 60px;
             padding: 0;
             background-color: #FAFAFA;
-            font: 12pt "Tahoma";
+            font: 10pt "Times New Roman";
         }
 
         * {
@@ -120,7 +120,7 @@
             </tr>
         </table>
     </header>
-
+<br><br>
     <center><br><br>
         <h1> PERJANJIAN KERJA <br> HARIAN LEPAS
 
@@ -258,11 +258,7 @@
         <p>
         <h4>Pasal 3<br>
             Jangka Waktu Perjanjian Kerja</h4>
-    </div>
-    <div style="page-break-after: always;">
-        <!-- Konten yang akan diakhiri di halaman ini -->
-    </div>
-    <div class="content">
+    
         <ol type="1">
             <li>Jangka waktu perjanjian kerja harian lepas adalah <b><?= $karyawan['periode'];?></b> Bulan terhitung sejak <b><?= date("d M Y", strtotime($karyawan['start_kontrak'])) ?> &ndash; <?= date("d M Y", strtotime($karyawan['end_kontrak'])) ?>.</b></li>
             <li>Pekerjaan dilaksanakan pada jam kerja untuk setiap hari kerja sesuai dengan jam kerja Perusahaan.Dengan tetap mengacu pada UU Ketenagakerjaan No. 13 Tahun 2003 pasal 77 ayat 2</li>
@@ -275,6 +271,11 @@
         Tata cara penghitungan upah lembur dilakukan berdasarkan atas ketentuan hukum yang berlaku.</p>
 
         <p>
+        </div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
         <h4>Pasal 5 <br>
             Tunjangan Hari Raya</h4>
         <ol>
@@ -321,7 +322,7 @@
                         kehadiran pihak kedua,
                     </li>
                     <li>Merujuk pada UU Ketenagakerjaan No. 13 Tahun 2013 Pasal 93. (1) Perjanjian kerja ini apapun alasannya didasarkan pada &ldquo;no show, no pay&rdquo;. </li>
-                    <br><br><br><br><br><br><br><li>Melaksanakan pekerjaan harian lepas hingga perjanjian kerja harian lepas ini berakhir</li>
+                   <li>Melaksanakan pekerjaan harian lepas hingga perjanjian kerja harian lepas ini berakhir</li>
                     <li>Memberikan pembinaan dan pengarahan kepada Pihak Kedua</li>
                     <li>Melakukan evaluasi secara berkala tentang perkembangan Pihak Kedua dalam hal Pelaksanaan Pekerjaan.</li>
                 </ol>
@@ -361,10 +362,15 @@
         </ul>
 
         Pengakhiran perjanjian kerja oleh pihak pekerja :
+        </div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
         <ul>
             <li>8.1.1. Pihak Pekerja yang bekerja kurang dari 30 hari dan bermaksud mengundurkan diri, maka harus memberitahukan kepada Pihak Perusahaan minimal 7 hari kerja sebelum hari pengunduran diri, dan bersedia menerima sanksi administratif berupa pemotongan separuh (50%) atas upah yang seharusnya diterima dihitung dari hari kerja yang sudah dijalani sebelum pengunduran diri;</li>
             <li>8.1.2. Pihak Pekerja dapat mengakhiri perjanjian ini sewaktu-waktu dengan cara mengajukan pengunduran diri secara tertulis dengan tenggang waktu 30 (tiga puluh) hari kerja komulatif tanpa memperhitungkan hari libur atau segala bentuk ketidakhadiran lainnya sebelum tanggal pekerja tersebut mengundurkan diri sebagaimana tertera di dalam suratnya;</li>
-            <li>8.1.3. Apabila tanggal pengunduran diri telah ditentukan, sebagaimana dimaksud dalam pasal 8.1.1 dan/atau 8.1.2, perhitungan gaji akan menggunakan sistem &quot;No Show No Pay&quot;, perusahaan bersikeras untuk menerapkan sistem ini agar karyawan <br><br><br><br><br><br><br><br>tetap bekerja sesuai dengan keinginannya. /Posisinya saat ini sementara perusahaan  mempunyai cukup waktu untuk mencari pengganti dan menyerahkan seluruh pekerjaan;</li>
+            <li>8.1.3. Apabila tanggal pengunduran diri telah ditentukan, sebagaimana dimaksud dalam pasal 8.1.1 dan/atau 8.1.2, perhitungan gaji akan menggunakan sistem &quot;No Show No Pay&quot;, perusahaan bersikeras untuk menerapkan sistem ini agar karyawan tetap bekerja sesuai dengan keinginannya. /Posisinya saat ini sementara perusahaan  mempunyai cukup waktu untuk mencari pengganti dan menyerahkan seluruh pekerjaan;</li>
             <li>8.1.4. Pada saat tanggal pengunduran diri telah diserahkan atau diputuskan, seperti yang tercantum pada Pasal 8.1.1 dan 8.1.2. Maka sistem perhitungan gaji akan berdasarkan &ldquo;no show, no pay&rdquo;, pihak perusahaan bersikeras menerapkan hal ini agar pihak pekerja tetap melaksanakan pekerjaannya hingga tanggal tersebut di atas, dan memberi cukup waktu bagi perusahaan untuk mencari pengganti dan melakukan serah terima jabatan atau pekerjaan;</li>
             <li>8.1.5. Kegagalan pemenuhan kondisi Pengakhiran atas perjanjian kerja harian lepas ini oleh Pihak Pekerja sebagaimana tersebut di Pasal 8.1.1. diatas, berakibat Pihak Pekerja dikenakan sanksi administratif berupa pemotongan sisa upah yang belum dibayarkan sebesar kekurangan pemenuhan 30 (tiga puluh) hari kerja komulatif (pasal 8.1.2.), atau ganti rugi sebesar upah yang disepakati untuk sisa perjanjian kerja waktu tertentu yang belum dijalani;<br>
                 Pengakhiran perjanjian kerja oleh pihak pengusaha :</li>
@@ -416,7 +422,7 @@
         <center>
             <table border="0">
                 <tr>
-                    <td colspan="3">Dibuat di Pasuruan pada <b><?= $tgl; ?></b> </td>
+                    <td colspan="3">Dibuat di Pasuruan pada <?= $tgl; ?> </td>
 
                 </tr>
                 <tr>
