@@ -26,12 +26,13 @@
                     <th width="30">No.</th>
                     <th>nik_akt</th>
                     <th>nama</th>
+                    <th style="background:#88FA88; color: white;">start_kontrak</th>
+                    <th style="background: #F54E49; color: white;">end_kontrak</th>
                     <th>status_pkwt</th>
                     <th>divisi</th>
                     <th>dept</th>
                     <th>post</th>
-                    <th style="background:#88FA88; color: white;">start_kontrak</th>
-                    <th style="background: #F54E49; color: white;">end_kontrak</th>
+                    
                     <th>keterangan</th>
 
 
@@ -48,13 +49,12 @@
                             <td><?= $no++; ?></td>
                             <td><?=$row['nik_akt'] ?></td>
                             <td><?=$row['nama'] ?></td>
+                            <td style="background: #88FA88; color: white;"><?=$row['start_kontrak'] ?></td>
+                            <td style="background: #F54E49; color: white;"><?=$row['end_kontrak'] ?></td>
                             <td><?=$row['status_pkwt'] ?></td>
                             <td><?=$row['divisi'] ?></td>
                             <td><?=$row['dept'] ?></td>
                             <td><?=$row['post'] ?></td>
-                            <td style="background: #88FA88; color: white;"><?=$row['start_kontrak'] ?></td>
-                            <td style="background: #F54E49; color: white;"><?=$row['end_kontrak'] ?></td>
-                            
                             <td><?=$row['keterangan'] ?></td>
                             
 
@@ -62,8 +62,7 @@
                                 <a href="<?= base_url('karyawan/edit/') . $row['id'] ?>" class="btn  btn-sm btn-danger">Edit Data Karyawan</a>
                                 <a href="<?= base_url('pkwt/print_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-info" target="_blank">Print PKWT</a>
                                 <a href="<?= base_url('pkwt/print_phl/') . $row['id'] ?>" class="btn  btn-sm btn-secondary" target="_blank">Print PHL</a>
-                            <!-- <a href="<?= base_url('pkwt/simpan_pkwt/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-primary"><i class="fa fa-fw fa-save"></i></a>
-                                <a href="<?= base_url('pkwt/riwayat_pkwt/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-success"><i class="fa fa-fw fa-folder"></i></a> -->
+                                
                             </td>
                             
                         </tr>
