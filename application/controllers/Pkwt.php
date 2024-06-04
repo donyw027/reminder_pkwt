@@ -42,6 +42,8 @@ class Pkwt extends CI_Controller
     public function print_pkwt($getId)
     {
 
+        
+        
         $data['title'] = "Print PKWT";
         $role = $this->session->userdata('login_session')['role'];
         $id = encode_php_tags($getId);

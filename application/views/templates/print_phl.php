@@ -104,8 +104,11 @@
 
 <body>
 <?php 
-    $tgl = date('d M Y');
-    $hari = date('D'); ?>
+    $tgl = format_indo(date('Y-m-d'));
+    $hari =format_hari(date('Y-m-d'));
+    $thn = date('Y');
+
+    $bl_th = date('M Y'); ?>
     
     <?= form_open('', [], ['id' => $karyawan['id']]); ?>
     <header>
@@ -147,16 +150,14 @@
         <h2><u>
                 PERIODE HARIAN LEPAS <br><br>
 
-                <?= date("d M Y", strtotime($karyawan['start_kontrak'])); ?> – <?= date("d M Y", strtotime($karyawan['end_kontrak'])); ?>
+                <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> – <?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?>
             </u></h2>
     </center>
 
     <div style="page-break-after: always;">
         <!-- Konten yang akan diakhiri di halaman ini -->
     </div>
-    <?php
-    $tgl = date('d M Y');
-    $hari = date('D'); ?>
+    
 
     <div class="content">
         <h2>PERJANJIAN KERJA HARIAN LEPAS</h2>
@@ -260,7 +261,7 @@
             Jangka Waktu Perjanjian Kerja</h4>
     
         <ol type="1">
-            <li>Jangka waktu perjanjian kerja harian lepas adalah <b><?= $karyawan['periode'];?></b> Bulan terhitung sejak <b><?= date("d M Y", strtotime($karyawan['start_kontrak'])) ?> &ndash; <?= date("d M Y", strtotime($karyawan['end_kontrak'])) ?>.</b></li>
+            <li>Jangka waktu perjanjian kerja harian lepas adalah <b><?= $karyawan['periode'];?></b> Bulan terhitung sejak <b><?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> &ndash; <?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?>.</b></li>
             <li>Pekerjaan dilaksanakan pada jam kerja untuk setiap hari kerja sesuai dengan jam kerja Perusahaan.Dengan tetap mengacu pada UU Ketenagakerjaan No. 13 Tahun 2003 pasal 77 ayat 2</li>
             <li>Jangka waktu tersebut dapat diperpanjang atau diperpendek atas pertimbangan Pihak Pertama berdasarkan rekomendasi tertulis dari Perusahaan.
                 Dalam hal demikian, Pihak Kedua tidak berhak menolak ataupun menuntut ganti rugi berupa apa pun baik dari Pihak Pertama maupun dari Perusahaan.</li>
