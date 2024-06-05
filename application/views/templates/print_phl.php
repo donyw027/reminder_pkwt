@@ -261,7 +261,7 @@
             Jangka Waktu Perjanjian Kerja</h4>
     
         <ol type="1">
-            <li>Jangka waktu perjanjian kerja harian lepas adalah <b><?= $karyawan['periode'];?></b> Bulan terhitung sejak <b><?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> &ndash; <?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?>.</b></li>
+            <li>Jangka waktu perjanjian kerja harian lepas adalah <b><?= $karyawan['periode'];?> Bulan</b> terhitung sejak <b><?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> &ndash; <?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?>.</b></li>
             <li>Pekerjaan dilaksanakan pada jam kerja untuk setiap hari kerja sesuai dengan jam kerja Perusahaan.Dengan tetap mengacu pada UU Ketenagakerjaan No. 13 Tahun 2003 pasal 77 ayat 2</li>
             <li>Jangka waktu tersebut dapat diperpanjang atau diperpendek atas pertimbangan Pihak Pertama berdasarkan rekomendasi tertulis dari Perusahaan.
                 Dalam hal demikian, Pihak Kedua tidak berhak menolak ataupun menuntut ganti rugi berupa apa pun baik dari Pihak Pertama maupun dari Perusahaan.</li>
