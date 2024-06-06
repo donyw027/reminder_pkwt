@@ -73,6 +73,14 @@
                 </div>
 
                 <div class="row form-group">
+                    <label class="col-4 text-md-right" for="jabatan">jabatan</label>
+                    <div class="col-md-8">
+                        <input value="<?= set_value('jabatan'); ?>" type="text" id="jabatan" name="jabatan" class="form-control" placeholder=" Masukan jabatan">
+                        <?= form_error('jabatan', '<span class="text-danger small">', '</span>'); ?>
+                    </div>
+                </div>
+
+                <div class="row form-group">
                     <label class="col-4 text-md-right" for="dept">dept</label>
                     <div class="col-md-8">
                         <input value="<?= set_value('dept'); ?>" type="text" id="dept" name="dept" class="form-control" placeholder=" Masukan dept">
@@ -126,6 +134,8 @@
                 </div>
 
                 
+
+                
                     </div>
                     <div class="col-6">
                     <div class="row form-group">
@@ -176,10 +186,10 @@
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-4 text-md-right" for="end_kontrak">end_kontrak</label>
+                    <label class="col-4 text-md-right" for="periode">periode</label>
                     <div class="col-md-8">
-                        <input value="<?= set_value('end_kontrak'); ?>" type="date" id="end_kontrak" name="end_kontrak" class="form-control" placeholder=" Masukan end_kontrak">
-                        <?= form_error('end_kontrak', '<span class="text-danger small">', '</span>'); ?>
+                        <input value="<?= set_value('periode'); ?>" type="text" id="periode" name="periode" class="form-control" placeholder=" Masukan periode">
+                        <?= form_error('periode', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 

@@ -27,9 +27,12 @@
                     <th>nik_akt</th>
                     <th>nama</th>
                     <th>status_pkwt</th>
+                    <th>jabatan</th>
                     <th>divisi</th>
                     <th>dept</th>
                     <th>post</th>
+                    <th>periode</th>
+
                     <th>start_kontrak</th>
                     <th>end_kontrak</th>
                     <th>gaji</th>
@@ -58,9 +61,11 @@
                             <td><?=$karyawani['nik_akt'] ?></td>
                             <td><?=$karyawani['nama'] ?></td>
                             <td><?=$karyawani['status_pkwt'] ?></td>
+                            <td><?=$karyawani['jabatan'] ?></td>
                             <td><?=$karyawani['divisi'] ?></td>
                             <td><?=$karyawani['dept'] ?></td>
                             <td><?=$karyawani['post'] ?></td>
+                            <td><?=$karyawani['periode'] ?></td>
                             <td><?=$karyawani['start_kontrak'] ?></td>
                             <td><?=$karyawani['end_kontrak'] ?></td>
                             <td>Rp. <?= number_format($karyawani['gaji'],0,',','.'); ?> </td>

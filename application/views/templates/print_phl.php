@@ -116,7 +116,7 @@
             <tr>
         
                 <td>
-                <img src="<?= base_url('assets/img/akt.png'); ?>" width="250" alt="">
+                <a href="<?= base_url('karyawan/reminder_pkwt') ?>"><img src="<?= base_url('assets/img/akt.png'); ?>" width="250" alt=""></a>
                 </td>
                 <td style="width: 280px;"></td>
                 <td><h1>PHL-<?= $karyawan['status_pkwt']; ?></h1></td>
@@ -164,7 +164,7 @@
 
         <p>Pada hari ini, <?= $hari; ?> tanggal <?= $tgl; ?> bertempat di Pasuruan, yang bertanda tangan di bawah ini:<br>
         <ul>
-            <li>
+            <li type="none">
                 <table>
                     <tr>
                         <td style="width: 150px;">Nama</td>
@@ -203,7 +203,7 @@
         <p>Bertindak untuk dan atas nama PT. AKT Indonesia beralamat di Rembang Industri Raya No.45 PIER - Pasuruan selanjutnya disebut sebagai Pihak Pertama.</p>
 
         <ul>
-            <li>
+            <li type="none">
                 <table>
                     <tr>
                         <td style="width: 150px;">Nama</td>
@@ -226,7 +226,7 @@
                         <td><?= $karyawan['nik_kk']; ?></td>
                     </tr>
                     <tr>
-                        <td>ID</td>
+                        <td>No. ID</td>
                         <td>:</td>
                         <td><?= $karyawan['nik_akt']; ?></td>
                     </tr>
@@ -311,16 +311,19 @@
                     <li>Sebagai imbalan atas pekerjaan Pihak Kedua tersebut Pihak Pertama akan memberikan
                         <?php
                         if ($karyawan['status_pkwt'] == '3A') { ?>
-                            <b> gaji sebesar Rp. 180.000- per hari</b>
+                            <b> gaji sebesar Rp. 180.000- per hari</b> kehadiran pihak kedua,
                         <?php  } elseif ($karyawan['status_pkwt'] == '2A') { ?>
-                            <b> gaji sebesar Rp. 150.000- per hari </b>
+                            <b> gaji sebesar Rp. 150.000- per hari </b> kehadiran pihak kedua,
 
                         <?php } elseif ($karyawan['status_pkwt'] == '1A') { ?>
-                            <b> gaji sebesar Rp. 120.000- per hari</b>
+                            <b> gaji sebesar Rp. 120.000- per hari</b> kehadiran pihak kedua,
 
-                        <?php } ?>
+                        <?php } elseif ($karyawan['status_pkwt'] == '4A') { ?>
+                            <b> gaji sebesar Rp. <?= number_format($karyawan['gaji'],0,',','.'); ?>- </b>
+                            <?php } ?>
+                        
 
-                        kehadiran pihak kedua,
+                        
                     </li>
                     <li>Merujuk pada UU Ketenagakerjaan No. 13 Tahun 2013 Pasal 93. (1) Perjanjian kerja ini apapun alasannya didasarkan pada &ldquo;no show, no pay&rdquo;. </li>
                    <li>Melaksanakan pekerjaan harian lepas hingga perjanjian kerja harian lepas ini berakhir</li>

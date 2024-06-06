@@ -54,7 +54,7 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="divisi">divisi</label>
                             <div class="col-md-8">
-                                <input value="<?= set_value('divisi', $karyawan['divisi']); ?>" type="text" id="divisi" name="divisi" class="form-control" placeholder=" Masukan divisi">
+                                <input value="<?= set_value('divisi', $karyawan['divisi']); ?>" type="text" id="divisi" name="divisi" class="form-control" placeholder=" Masukan divisi" disabled>
                                 <?= form_error('divisi', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="dept">dept</label>
                             <div class="col-md-8">
-                                <input value="<?= set_value('dept', $karyawan['dept']); ?>" type="text" id="dept" name="dept" class="form-control" placeholder=" Masukan dept">
+                                <input value="<?= set_value('dept', $karyawan['dept']); ?>" type="text" id="dept" name="dept" class="form-control" placeholder=" Masukan dept" disabled>
                                 <?= form_error('dept', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="post">post</label>
                             <div class="col-md-8">
-                                <input value="<?= set_value('post', $karyawan['post']); ?>" type="text" id="post" name="post" class="form-control" placeholder=" Masukan post">
+                                <input value="<?= set_value('post', $karyawan['post']); ?>" type="text" id="post" name="post" class="form-control" placeholder=" Masukan post" disabled>
                                 <?= form_error('post', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>
@@ -91,7 +91,13 @@
                             </div>
                         </div>
 
-                        <div class="row form-group">
+                        
+
+
+                    </div>
+                    <div class="col-6">
+
+                    <div class="row form-group">
                             <label class="col-4 text-md-right" for="nik_kk">nik_kk</label>
                             <div class="col-md-8">
                                 <input value="<?= set_value('nik_kk', $karyawan['nik_kk']); ?>" type="text" id="nik_kk" name="nik_kk" class="form-control" placeholder=" Masukan nik_kk">
@@ -114,12 +120,6 @@
                                 <?= form_error('ttl', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>
-
-                        
-
-
-                    </div>
-                    <div class="col-6">
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="alamat">alamat</label>
                             <div class="col-md-8">
@@ -127,38 +127,7 @@
                                 <?= form_error('alamat', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>
-                        <div class="row form-group">
-                            <label class="col-4 text-md-right" for="email">email</label>
-                            <div class="col-md-8">
-                                <input value="<?= set_value('email', $karyawan['email']); ?>" type="text" id="email" name="email" class="form-control" placeholder=" Masukan email">
-                                <?= form_error('email', '<span class="text-danger small">', '</span>'); ?>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <label class="col-4 text-md-right" for="bpjstk">bpjstk</label>
-                            <div class="col-md-8">
-                                <input value="<?= set_value('bpjstk', $karyawan['bpjstk']); ?>" type="text" id="bpjstk" name="bpjstk" class="form-control" placeholder=" Masukan bpjstk">
-                                <?= form_error('bpjstk', '<span class="text-danger small">', '</span>'); ?>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <label class="col-4 text-md-right" for="bpjskes">bpjskes</label>
-                            <div class="col-md-8">
-                                <input value="<?= set_value('bpjskes', $karyawan['bpjskes']); ?>" type="text" id="bpjskes" name="bpjskes" class="form-control" placeholder=" Masukan bpjskes">
-                                <?= form_error('bpjskes', '<span class="text-danger small">', '</span>'); ?>
-                            </div>
-                        </div>
-
-                        <div class="row form-group">
-                            <label class="col-4 text-md-right" for="bank">bank</label>
-                            <div class="col-md-8">
-                                <input value="<?= set_value('bank', $karyawan['bank']); ?>" type="text" id="bank" name="bank" class="form-control" placeholder=" Masukan bank">
-                                <?= form_error('bank', '<span class="text-danger small">', '</span>'); ?>
-                            </div>
-                        </div>
-
+                        
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="start_kontrak">start_kontrak</label>
                             <div class="col-md-8">
@@ -175,22 +144,7 @@
                             </div>
                         </div>
 
-                        <div class="row form-group">
-                            <label class="col-4 text-md-right" for="status_karyawan">status_karyawan</label>
-                            <div class="col-md-8">
-                                <input value="<?= set_value('status_karyawan', $karyawan['status_karyawan']); ?>" type="text" id="status_karyawan" name="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan">
-                                <?= form_error('status_karyawan', '<span class="text-danger small">', '</span>'); ?>
-                            </div>
-                        </div>
-
-
-                        <div class="row form-group">
-                            <label class="col-4 text-md-right" for="keterangan">Keterangan</label>
-                            <div class="col-md-8">
-                                <textarea value="<?= set_value('keterangan', $karyawan['keterangan']); ?>" type="text" id="keterangan" name="keterangan" class="form-control" placeholder=" Masukan keterangan"><?= set_value('keterangan', $karyawan['keterangan']); ?></textarea>
-                                <?= form_error('ket', '<span class="text-danger small">', '</span>'); ?>
-                            </div>
-                        </div>
+                        
 
                         <br>
                         <div class="row form-group justify-content-end">

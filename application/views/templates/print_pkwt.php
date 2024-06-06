@@ -55,7 +55,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 25px;
+            height: 35px;
             /* Adjust the height of your footer */
             text-align: center;
             padding: 10px;
@@ -90,6 +90,7 @@
 
         @media print {
             .page {
+
                 margin: 0;
                 border: initial;
                 border-radius: initial;
@@ -119,7 +120,7 @@
             <tr>
         
                 <td>
-                <img src="<?= base_url('assets/img/akt.png'); ?>" width="250" alt="">
+                <a href="<?= base_url('karyawan/reminder_pkwt') ?>"><img src="<?= base_url('assets/img/akt.png'); ?>" width="250" alt=""></a>
                 </td>
                 <td style="width: 280px;"></td>
                 <td></td>
@@ -172,7 +173,7 @@
 
         <p>Pada hari ini, Selasa Tanggal 08 Mei 2024 para pihak telah bersepakat dan saling menyetujui untuk mengadakan perjanjian kerja waktu tertentu (PKWT) sebagai berikut :<br>
 <ul>
-    <li>
+    <li type="none">
     <table>
                     <tr>
                         <td style="width: 150px;">Nama</td>
@@ -212,7 +213,7 @@
 Menurut keterangannya dan berdasarkan atas anggaran dasar perseroan dan karenanya sah mewakili serta bertindak untuk dan atas nama perseroan.<br>
 Selanjutnya di dalam perjanjian ini disebut sebagai PIHAK PERUSAHAAN<br>
 <ul>
-    <li>
+    <li type="none">
     <table>
                     <tr>
                         <td style="width: 150px;">Nama</td>
@@ -259,7 +260,15 @@ Pasal 1</h4>
     <li>Pihak perusahaan berhak untuk melakukan mutasi / perpindahan tugas, transfer (pergeseran) ,penurunan jabatan (demosi), rotasi (perputaran tugas) pihak pekerja kebagian lain sesuai dengan kebijakan perusahaan;</li>
     <li>Pihak Pekerja di dalam pelaksanaan perjanjian ini akan bertindak sebagai pekerja yang baik yaitu untuk melakukan atau tidak melakukan segala sesuatu yang dalam keadaan yang sama seharusnya dilakukan atau tidak dilakukan oleh seorang pekerja yang baik;</li>
     <li>Pihak Pekerja selaku pekerja wajib menyampaikan segala laporan atas pekerjaan yang menjadi tugas dan kewenangannya dan selalu akan mengikuti petunjuk-petunjuk ataupun perintah kerja yang diberikan oleh atasan ataupun pimpinan;</li>
-    <li>Pihak Pekerja memahami dan menerima baik pekerjaan yang diberikan kepadanya dengan syarat-syarat sebagaimana ditentukan di dalam perjanjian kerja waktu tertentu (PKWT), peraturan perusahaan (PP), Standart Operasional Prosedure (SOP) dan dengan ini pekerja berjanji serta mengikatkan diri untuk melakukan pekerjaan itu dengan sebaik-baiknya dan sejujur-jujurnya; untuk itu pekerja akan mencurahkan pula segala kegiatan dan kerajinannya;</li><br><br><br><br>
+    <li>Pihak Pekerja memahami dan menerima baik pekerjaan yang diberikan kepadanya dengan syarat-syarat sebagaimana ditentukan di dalam perjanjian kerja waktu tertentu (PKWT), peraturan perusahaan (PP), Standart Operasional Prosedure (SOP) dan dengan ini pekerja berjanji serta mengikatkan diri untuk melakukan pekerjaan itu dengan sebaik-baiknya dan sejujur-jujurnya; untuk itu pekerja akan mencurahkan pula segala kegiatan dan kerajinannya;</li>
+</ol>
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
+<ol type="1" start="6">
+    
     <li>Pihak Pekerja dengan ini menjamin kepada Pihak Perusahaan bahwa pada saat penandatangan perjanjian ini sampai dengan berakhirnya perjanjian ini atau selama berlangsungnya perjanjian kerja ini tidak sedang terikat oleh adanya hubungan kerja atau bekerja pada perusahaan/badan usaha/perorangan yang dapat mengganggu jalannya pekerjaan pihak Pekerja dan apabila terbukti Pihak Pekerja melanggar hal tersebut maka pekerja bersedia untuk mengundurkan diri dari seluruh tugas dan tanggungjawab seketika itu dan atau dikenakan sanksi pemutusan hubungan kerja (PHK) dengan tanpa diberikan ganti rugi atas sisa upah dari pejanjian kerja waktu terentu yang belum dijalani.</li>
 </ol>
 
@@ -302,14 +311,31 @@ Pasal 7</h4>
         <li>Mendapatkan upah sebagaimana diperjanjikan;</li>
     </ol>
 </li>
-<br><br><br><br><br><br><br><br><br><br><br>
+
 <li>Kewajiban Pekerja.
     <ol type="A">
-        <li>Melaksanakan pekerjaan sebagaimana yang diperjanjikan dengan sebaik-baiknya serta sejujur-jujurnya sesuai Standart Operasional Prosedur (SOP) / Job Description / Peraturan Perusahaan (PP) yang telah ditetapkan;</li>
-        <li>Melaksanakan segala perintah yang diberikan oleh Pimpinan / atasan baik yang bersifat lisan maupun tertulis dengan sebaik-baiknya dan memberikan laporan atas hasil kerja yang telah dilaksanakan tersebut;</li>
-        <li>Mematuhi segala tata tertib perusahaan, standart operasional prosedur, memo / surat tugas / surat peringatan / teguran yang diberikan pimpinan tanpa kecuali sebagaimana yang telah ditetapkan dengan sebaik-baiknya;</li>
+        <li>Melaksanakan pekerjaan sebagaimana yang diperjanjikan dengan sebaik-baiknya serta sejujur-jujurnya sesuai Standart Operasional Prosedur (SOP) / Job Description / Peraturan Perusahaan (PP) yang telah ditetapkan;</li> 
+        
     </ol>
-</li>
+</li></ol>
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
+
+<ol type="1" start="2">
+   
+        <li>
+            <ol type="A" start="2">
+            <li>Melaksanakan segala perintah yang diberikan oleh Pimpinan / atasan baik yang bersifat lisan maupun tertulis dengan sebaik-baiknya dan memberikan laporan atas hasil kerja yang telah dilaksanakan tersebut;</li>
+        <li>Mematuhi segala tata tertib perusahaan, standart operasional prosedur, memo / surat tugas / surat peringatan / teguran yang diberikan pimpinan tanpa kecuali sebagaimana yang telah ditetapkan dengan sebaik-baiknya;</li>
+            </ol>
+                                    
+        </li>
+    
+    
+
 
 <li>Hak Perusahaan.
     <ol type="A">
@@ -343,7 +369,14 @@ Pasal 8</h4>
         <li>Pihak Pekerja bertanggung jawab penuh atas tugas-tugas pekerjaan yang berjalan dari waktu ke waktu tanpa terkecuali dan mengingat posisi serta tanggung jawab yang diberikan akan selalu siap bertugas kapanpun dan dimanapun dibutuhkan oleh Pihak Perusahaan;</li>
         <li>Pihak Pekerja bertanggung jawab serta memelihara barang-barang dan alat &ndash; alat milik Pihak Perusahaan, apabila Pihak Pekerja melakukan kecerobohan baik sengaja maupun tidak disengaja yang mengakibatkan kerusakan atau kehilangan barang milik Pihak Perusahaan maka Pihak Pekerja harus mengganti kerugian tersebut pada Pihak Perusahaan;</li>
         <li>Pihak pekerja bersedia bahwa dalam kurun waktu 3 (Tiga) bulan sejak ditandatanganinya perjanjian kerja ini untuk bekerja secara penuh dalam hari kerja efektif yang telah ditentukan oleh perusahaan, dan jika terdapat ketidakhadiran dalam bentuk apapun maka perusahaan hanya akan membayarkan gaji/upah sesuai dengan jumlah hari kehadiran pihak pekerja<br>
-Pihak pekerja tetap berkewajiban untuk mengajukan izin sebelumnya dan atau menginformasikan/melaporkan <br><br><br><br><br><br><br><br> ketidakhadirannya kepada atasan langsung atau pihak perusahaan dan kemudian menyerahkan dokumen pendukung atau bukti yang diperlukan selambat-lambatnya pada saat pihak pekerja kembali hadir bekerja, semua bentuk ketidakhadiran pihak pekerja yang tidak mendapat izin, tidak dilaporkan dan atau tidak dilengkapi dokumen yang sah dan bisa dipertanggungjawabkan akan dianggap sebagai mangkir;</li>
+Pihak pekerja tetap berkewajiban untuk mengajukan izin sebelumnya dan atau menginformasikan/melaporkan ketidakhadirannya kepada atasan langsung atau pihak perusahaan dan kemudian menyerahkan dokumen pendukung atau bukti yang diperlukan selambat-lambatnya pada saat pihak pekerja kembali hadir bekerja, semua bentuk ketidakhadiran pihak pekerja yang tidak mendapat izin, tidak dilaporkan dan atau tidak dilengkapi dokumen yang sah dan bisa dipertanggungjawabkan akan dianggap sebagai mangkir;</li>
+</ol>
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
+<ol type="1" start="6">
         <li>Bila Pihak Pekerja melanggar peraturan disiplin kerja yang telah ditetapkan oleh Pihak Perusahaan seperti ; absen atau mangkir kerja, datang terlambat, pulang lebih awal, tidak melakukan check &ndash;clock atau kartu absensi dan lain-lain, maka Pihak Pekerja sanggup menerima sanksi dari Pihak Perusahaan berupa upah tidak akan dibayarkan berdasarkan ketentuan aturan Perusahaan maupun sanksi administrasi berupa surat peringatan tertulis.</li>
 
 </ol>
@@ -375,13 +408,18 @@ Pengakhiran perjanjian kerja oleh pihak pengusaha :</p>
 9.1.7. Pihak perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila menemukan bukti catatan dan atau rekam medis atas pihak pekerja mengenai kondisi kesehatannya dan pihak pekerja tidak melaporkan kondisi kesehatan yang sebenarnya atau sakit bawaannya kepada perusahaan pada saat penandatanganan perjanjian kerja ini yang berdampak pada ketidakhadiran pihak pekerja;<br>
 9.1.8. Apabila pengakhiran perjanjian ini disebabkan oleh pelanggaran sebagaimana tercantum dalam pasal 9.1.4 dan atau 9.1.5. di atas, maka Pihak Pekerja tidak berhak atas sisa upah yang belum dibayarkan dan atau segala bentuk kompensasi lainnya yang seharusnya diterima oleh pekerja tersebut, seperti dan tidak terbatas pada uang pesangon, uang penghargaan masa kerja, uang pisah dan kompensasi lain sebagaimana diatur dalam undang-undang ketenagakerjaan yang berlaku. serta melepaskan pihak perusahaan atas segala bentuk gugatan dan atau konsekuensi hukum yang bisa ditimbulkan setelahnya;</li>
 </ul>
-<br><br><br><br><br><br><br>
 Pengakhiran perjanjian kerja karena berakhirnya masa waktu perjanjian kerja :</p>
 <ul>
     <li>
     <p>9.3.1. Perjanjian ini dengan sendirinya berakhir demi hukum apabila waktu yang diperjanjikan telah terpenuhi sehingga tidak diperlukan adanya penetapan tertulis dari Lembaga penyelesaian Perselisihan Hubungan Industrial;
     </li>
 </ul>
+
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
 
 Pihak perusahaan dan pekerja dengan ini telah bersepakat dan menyetujui bahwa pada saat pengakhiran perjanjian kerja waktu tertentu ini, maka pihak pekerja bersedia melepaskan hak nya sebagai pekerja berupa kewajiban dari pihak perusahaan untuk memberikan kompensasi atas pengakhiran atau berakhirnya perjanjian kerja waktu tertentu yang telah dijalani sesuai dengan peraturan perundang-undangan ketenagakerjaan yang berlaku, dan membebaskan pihak perusahaan atas segala bentuk tuntutan secara hukum di kemudian hari.</p>
 
@@ -413,11 +451,7 @@ Pasal 11</h4>
     <li>Apabila Pihak Pekerja tidak hadir bekerja di tempat kerjanya tanpa alasan yang sah (mangkir) , maka upah yang akan diterimanya selama pekerja tidak hadir bekerja sebagaimana tersebut diatas tidak akan dibayarkan oleh Perusahaan.</li>
     <li>Hak Cuti Tahunan Pihak Pekerja selama 12 hari kerja pada tahun itu baru akan timbul <b><u>SETELAH</u></b> Pihak Kedua bekerja selama 12 bulan secara terus menerus namun apabila ternyata Pihak Pengusaha tidak memperpanjang perjanjian ini sebagaimana tanggal yang tertera di dalam perjanjian ini maka hak cuti tahunan Pihak Pekerja pada tahun itu dengan sendirinya belum ada / belum timbul sebagaimana ditentukan di dalam pasal 79 ayat 2 huruf c UU No.13 Tahun 2003 Tentang Ketenagakerjaan sehingga tidak ada kewajiban hukum Pihak Perusahaan untuk memberikan hak cuti tahunan tersebut.</li>
 </ol>
-</div>
-    <div style="page-break-after: always;">
-        <!-- Konten yang akan diakhiri di halaman ini -->
-    </div>
-    <div class="content">
+
 
 <h4>JAMINAN PIHAK PEKERJA<br>
 Pasal 12</h4>
@@ -425,7 +459,11 @@ Pasal 12</h4>
     <li>Pihak Pekerja dengan ini menjamin kepada Pihak Perusahaan bahwa di dalam pelaksanaan perjanjian kerja waktu tertentu ini tidak akan melakukan tuntutan untuk melakukan perubahan status pekerja dari pekerja waktu tertentu (kontrak) menjadi pekerja tetap;</li>
     <li>Pihak Pekerja dengan ini berjanji untuk selalu patuh dan taat serta mematuhi segala perintah pimpinan, peraturan perusahaan (PP), Standart Operasional Procedure (SOP) serta peraturan perundang-undangan di bidang ketenagakerjaan.</li>
 </ol>
-
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
 
 <p><h4>PERUBAHAN PERJANJIAN<br>
 Pasal 13</h4>

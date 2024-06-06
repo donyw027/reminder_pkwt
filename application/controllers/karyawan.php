@@ -33,9 +33,9 @@ class Karyawan extends CI_Controller
         $role = $this->session->userdata('login_session')['role'];
 
         if (is_admin() == true) {
-            $query_karyawan = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif'");
+            $query_karyawan = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' AND status_pkwt != 'PMNT'");
             $data['karyawan'] = $query_karyawan->result_array();
-            
+
 
             $this->template->load('templates/dashboard', 'data_pkwt/data', $data);
         }
@@ -50,14 +50,14 @@ class Karyawan extends CI_Controller
         // var_dump($bulan);die();
 
         if (is_admin() == true) {
-            $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$bulan'");
+            $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$bulan' AND status_pkwt != 'PMNT'");
             $data['karyawan'] = $query_reminder->result_array();
 
             $this->template->load('templates/dashboard', 'reminderpkwt/data', $data);
         }
     }
 
-    
+
 
 
 
@@ -65,9 +65,20 @@ class Karyawan extends CI_Controller
     private function _validasi($mode)
     {
         $this->form_validation->set_rules('nama', 'nama', 'required|trim');
+        $this->form_validation->set_rules('periode', 'periode', 'required|trim');
+
 
         if ($mode == 'add') {
             $this->form_validation->set_rules('nama', 'nama', 'required|trim');
+            $this->form_validation->set_rules('status_karyawan', 'status_karyawan', 'required|trim');
+            $this->form_validation->set_rules('nik_akt', 'nik_akt', 'required|trim');
+            $this->form_validation->set_rules('status_pkwt', 'status_pkwt', 'required|trim');
+            $this->form_validation->set_rules('jabatan', 'jabatan', 'required|trim');
+            $this->form_validation->set_rules('gaji', 'gaji', 'required|trim');
+            $this->form_validation->set_rules('periode', 'periode', 'required|trim');
+
+
+
         } else {
             $db = $this->admin->get('karyawan', ['nama' => $this->input->post('nama', true)]);
             $nama = $this->input->post('nama', true);
@@ -82,11 +93,20 @@ class Karyawan extends CI_Controller
             $data['title'] = "Tambah karyawan";
             $this->template->load('templates/dashboard', 'karyawan/add', $data);
         } else {
+
             $input = $this->input->post(null, true);
+            $date = new DateTime($input['start_kontrak']);
+            $periode = $input['periode'];
+            $date->modify("+$periode month");
+            $end_kontrak = $date->format('Y-m-d');
+
+
+
             $input_data = [
                 'nik_akt'       => $input['nik_akt'],
                 'nama'       => $input['nama'],
                 'status_pkwt'       => $input['status_pkwt'],
+                'jabatan'       => $input['jabatan'],
                 'divisi'       => $input['divisi'],
                 'dept'       => $input['dept'],
                 'post'       => $input['post'],
@@ -99,8 +119,9 @@ class Karyawan extends CI_Controller
                 'bpjstk'       => $input['bpjstk'],
                 'bpjskes'       => $input['bpjskes'],
                 'bank'       => $input['bank'],
+                'periode'       => $input['periode'],
                 'start_kontrak'       => $input['start_kontrak'],
-                'end_kontrak'       => $input['end_kontrak'],
+                'end_kontrak'       => $end_kontrak,
                 'status_karyawan'       => $input['status_karyawan'],
                 'keterangan'       => $input['keterangan']
 
@@ -127,10 +148,16 @@ class Karyawan extends CI_Controller
             $this->template->load('templates/dashboard', 'karyawan/edit', $data);
         } else {
             $input = $this->input->post(null, true);
+            $date = new DateTime($input['start_kontrak']);
+            $periode = $input['periode'];
+            $date->modify("+$periode month");
+            $end_kontrak = $date->format('Y-m-d');
             $input_data = [
                 'nik_akt'       => $input['nik_akt'],
                 'nama'       => $input['nama'],
                 'status_pkwt'       => $input['status_pkwt'],
+                'jabatan'       => $input['jabatan'],
+
                 'divisi'       => $input['divisi'],
                 'dept'       => $input['dept'],
                 'post'       => $input['post'],
@@ -143,8 +170,10 @@ class Karyawan extends CI_Controller
                 'bpjstk'       => $input['bpjstk'],
                 'bpjskes'       => $input['bpjskes'],
                 'bank'       => $input['bank'],
+                'periode'       => $input['periode'],
+
                 'start_kontrak'       => $input['start_kontrak'],
-                'end_kontrak'       => $input['end_kontrak'],
+                'end_kontrak'       => $end_kontrak,
                 'status_karyawan'       => $input['status_karyawan'],
                 'keterangan'       => $input['keterangan']
 
@@ -153,6 +182,103 @@ class Karyawan extends CI_Controller
             if ($this->admin->update('karyawan', 'id', $id, $input_data)) {
                 set_pesan('data berhasil diubah.');
                 redirect('karyawan');
+            } else {
+                set_pesan('data gagal diubah.', false);
+                redirect('karyawan/edit/' . $id);
+            }
+        }
+    }
+
+    public function up_print_pkwt($getId)
+    {
+        $id = encode_php_tags($getId);
+        $this->_validasi('edit');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = "Edit Karyawan";
+            $data['karyawan'] = $this->admin->get('karyawan', ['id' => $id]);
+            $this->template->load('templates/dashboard', 'karyawan/edit_dan_print_pkwt', $data);
+        } else {
+            $input = $this->input->post(null, true);
+            $date = new DateTime($input['start_kontrak']);
+            $periode = $input['periode'];
+            $date->modify("+$periode month");
+            $end_kontrak = $date->format('Y-m-d');
+            $input_data = [
+                'nik_akt'       => $input['nik_akt'],
+                'nama'       => $input['nama'],
+                'status_pkwt'       => $input['status_pkwt'],
+                'jabatan'       => $input['jabatan'],
+
+                
+                'gaji'       => $input['gaji'],
+                'nik_kk'       => $input['nik_kk'],
+                'jk'       => $input['jk'],
+                'ttl'       => $input['ttl'],
+                'alamat'       => $input['alamat'],
+                'periode'       => $input['periode'],
+
+
+                'start_kontrak'       => $input['start_kontrak'],
+                'end_kontrak'       => $end_kontrak
+
+
+            ];
+
+            if ($this->admin->update('karyawan', 'id', $id, $input_data)) {
+                $data['karyawan'] = $this->admin->get('karyawan', ['id' => $id]);
+                $data['pkwt'] = $this->admin->get('pkwt');
+
+
+                $this->template->load('templates/print_pkwt', 'pkwt/print_pkwt', $data);
+            } else {
+                set_pesan('data gagal diubah.', false);
+                redirect('karyawan/edit/' . $id);
+            }
+        }
+    }
+
+    public function up_print_phl($getId)
+    {
+        $id = encode_php_tags($getId);
+        $this->_validasi('edit');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = "Edit Karyawan";
+            $data['karyawan'] = $this->admin->get('karyawan', ['id' => $id]);
+            $this->template->load('templates/dashboard', 'karyawan/edit_dan_print_phl', $data);
+        } else {
+            $input = $this->input->post(null, true);
+            $date = new DateTime($input['start_kontrak']);
+            $periode = $input['periode'];
+            $date->modify("+$periode month");
+            $end_kontrak = $date->format('Y-m-d');
+            $input_data = [
+                'nik_akt'       => $input['nik_akt'],
+                'nama'       => $input['nama'],
+                'status_pkwt'       => $input['status_pkwt'],
+                'jabatan'       => $input['jabatan'],
+                
+                'gaji'       => $input['gaji'],
+                'nik_kk'       => $input['nik_kk'],
+                'jk'       => $input['jk'],
+                'ttl'       => $input['ttl'],
+                'alamat'       => $input['alamat'],
+                'periode'       => $input['periode'],
+
+
+                'start_kontrak'       => $input['start_kontrak'],
+                'end_kontrak'       => $end_kontrak
+
+
+            ];
+
+            if ($this->admin->update('karyawan', 'id', $id, $input_data)) {
+                $data['karyawan'] = $this->admin->get('karyawan', ['id' => $id]);
+                $data['pkwt'] = $this->admin->get('pkwt');
+
+
+                $this->template->load('templates/print_phl', 'pkwt/print_phl', $data);
             } else {
                 set_pesan('data gagal diubah.', false);
                 redirect('karyawan/edit/' . $id);

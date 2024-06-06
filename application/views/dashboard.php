@@ -71,6 +71,102 @@
          </div>
      </div>
 
+     <div class="col-xl-2 col-6 mb-4">
+                               <div class="card border-left-danger shadow h-100 py-2">
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-md font-weight-bold text-primary text-uppercase mb-1">Jumlah PMNT </div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_pmnt; ?></div>
+                     </div>
+                     <div class="col-auto">
+                         <i class="fas fa-folder fa-2x text-gray-300"></i>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-xl-2 col-6 mb-4">
+                               <div class="card border-left-primary shadow h-100 py-2">
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-md font-weight-bold text-primary text-uppercase mb-1">Jumlah PKWT</div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $jumlah_pkwt; ?> </div>
+                     </div>
+                     <div class="col-auto">
+                         <i class="fas fa-folder fa-2x text-gray-300"></i>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-xl-2 col-6 mb-4">
+                               <div class="card border-left-warning shadow h-100 py-2">
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-md font-weight-bold text-primary text-uppercase mb-1">Jumlah PHL-4A</div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $jumlah_4a; ?> </div>
+                     </div>
+                     <div class="col-auto">
+                         <i class="fas fa-folder fa-2x text-gray-300"></i>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-xl-2 col-6 mb-4">
+                               <div class="card border-left-danger shadow h-100 py-2">
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-md font-weight-bold text-primary text-uppercase mb-1">Jumlah PHL-3A </div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_3a; ?></div>
+                     </div>
+                     <div class="col-auto">
+                         <i class="fas fa-folder fa-2x text-gray-300"></i>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-xl-2 col-6 mb-4">
+                               <div class="card border-left-primary shadow h-100 py-2">
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-md font-weight-bold text-primary text-uppercase mb-1">Jumlah PHL-2A</div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $jumlah_2a; ?> </div>
+                     </div>
+                     <div class="col-auto">
+                         <i class="fas fa-folder fa-2x text-gray-300"></i>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-xl-2 col-6 mb-4">
+                               <div class="card border-left-warning shadow h-100 py-2">
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-md font-weight-bold text-primary text-uppercase mb-1">Jumlah PHL-1A</div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $jumlah_1a; ?> </div>
+                     </div>
+                     <div class="col-auto">
+                         <i class="fas fa-folder fa-2x text-gray-300"></i>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
 
    
 
