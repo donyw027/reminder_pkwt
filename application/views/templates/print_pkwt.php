@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title; ?></title>
+    <title>Kontrak_PKWT-<?= $karyawan['nik_akt'];?>-<?= $karyawan['nama'];?>  </title>
+
     <link rel="icon" href="<?= base_url('assets/img/xto.ico'); ?>">
 
 

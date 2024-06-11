@@ -124,9 +124,9 @@ margin: 0;
                 <tr  style="background: yellow; color: ;">
                     <th width="30">No.</th>
                     <th width="50">NIP</th>
-                    <th width="310" >NAMA</th>
+                    <th width="210" >NAMA</th>
                     <th width="100">DEPT</th>
-                    <th width="100">POS</th>
+                    <th width="150">POS</th>
                     <th width="100">HABIS KONTRAK</th>
 
                 </tr>
@@ -141,8 +141,8 @@ margin: 0;
                             <td style="padding: 5px;"><?= $no++; ?></td>
                             <td style=""><?=$row['nik_akt'] ?></td>
                             <td style="text-align: left;"><?=$row['nama'] ?></td>
-                            <td style=""><?=$row['dept'] ?></td>
-                            <td style=""><?=$row['post'] ?></td>
+                            <td style="text-align: left;"><?=$row['dept'] ?></td>
+                            <td style="text-align: left;"><?=$row['post'] ?></td>
                             <td style="background: #F54E49; ;"><?=$row['end_kontrak'] ?></td>
                          
                         </tr>

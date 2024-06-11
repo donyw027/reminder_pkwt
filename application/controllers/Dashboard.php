@@ -28,11 +28,15 @@ class Dashboard extends CI_Controller
         $data['jumlah_reminder'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' AND MONTH(end_kontrak)='$bulan' AND status_pkwt != 'PMNT'")->row()->jumlah;
         $data['jumlah_pkwt'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='PKWT'")->row()->jumlah;
         $data['jumlah_pmnt'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='PMNT'")->row()->jumlah;
+        $data['jumlah_pkwts'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='PKWT-STAFF'")->row()->jumlah;
+        $data['jumlah_pmnts'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='PMNT-STAFF'")->row()->jumlah;
 
         $data['jumlah_1a'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='1A'")->row()->jumlah;
         $data['jumlah_2a'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='2A'")->row()->jumlah;
         $data['jumlah_3a'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='3A'")->row()->jumlah;
         $data['jumlah_4a'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='4A'")->row()->jumlah;
+        $data['jumlah_c4'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='C4'")->row()->jumlah;
+
 
 
         

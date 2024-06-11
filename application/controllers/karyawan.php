@@ -47,10 +47,12 @@ class Karyawan extends CI_Controller
         $data['title'] = "Data Reminder PKWT";
         $role = $this->session->userdata('login_session')['role'];
         $bulan = date('m');
+        $tahun = date('Y');
+
         // var_dump($bulan);die();
 
         if (is_admin() == true) {
-            $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$bulan' AND status_pkwt != 'PMNT'");
+            $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$bulan' and YEAR(end_kontrak) = '$tahun' AND status_pkwt != 'PMNT'");
             $data['karyawan'] = $query_reminder->result_array();
 
             $this->template->load('templates/dashboard', 'reminderpkwt/data', $data);

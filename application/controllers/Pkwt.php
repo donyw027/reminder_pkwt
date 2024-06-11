@@ -26,24 +26,23 @@ class Pkwt extends CI_Controller
         }
     }
 
-    public function riwayat_pkwt()
+    public function riwayat_pkwt($getId)
     {
-
+        $id = encode_php_tags($getId);
         $data['title'] = "Riwayat PKWT";
         $role = $this->session->userdata('login_session')['role'];
+        $data['karyawan'] = $this->admin->get('karyawan', ['id' => $id]);
 
-        if (is_admin() == true) {
-            $data['pkwt'] = $this->admin->get('pkwt');
+            $data['riwayat_pkwt'] =  $this->db->query("SELECT * FROM riwayat_pkwt WHERE idk = '$id'")->result_array();
 
             $this->template->load('templates/dashboard', 'riwayat_pkwt/data', $data);
-        }
     }
 
     public function print_pkwt($getId)
     {
 
-        
-        
+
+
         $data['title'] = "Print PKWT";
         $role = $this->session->userdata('login_session')['role'];
         $id = encode_php_tags($getId);
@@ -80,11 +79,11 @@ class Pkwt extends CI_Controller
 
         $data['title'] = "Pengumuman Reminder PKWT";
         $role = $this->session->userdata('login_session')['role'];
-        $bulan =date('m');
+        $bulan = date('m');
 
         if (is_admin() == true) {
             $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$bulan'");
-            $data['karyawan'] = $query_reminder->result_array();    
+            $data['karyawan'] = $query_reminder->result_array();
 
             $data['nama_hrd'] = $this->admin->getNamaHrd();
 
@@ -162,6 +161,38 @@ class Pkwt extends CI_Controller
         }
     }
 
+    public function simpan_pkwt($getId)
+    {
+        $id = encode_php_tags($getId);
+        $this->_validasi('add');
+
+        $karyawan = $this->admin->get('karyawan', ['id' => $id]);
+
+        $idk = set_value('id', $karyawan['id']);
+        $nik_akt = set_value('nik_akt', $karyawan['nik_akt']);
+        $status_pkwt = set_value('status_pkwt', $karyawan['status_pkwt']);
+        $start_kontrak = set_value('start_kontrak', $karyawan['start_kontrak']);
+        $end_kontrak = set_value('end_kontrak', $karyawan['end_kontrak']);
+        $tgl_simpan = date('Y-m-d');
+        
+
+
+        $input_data = [
+            'idk'       => $idk,
+
+            'nik_akt'       => $nik_akt,
+            'status_pkwt'       => $status_pkwt,
+            'start_kontrak'       => $start_kontrak,
+            'end_kontrak'       => $end_kontrak,
+            'tgl_simpan'       => $tgl_simpan
+
+        ];
+
+        $this->admin->insert('riwayat_pkwt', $input_data);
+        set_pesan('data berhasil disimpan.');
+        redirect('karyawan/data_pkwt');
+    }
+
     public function delete($getId)
     {
         $id = encode_php_tags($getId);
@@ -171,5 +202,16 @@ class Pkwt extends CI_Controller
             set_pesan('data gagal dihapus.', false);
         }
         redirect('pkwt');
+    }
+
+    public function d_riwayat($getId)
+    {
+        $id = encode_php_tags($getId);
+        if ($this->admin->delete('riwayat_pkwt', 'id', $id)) {
+            set_pesan('data berhasil dihapus.');
+        } else {
+            set_pesan('data gagal dihapus.', false);
+        }
+        redirect('karyawan/data_pkwt');
     }
 }

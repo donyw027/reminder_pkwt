@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title; ?></title>
+    <title>Kontrak_PHL-<?= $karyawan['nik_akt'];?>-<?= $karyawan['nama'];?>  </title>
     <link rel="icon" href="<?= base_url('assets/img/xto.ico'); ?>">
 
 
@@ -103,6 +103,8 @@
 </head>
 
 <body>
+<?= form_open('', [], ['id' => $karyawan['id']]); ?>
+
 <?php 
     $tgl = format_indo(date('Y-m-d'));
     $hari =format_hari(date('Y-m-d'));
@@ -110,7 +112,6 @@
 
     $bl_th = date('M Y'); ?>
     
-    <?= form_open('', [], ['id' => $karyawan['id']]); ?>
     <header>
         <table>
             <tr>

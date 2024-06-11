@@ -4,7 +4,9 @@
         <div class="row">
             <div class="col">
                 <h4 class="h5 align-middle m-0 font-weight-bold text-primary">
-                    Riwayat PKWT
+                <?= form_open('', [], ['id' => $karyawan['id']]); ?>
+
+                    Riwayat PKWT : <?= $karyawan['nama']; ?>
                 </h4>
             </div>
             
@@ -14,14 +16,28 @@
         <table class="table table-striped dt-responsive nowrap" id="dataTable">
             <thead>
                 <tr>
-                    <th width="30">No.</th>
                     <th>nik_akt</th>
-                    <th>nama</th>
-                    <th>file Kontrak</th>
-                    <th>Tgl Simpan</th>
+                    <th>status_pkwt</th>
+                    <th>start_kontrak</th>
+                    <th>end_kontrak</th>
+                    <th>tgl_simpan</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php foreach ($riwayat_pkwt as $row) : ?>
+                    <tr>
+                        <td><?php echo $row['nik_akt']; ?></td>
+                        <td><?php echo $row['status_pkwt']; ?></td>
+                        <td><?php echo $row['start_kontrak']; ?></td>
+                        <td><?php echo $row['end_kontrak']; ?></td>
+                        <td><?php echo $row['tgl_simpan']; ?></td>
+                        <td>
+                        <a onclick="return confirm('Yakin ingin menghapus data?')" href="<?= base_url('pkwt/d_riwayat/') . $row['id'] ?>" class="btn btn-circle btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i></a>
+                            </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
             
             
         </table>
