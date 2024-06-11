@@ -28,6 +28,21 @@ class Admin_model extends CI_Model
         return $this->db->delete($table, [$pk => $id]);
     }
 
+    public function get_all_payrolls() {
+        $this->db->select('*');
+        $this->db->from('payroll');
+        $query = $this->db->get();
+        return $query->result();
+    }
+
+    public function get_payroll_by_employee_id($employee_id) {
+        $this->db->select('*');
+        $this->db->from('payroll');
+        $this->db->where('nik', $employee_id);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
     public function getUsers($id)
     {
         /**

@@ -9,7 +9,6 @@ class Dashboard extends CI_Controller
         cek_login();
 
     
- 
 
         $this->load->model('Admin_model', 'admin');
     }

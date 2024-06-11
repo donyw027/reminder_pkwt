@@ -144,6 +144,13 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('payroll'); ?>">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Payroll Via Email</span>
+                </a>
+            </li>
+
 
 
 
