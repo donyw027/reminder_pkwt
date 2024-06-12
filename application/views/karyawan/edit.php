@@ -54,7 +54,14 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="divisi">divisi</label>
                             <div class="col-md-8">
-                                <input value="<?= set_value('divisi', $karyawan['divisi']); ?>" type="text" id="divisi" name="divisi" class="form-control" placeholder=" Masukan divisi">
+                            <select name="divisi" id="divisi" class="form-control" placeholder=" Masukan divisi">
+                                    <option value="">--Pilih Divisi--</option>
+                                    <option value="Direct" <?php echo ($karyawan['divisi'] == 'Direct') ? 'selected' : ''; ?>>Direct</option>
+                                    <option value="Indirect" <?php echo ($karyawan['divisi'] == 'Indirect') ? 'selected' : ''; ?>>Indirect</option>
+                                    <option value="Cleaner" <?php echo ($karyawan['divisi'] == 'Cleaner') ? 'selected' : ''; ?>>Cleaner</option>
+                                    
+                                </select>
+                                
                                 <?= form_error('divisi', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>
@@ -102,7 +109,11 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="jk">jk</label>
                             <div class="col-md-8">
-                                <input value="<?= set_value('jk', $karyawan['jk']); ?>" type="text" id="jk" name="jk" class="form-control" placeholder=" Masukan jk">
+                            <select name="jk" id="jk" class="form-control" placeholder=" Masukan jk">
+                                    <option value="">--Pilih JK--</option>
+                                    <option value="Laki-Laki" <?php echo ($karyawan['jk'] == 'Laki-Laki') ? 'selected' : ''; ?>>Laki-Laki</option>
+                                    <option value="Perempuan" <?php echo ($karyawan['jk'] == 'Perempuan') ? 'selected' : ''; ?>>Perempuan</option>
+                                </select>
                                 <?= form_error('jk', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>
@@ -178,7 +189,11 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="status_karyawan">status_karyawan</label>
                             <div class="col-md-8">
-                                <input value="<?= set_value('status_karyawan', $karyawan['status_karyawan']); ?>" type="text" id="status_karyawan" name="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan">
+                                <select name="status_karyawan" id="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan">
+                                    <option value="">--Pilih Status--</option>
+                                    <option value="aktif" <?php echo ($karyawan['status_karyawan'] == 'aktif') ? 'selected' : ''; ?>>Aktif</option>
+                                    <option value="tidak" <?php echo ($karyawan['status_karyawan'] == 'tidak') ? 'selected' : ''; ?>>Non-Aktif</option>
+                                </select>
                                 <?= form_error('status_karyawan', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>

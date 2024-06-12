@@ -36,11 +36,11 @@
         </tr>
         <tr>
             <td style="font-weight: bold;">STATUS</td>
-            <td><?= $payroll->take_home_pay ?></td>
+            <td><?= $payroll->status ?></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">TOTAL HARI KERJA</td>
-            <td><?= $payroll->jumlah_potongan ?></td>
+            <td><?= $payroll->total_hari_kerja ?></td>
         </tr>
     </table>
 
@@ -84,23 +84,23 @@
     <table>
     <tr>
             <td style="font-weight: bold;">BPJS Ketenagakerjaan</td>
-            <td>Rp. <?= number_format($payroll->gaji_pokok,0,',','.'); ?></td>
+            <td>Rp. <?= number_format($payroll->bpjs_tk,0,',','.'); ?></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">BPJS Kesehatan</td>
-            <td>Rp. <?= number_format($payroll->gaji_tidak_full,0,',','.'); ?></td>
+            <td>Rp. <?= number_format($payroll->bpjs_kes,0,',','.'); ?></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">PPH 21</td>
-            <td>Rp. <?= number_format($payroll->uang_phl,0,',','.'); ?></td>
+            <td>Rp. <?= number_format($payroll->pph21,0,',','.'); ?></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">Absensi</td>
-            <td>Rp. <?= number_format($payroll->tunjangan,0,',','.'); ?></td>
+            <td>Rp. <?= number_format($payroll->absensi,0,',','.'); ?></td>
         </tr>
         <tr>
             <td style="font-weight: bold;">Koreksi Negatif</td>
-            <td>Rp. <?= number_format($payroll->sisa_cuti,0,',','.'); ?></td>
+            <td>Rp. <?= number_format($payroll->koreksi_negatif,0,',','.'); ?></td>
         </tr>
        
         <tr>
@@ -114,7 +114,7 @@
     <table>
         
         <tr>
-            <td style="background-color: yellow;"><b>Rp. <?= number_format($payroll->nik,0,',','.'); ?></b></td>
+            <td style="background-color: yellow;"><b>Rp. <?= number_format($payroll->take_home_pay,0,',','.'); ?></b></td>
         </tr>
         
     </table>

@@ -42,7 +42,7 @@ class Payroll extends CI_Controller
         $this->email->clear(TRUE);
 
         // echo "Payroll emails sent successfully.";
-        set_pesan('Payroll emails sent successfully..');
+        set_pesan('Email Berhasil Terkirim');
                 redirect('payroll');
     }
 
