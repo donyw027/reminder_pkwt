@@ -15,9 +15,8 @@
                     </span>
                 </a>
 
-                <a href="<?= base_url('payroll/') ?>" class="btn btn-sm btn-secondary btn-icon-split">
-                    
-                    <span class="text">
+                <a id="myBtn"  class="btn btn-sm btn-secondary btn-icon-split">
+                    <span class="text" style="color: white;">
                         Export Database
                     </span>
                 </a>
@@ -32,6 +31,7 @@
             </div>
         </div>
     </div>
+ 
     <div class="table-responsive">
         <table class="table table-striped dt-responsive nowrap" id="dataTable">
             <thead>
@@ -99,6 +99,8 @@
 
                                 <a href="<?= base_url('payroll/edit/') . $payrolli['id'] ?>" class="btn btn-circle btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i></a>
                                 <a onclick="return confirm('Yakin ingin menghapus data?')" href="<?= base_url('payroll/delete/') . $payrolli['id'] ?>" class="btn btn-circle btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i></a>
+
+                                <a href="<?= base_url('payroll/send_payrolls_by1/') . $payrolli['id'] ?>" class="btn btn-circle btn-sm btn-secondary"><i class="fa fa-fw fa-envelope"></i></a>
                             </td>
                             
                         </tr>
@@ -111,4 +113,57 @@
             </tbody>
         </table>
     </div>
+
+    <div id="myModal" class="modal">
+
+<!-- Modal content -->
+<center>
+<div class="col-5" >
+<div class="modal-content" >
+  <span class="close">&times;</span>
+  <h4>Upload Payroll Excel</h4>
+  <?php echo form_open_multipart('payroll/upload_excel'); ?>
+  <table style="margin-bottom: 50px;">
+      <tr>
+          <td><input class="form-control" type="file" name="excel_file" /></td>
+          <td><input  class="form-control" type="submit" value="Upload" /></td>
+      </tr>
+  </table>
+      
+      
+  <?php echo form_close(); ?>
+  </center>
 </div>
+    
+    
+
+
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>

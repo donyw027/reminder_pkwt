@@ -35,6 +35,16 @@ class Admin_model extends CI_Model
         return $query->result();
     }
 
+    public function insert_batch($data) {
+        $this->db->insert_batch('payroll', $data);
+    }
+
+    function get_payroll_by_id($id) {
+        $this->db->where('id', $id);
+        $query = $this->db->get('payroll');
+        return $query->row(); // Mengambil satu baris hasil
+    }
+
     public function get_payroll_by_employee_id($employee_id) {
         $this->db->select('*');
         $this->db->from('payroll');
