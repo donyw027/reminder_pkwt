@@ -9,7 +9,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // require_once 'application/third_party/dompdf/autoload.inc.php';
 // use Dompdf\Dompdf;
 
-class Payroll extends CI_Controller
+class Workingdays extends CI_Controller
 {
     public function __construct()
     {
@@ -24,79 +24,79 @@ class Payroll extends CI_Controller
     public function index()
     {
 
-        $data['title'] = "Payroll";
+        $data['title'] = "WorkingDays";
         $role = $this->session->userdata('login_session')['role'];
 
         if (is_admin() == true) {
-            $data['payroll'] = $this->admin->get('payroll');
+            $data['workingdays'] = $this->admin->get('workingdays');
 
-            $this->template->load('templates/dashboard', 'payroll/data', $data);
+            $this->template->load('templates/dashboard', 'workingdays/data', $data);
         }
     }
 
 
-    public function send_payrolls_by1($getId) {
+    public function send_workingdays_by1($getId) {
         $id = encode_php_tags($getId);
 
-        $payroll = $this->admin->get_payroll_by_id($id);
-        // var_dump($payrolls->email); die();
+        $workingdays = $this->admin->get_workingdays_by_id($id);
+        // var_dump($workingdayss->email); die();
 
-            $this->send_payroll_email_by1($payroll);
+            $this->send_workingdays_email_by1($workingdays);
 
         set_pesan('Email Berhasil Terkirim');
-                redirect('payroll');
+                redirect('workingdays');
     }
 
-    private function send_payroll_email_by1($payroll) {
-        // var_dump($payroll); die();
+    private function send_workingdays_email_by1($workingdays) {
+        // var_dump($workingdays); die();
         $bulann =  date('Y-m-d');
 $date1 = new DateTime($bulann);
 $date1->modify("-1 month");
 $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
 
         $this->email->from('aktindonesia@akt-id.com', 'PT. AKT Indonesia');
-        $this->email->to($payroll->email);
-        $this->email->subject('Slip Gaji ' . $bulan_sebelum);
+        $this->email->to($workingdays->email);
+        $this->email->subject('Slip WD ' . $bulan_sebelum);
 
-        $message = $this->load->view('payroll/print_payrol', ['payroll' => $payroll], TRUE);
+        $message = $this->load->view('workingdays/print_workingdays', ['workingdays' => $workingdays], TRUE);
         $this->email->message($message);
 
         if (!$this->email->send()) {
-            log_message('error', 'Failed to send payroll email to: ' . $payroll->email);
+            log_message('error', 'Failed to send workingdays email to: ' . $workingdays->email);
         }
     }
     
 
-    public function send_payrolls() {
+    public function send_workingdays() {
 
-        $payrolls = $this->admin->get_all_payrolls();
+        $workingdayss = $this->admin->get_all_workingdays();
 
-        foreach ($payrolls as $payroll) {
-            $this->send_payroll_email($payroll);
+        foreach ($workingdayss as $workingdays) {
+            $this->send_workingdays_email($workingdays);
         }
         $this->email->clear(TRUE);
 
         set_pesan('Email Berhasil Terkirim');
-                redirect('payroll');
+                redirect('workingdays');
     }
 
    
 
-    private function send_payroll_email($payroll) {
+    private function send_workingdays_email($workingdays) {
         $bulann =  date('Y-m-d');
 $date1 = new DateTime($bulann);
 $date1->modify("-1 month");
 $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
 
         $this->email->from('aktindonesia@akt-id.com', 'PT. AKT Indonesia');
-        $this->email->to($payroll->email);
-        $this->email->subject('Slip Gaji ' . $bulan_sebelum);
+        $this->email->to($workingdays->email);
+        $this->email->subject('Slip WD ' . $bulan_sebelum);
 
-        $message = $this->load->view('payroll/print_payrol', ['payroll' => $payroll], TRUE);
+        $message = $this->load->view('workingdays/print_workingdays', ['workingdays' => $workingdays], TRUE);
         $this->email->message($message);
 
         if (!$this->email->send()) {
-            log_message('error', 'Failed to send payroll email to: ' . $payroll->email);
+            log_message('error', 'Failed to send workingdays email to: ' . $workingdays->email);
         }
     }
 
@@ -158,16 +158,16 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
         }
     }
 
-    public function empty_payroll()
+    public function empty_workingdays()
     {
         // Execute truncate query
-        $this->db->truncate('payroll');
+        $this->db->truncate('workingdays');
 
         // Set flashdata for success message
         $this->session->set_flashdata('message', 'All Data payrol berhasil dihapus.');
 
         // Redirect to the desired page
-        redirect('payroll');
+        redirect('workingdays');
     }
 
     // public function upload_excel_form() {
@@ -192,9 +192,9 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
         $this->_validasi('edit');
 
         if ($this->form_validation->run() == false) {
-            $data['title'] = "Edit Payrol";
-            $data['payroll'] = $this->admin->get('payroll', ['id' => $id]);
-            $this->template->load('templates/dashboard', 'payroll/edit', $data);
+            $data['title'] = "Edit Workingdays";
+            $data['workingdays'] = $this->admin->get('workingdays', ['id' => $id]);
+            $this->template->load('templates/dashboard', 'workingdays/edit', $data);
         } else {
             $input = $this->input->post(null, true);
             $input_data = [
@@ -202,12 +202,12 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
 
             ];
 
-            if ($this->admin->update('payroll', 'id', $id, $input_data)) {
+            if ($this->admin->update('workingdays', 'id', $id, $input_data)) {
                 set_pesan('data berhasil diubah.');
-                redirect('payroll');
+                redirect('workingdays');
             } else {
                 set_pesan('data gagal diubah.', false);
-                redirect('payroll/edit/' . $id);
+                redirect('workingdays/edit/' . $id);
             }
         }
     }
@@ -215,11 +215,11 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
     public function delete($getId)
     {
         $id = encode_php_tags($getId);
-        if ($this->admin->delete('payroll', 'id', $id)) {
+        if ($this->admin->delete('workingdays', 'id', $id)) {
             set_pesan('data berhasil dihapus.');
         } else {
             set_pesan('data gagal dihapus.', false);
         }
-        redirect('payroll');
+        redirect('workingdays');
     }
 }

@@ -18,8 +18,15 @@
     </style>
 </head>
 <body>
-    <h3>Slip Gaji <?= format_bulan(date('Y-m-d')); ?>-<?= $payroll->nik ?>_<?= $payroll->nama ?></h3>
-    <p>Berikut Detail Slip Gaji Bulan <?= format_bulan(date('Y-m-d')); ?> :</p>
+
+<?php 
+    $bulann =  date('Y-m-d');
+    $date1 = new DateTime($bulann);
+    $date1->modify("-1 month");
+    $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
+?>
+    <h3>Slip Gaji <?= $bulan_sebelum; ?>-<?= $payroll->nik ?>_<?= $payroll->nama ?></h3>
+    <p>Berikut Detail Slip Gaji Bulan <?= $bulan_sebelum; ?> :</p>
     <table>
         
         <tr >

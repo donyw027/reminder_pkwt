@@ -46,7 +46,18 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="status_pkwt">status_pkwt</label>
                             <div class="col-md-8">
-                                <input value="<?= set_value('status_pkwt', $karyawan['status_pkwt']); ?>" type="text" id="status_pkwt" name="status_pkwt" class="form-control" placeholder=" Masukan status_pkwt">
+                            <select name="status_pkwt" id="status_pkwt" class="form-control" placeholder=" Masukan status_pkwt">
+                                    <option value="">--Pilih status_pkwt--</option>
+                                    <option value="PMNT" <?php echo ($karyawan['status_pkwt'] == 'PMNT') ? 'selected' : ''; ?>>PMNT</option>
+                                    <option value="PMNT-STAFF" <?php echo ($karyawan['status_pkwt'] == 'PMNT-STAFF') ? 'selected' : ''; ?>>PMNT-STAFF</option>
+                                    <option value="PKWT" <?php echo ($karyawan['status_pkwt'] == 'PKWT') ? 'selected' : ''; ?>>PKWT</option>
+                                    <option value="PKWT-STAFF" <?php echo ($karyawan['status_pkwt'] == 'PKWT-STAFF') ? 'selected' : ''; ?>>PKWT-STAFF</option>
+                                    <option value="C4" <?php echo ($karyawan['status_pkwt'] == 'C4') ? 'selected' : ''; ?>>C4</option>
+                                    <option value="3A" <?php echo ($karyawan['status_pkwt'] == '3A') ? 'selected' : ''; ?>>3A</option>
+                                    <option value="2A" <?php echo ($karyawan['status_pkwt'] == '2A') ? 'selected' : ''; ?>>2A</option>
+                                    <option value="1A" <?php echo ($karyawan['status_pkwt'] == '1A') ? 'selected' : ''; ?>>1A</option>
+                                    
+                                </select>
                                 <?= form_error('status_pkwt', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>

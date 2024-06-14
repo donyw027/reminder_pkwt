@@ -46,19 +46,7 @@
                 <div class="row form-group">
                     <label class="col-4 text-md-right" for="status_pkwt">status_pkwt</label>
                     <div class="col-md-8">
-                        <select value="<?= set_value('status_pkwt'); ?>" type="text" id="status_pkwt" name="status_pkwt" class="form-control" placeholder=" Masukan status_pkwt">
-                            <option value="">--Pilih Status PKWT--</option>
-                            <option value="PMNT">PMNT</option>
-                            <option value="PMNT-STAFF">PMNT-STAFF</option>
-                            <option value="PKWT">PKWT</option>
-                            <option value="PKWT-STAFF">PKWT-STAFF</option>
-                            <option value="CA">CA</option>
-                            <option value="3A">3A</option>
-                            <option value="2A">2A</option>
-                            <option value="1A">1A</option>
-
-                        </select>
-                        <!-- <input value="<?= set_value('status_pkwt'); ?>" type="text" id="status_pkwt" name="status_pkwt" class="form-control" placeholder=" Masukan status_pkwt"> -->
+                        <input value="<?= set_value('status_pkwt'); ?>" type="text" id="status_pkwt" name="status_pkwt" class="form-control" placeholder=" Masukan status_pkwt">
                         <?= form_error('status_pkwt', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
@@ -66,21 +54,8 @@
                 <div class="row form-group">
                     <label class="col-4 text-md-right" for="divisi">divisi</label>
                     <div class="col-md-8">
-                    <select value="<?= set_value('divisi'); ?>" type="text" id="divisi" name="divisi" class="form-control" placeholder=" Masukan divisi">
-                            <option value="">--Pilih Divisi--</option>
-                            <option value="Indirect">Indirect</option>
-                            <option value="Direct">Direct</option>
-                        </select>
-                        <!-- <input value="<?= set_value('divisi'); ?>" type="text" id="divisi" name="divisi" class="form-control" placeholder=" Masukan divisi"> -->
+                        <input value="<?= set_value('divisi'); ?>" type="text" id="divisi" name="divisi" class="form-control" placeholder=" Masukan divisi">
                         <?= form_error('divisi', '<span class="text-danger small">', '</span>'); ?>
-                    </div>
-                </div>
-
-                <div class="row form-group">
-                    <label class="col-4 text-md-right" for="jabatan">jabatan</label>
-                    <div class="col-md-8">
-                        <input value="<?= set_value('jabatan'); ?>" type="text" id="jabatan" name="jabatan" class="form-control" placeholder=" Masukan jabatan">
-                        <?= form_error('jabatan', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 
@@ -117,14 +92,9 @@
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-4 text-md-right" for="jk">Jenis_Kelamin</label>
+                    <label class="col-4 text-md-right" for="jk">jk</label>
                     <div class="col-md-8">
-                    <select value="<?= set_value('jk'); ?>" type="text" id="jk" name="jk" class="form-control" placeholder=" Masukan jk">
-                            <option value="">--Pilih Jenis Kelamin--</option>
-                            <option value="Laki-laki">Laki-laki</option>
-                            <option value="Perempuan">Perempuan</option>
-                        </select>
-                        <!-- <input value="<?= set_value('jk'); ?>" type="text" id="jk" name="jk" class="form-control" placeholder=" Masukan jk"> -->
+                        <input value="<?= set_value('jk'); ?>" type="text" id="jk" name="jk" class="form-control" placeholder=" Masukan jk">
                         <?= form_error('jk', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
@@ -136,8 +106,6 @@
                         <?= form_error('ttl', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
-
-                
 
                 
                     </div>
@@ -190,22 +158,17 @@
                 </div>
 
                 <div class="row form-group">
-                    <label class="col-4 text-md-right" for="periode">periode</label>
+                    <label class="col-4 text-md-right" for="end_kontrak">end_kontrak</label>
                     <div class="col-md-8">
-                        <input value="<?= set_value('periode'); ?>" type="text" id="periode" name="periode" class="form-control" placeholder=" Masukan periode">
-                        <?= form_error('periode', '<span class="text-danger small">', '</span>'); ?>
+                        <input value="<?= set_value('end_kontrak'); ?>" type="date" id="end_kontrak" name="end_kontrak" class="form-control" placeholder=" Masukan end_kontrak">
+                        <?= form_error('end_kontrak', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <label class="col-4 text-md-right" for="status_karyawan">status_karyawan</label>
                     <div class="col-md-8">
-                    <select value="<?= set_value('status_karyawan'); ?>" type="text" id="status_karyawan" name="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan">
-                            <option value="">--Pilih Status Karyawan--</option>
-                            <option value="aktif">Aktif</option>
-                            <option value="tidak">Non-aktif</option>
-                        </select>
-                        <!-- <input value="<?= set_value('status_karyawan'); ?>" type="text" id="status_karyawan" name="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan"> -->
+                        <input value="<?= set_value('status_karyawan'); ?>" type="text" id="status_karyawan" name="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan">
                         <?= form_error('status_karyawan', '<span class="text-danger small">', '</span>'); ?>
                     </div>
                 </div>

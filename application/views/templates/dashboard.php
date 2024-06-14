@@ -143,11 +143,29 @@
                     <span>Reminder PKWT</span>
                 </a>
             </li>
+            
+
+            
+<br>
+<hr class="sidebar-divider">
+
+            <div class="sidebar-heading">
+                Slip
+            </div>
+
+            <!-- Nav Item - Dashboard -->
+            
 
             <li class="nav-item">
                 <a class="nav-link pb-0" href="<?= base_url('payroll'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Payroll Via Email</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('workingdays'); ?>">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>WorkingDays Via Email</span>
                 </a>
             </li>
 
@@ -168,7 +186,7 @@
             </li><br> -->
 
 
-            <?php if (is_admin()) : ?>
+            <?php if ($this->session->userdata('login_session')['nama'] == 'doni') : ?>
 
                 <hr class="sidebar-divider">
 

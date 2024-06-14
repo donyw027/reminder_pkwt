@@ -8,10 +8,10 @@
                 </h4>
             </div>
             <div class="col-auto">
-                <a href="<?= base_url('payroll/send_payrolls') ?>" class="btn btn-sm btn-primary btn-icon-split">
+                <a onclick="return confirm('Semua Slip akan dikirim kesetiap email karyawan?')" href="<?= base_url('payroll/send_payrolls') ?>" class="btn btn-sm btn-primary btn-icon-split">
                     
                     <span class="text">
-                        Kirim Slip Via Email
+                        Kirim Slip Gaji Via Email
                     </span>
                 </a>
 
@@ -21,7 +21,7 @@
                     </span>
                 </a>
 
-                <a href="<?= base_url('payroll/') ?>" class="btn btn-sm btn-danger btn-icon-split">
+                <a onclick="return confirm('Yakin ingin menghapus semua data payroll?')" href="<?= base_url('payroll/empty_payroll') ?>" class="btn btn-sm btn-danger btn-icon-split">
                     
                     <span class="text">
                         Hapus Database
@@ -97,10 +97,10 @@
 
                             <td>
 
-                                <a href="<?= base_url('payroll/edit/') . $payrolli['id'] ?>" class="btn btn-circle btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i></a>
+                                <a href="<?= base_url('payroll/edit/') . $payrolli['id'] ?>" class="btn btn-square btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i>Edit Email</a>
                                 <a onclick="return confirm('Yakin ingin menghapus data?')" href="<?= base_url('payroll/delete/') . $payrolli['id'] ?>" class="btn btn-circle btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i></a>
 
-                                <a href="<?= base_url('payroll/send_payrolls_by1/') . $payrolli['id'] ?>" class="btn btn-circle btn-sm btn-secondary"><i class="fa fa-fw fa-envelope"></i></a>
+                                <a onclick="return confirm('Slip Gaji akan dikirim ke email karyawan yang dipilih?')" href="<?= base_url('payroll/send_payrolls_by1/') . $payrolli['id'] ?>" class="btn btn-circle btn-sm btn-secondary"><i class="fa fa-fw fa-envelope"></i></a>
                             </td>
                             
                         </tr>
@@ -126,7 +126,7 @@
   <table style="margin-bottom: 50px;">
       <tr>
           <td><input class="form-control" type="file" name="excel_file" /></td>
-          <td><input  class="form-control" type="submit" value="Upload" /></td>
+          <td><input  class="form-control"z type="submit" value="Upload" /></td>
       </tr>
   </table>
       
