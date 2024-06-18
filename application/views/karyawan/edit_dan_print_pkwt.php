@@ -171,7 +171,7 @@
                                 <select name="status_karyawan" id="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan">
                                     <option value="">--Pilih Status--</option>
                                     <option value="aktif" <?php echo ($karyawan['status_karyawan'] == 'aktif') ? 'selected' : ''; ?>>Aktif</option>
-                                    <option value="tidak" <?php echo ($karyawan['status_karyawan'] == 'tidak') ? 'selected' : ''; ?>>Non-Aktif</option>
+                                    <option value="non-aktif" <?php echo ($karyawan['status_karyawan'] == 'non-aktif') ? 'selected' : ''; ?>>Non-Aktif</option>
                                 </select>
                                 <?= form_error('status_karyawan', '<span class="text-danger small">', '</span>'); ?>
                             </div>

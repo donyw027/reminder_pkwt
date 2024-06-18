@@ -236,7 +236,7 @@
                          <div class="table-responsive">
         <table class="table table-striped dt-responsive nowrap" id="">
             <thead>
-                <td style="background-color: #0BCBD2; color: white;">STATUS PKWT KARYAWAN</td>  
+                <td style="background-color: #0BCBD2; color: white;">STATUS PKWT KARYAWAN AKTIF</td>  
                 <td style="background-color: #0BCBD2; color: white;">JUMLAH</td>  
             </thead>
             <tbody>
@@ -250,13 +250,16 @@
                 </tr><tr>
                     <td>Jumlah PKWT</td>
                     <td><?= $jumlah_pkwt; ?></td>
-                </tr><tr>
+                </tr>
+                <!-- <tr>
                     <td>Jumlah PKWT Staff</td>
                     <td><?= $jumlah_pkwts; ?></td>
-                </tr><tr>
+                </tr>
+                <tr>
                     <td>Jumlah  C4</td>
                     <td><?= $jumlah_c4; ?></td>
-                </tr><tr>
+                </tr> -->
+                <tr>
                     <td>Jumlah 3A</td>
                     <td><?= $jumlah_3a; ?></td>
                 </tr><tr>

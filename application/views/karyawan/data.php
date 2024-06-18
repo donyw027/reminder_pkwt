@@ -37,6 +37,8 @@
                     <th>end_kontrak</th>
                     <th>gaji</th>
                     <th>nik_kk</th>
+                    <th>jk</th>
+                    <th>ttl</th>
                     <th>alamat</th>
                     <th>email</th>
                     <th>bpjstk</th>
@@ -65,11 +67,13 @@
                             <td><?=$karyawani['divisi'] ?></td>
                             <td><?=$karyawani['dept'] ?></td>
                             <td><?=$karyawani['post'] ?></td>
-                            <td><?=$karyawani['periode'] ?></td>
+                            <td><?=$karyawani['periode'] ?> Bulan</td>
                             <td><?=$karyawani['start_kontrak'] ?></td>
                             <td><?=$karyawani['end_kontrak'] ?></td>
                             <td>Rp. <?= number_format($karyawani['gaji'],0,',','.'); ?> </td>
                             <td><?=$karyawani['nik_kk'] ?></td>
+                            <td><?=$karyawani['jk'] ?></td>
+                            <td><?=$karyawani['ttl'] ?></td>
                             <td><?=$karyawani['alamat'] ?></td>
                             <td><?=$karyawani['email'] ?></td>
                             <td><?=$karyawani['bpjstk'] ?></td>

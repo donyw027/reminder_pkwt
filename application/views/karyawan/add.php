@@ -203,7 +203,7 @@
                     <select value="<?= set_value('status_karyawan'); ?>" type="text" id="status_karyawan" name="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan">
                             <option value="">--Pilih Status Karyawan--</option>
                             <option value="aktif">Aktif</option>
-                            <option value="tidak">Non-aktif</option>
+                            <option value="non-aktif">Non-aktif</option>
                         </select>
                         <!-- <input value="<?= set_value('status_karyawan'); ?>" type="text" id="status_karyawan" name="status_karyawan" class="form-control" placeholder=" Masukan status_karyawan"> -->
                         <?= form_error('status_karyawan', '<span class="text-danger small">', '</span>'); ?>
