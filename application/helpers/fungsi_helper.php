@@ -23,6 +23,20 @@ function is_admin()
     return $status;
 }
 
+function is_non_admin()
+{
+    $ci = get_instance();
+    $role = $ci->session->userdata('login_session')['role'];
+
+    $status = true;
+
+    if ($role != 'non_admin') {
+        $status = false;
+    }
+
+    return $status;
+}
+
 function is_admin1()
 {
     $ci = get_instance();

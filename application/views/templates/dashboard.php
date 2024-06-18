@@ -186,7 +186,7 @@
             </li><br> -->
 
 
-            <?php if ($this->session->userdata('login_session')['nama'] == 'doni') : ?>
+            <?php if (is_admin() == true) : ?>
 
                 <hr class="sidebar-divider">
 

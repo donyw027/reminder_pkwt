@@ -33,7 +33,7 @@ class Karyawan extends CI_Controller
         $role = $this->session->userdata('login_session')['role'];
 
         if (is_admin() == true) {
-            $query_karyawan = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' AND status_pkwt != 'PMNT'");
+            $query_karyawan = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' AND status_pkwt != 'PMNT' AND status_pkwt != 'PMNT-STAFF'");
             $data['karyawan'] = $query_karyawan->result_array();
 
 
@@ -100,6 +100,7 @@ class Karyawan extends CI_Controller
             $date = new DateTime($input['start_kontrak']);
             $periode = $input['periode'];
             $date->modify("+$periode month");
+            $date->modify("-1 day");
             $end_kontrak = $date->format('Y-m-d');
 
 
@@ -153,6 +154,7 @@ class Karyawan extends CI_Controller
             $date = new DateTime($input['start_kontrak']);
             $periode = $input['periode'];
             $date->modify("+$periode month");
+            $date->modify("-1 day");
             $end_kontrak = $date->format('Y-m-d');
             $input_data = [
                 'nik_akt'       => $input['nik_akt'],
@@ -205,6 +207,7 @@ class Karyawan extends CI_Controller
             $date = new DateTime($input['start_kontrak']);
             $periode = $input['periode'];
             $date->modify("+$periode month");
+            $date->modify("-1 day");
             $end_kontrak = $date->format('Y-m-d');
             $input_data = [
                 'nik_akt'       => $input['nik_akt'],
@@ -254,6 +257,8 @@ class Karyawan extends CI_Controller
             $date = new DateTime($input['start_kontrak']);
             $periode = $input['periode'];
             $date->modify("+$periode month");
+            $date->modify("-1 day");
+
             $end_kontrak = $date->format('Y-m-d');
             $input_data = [
                 'nik_akt'       => $input['nik_akt'],

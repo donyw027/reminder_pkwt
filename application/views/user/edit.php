@@ -59,10 +59,12 @@
                             <input <?= $user['role'] == 'admin' ? 'checked' : ''; ?> <?= set_radio('role', 'admin'); ?> value="admin" type="radio" id="admin" name="role" class="custom-control-input">
                             <label class="custom-control-label" for="admin">Admin</label>
                         </div>
-                        <!-- <div class="custom-control custom-radio">
-                            <input <?= $user['role'] == 'keuangan' ? 'checked' : ''; ?> <?= set_radio('role', 'keuangan'); ?> value="keuangan" type="radio" id="keuangan" name="role" class="custom-control-input">
-                            <label class="custom-control-label" for="keuangan">Keuangan</label>
+                        
+                         <div class="custom-control custom-radio">
+                            <input <?= $user['role'] == 'non_admin' ? 'checked' : ''; ?> <?= set_radio('role', 'non_admin'); ?> value="non_admin" type="radio" id="non_admin" name="role" class="custom-control-input">
+                            <label class="custom-control-label" for="non_admin">Non Admin</label>
                         </div>
+                        <!--
                         <div class="custom-control custom-radio">
                             <input <?= $user['role'] == 'marketing' ? 'checked' : ''; ?> <?= set_radio('role', 'marketing'); ?> value="marketing" type="radio" id="marketing" name="role" class="custom-control-input">
                             <label class="custom-control-label" for="marketing">Marketing</label>
