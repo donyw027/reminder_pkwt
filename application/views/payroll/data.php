@@ -119,21 +119,19 @@
 <!-- Modal content -->
 <center>
 <div class="col-5" >
-<div class="modal-content" >
+<div class="modal-content">
   <span class="close">&times;</span>
   <h4>Upload Payroll Excel</h4>
   <?php echo form_open_multipart('payroll/upload_excel'); ?>
   <table style="margin-bottom: 50px;">
       <tr>
           <td><input class="form-control" type="file" name="excel_file" /></td>
-          <td><input  class="form-control"z type="submit" value="Upload" /></td>
+          <td><input class="form-control" type="submit" value="Upload" /></td>
       </tr>
   </table>
-      
-      
   <?php echo form_close(); ?>
-  </center>
 </div>
+</center>
     
     
 

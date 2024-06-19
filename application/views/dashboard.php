@@ -232,6 +232,37 @@
                          <?php date_default_timezone_set("Asia/Jakarta"); ?>
 
                          <div class="h5 mb-0 font-weight-bold text-gray-800">
+
+                         <span class="text">
+                        PRINT FORM : 
+                    </span>
+
+                         <a href="<?= base_url('cetak/cuti') ?>" target="_blank" class="btn btn-sm btn-secondary btn-icon-split">
+                    <span class="icon">
+                        <i class="fa fa-print"></i>
+                    </span>
+                    <span class="text">
+                        Print Form Cuti
+                    </span>
+                </a>
+                <a href="<?= base_url('cetak/lembur') ?>" target="_blank" class="btn btn-sm btn-secondary btn-icon-split">
+                    <span class="icon">
+                        <i class="fa fa-print"></i>
+                    </span>
+                    <span class="text">
+                        Print Form Lembur
+                    </span>
+                </a>
+
+                <a href="<?= base_url('cetak/ijin') ?>" target="_blank" class="btn btn-sm btn-secondary btn-icon-split">
+                    <span class="icon">
+                        <i class="fa fa-print"></i>
+                    </span>
+                    <span class="text">
+                        Print Form Ijin
+                    </span>
+                </a>
+                <br><br>
                          
                          <div class="table-responsive">
         <table class="table table-striped dt-responsive nowrap" id="">
@@ -291,7 +322,9 @@
 
                          <div class="h5 mb-0 font-weight-bold text-gray-800">
                          
-                         <center><img src="assets/img/xto.png" alt="" width="370"></center>
+                         <center><img src="assets/img/xto.png" alt="" width="370"> 
+                        
+                </center>
 
                          </div>
                      </div>

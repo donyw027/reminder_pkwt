@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM IJIN </title>
+    <link rel="icon" href="<?= base_url('assets/img/xto.ico'); ?>">
+
+
+    <style>
+        @page {
+            size: auto;
+            /* auto is the initial value */
+            margin: 0mm;
+            /* this affects the margin in the printer settings */
+        }
+
+
+        @media print {
+
+            body {
+                margin: 20mm 15mm;
+                /* Atur margin halaman cetak */
+
+                -webkit-print-color-adjust: exact;
+            }
+
+            .content {
+                page-break-inside: avoid;
+                text-align: justify;
+                margin-top: 90px;
+                page-break-inside: avoid;
+                /* Hindari memecah konten di tengah halaman */
+            }
+
+            /* Atur halaman baru sebelum dan setelah elemen dengan class .page-break */
+            .page-break {
+                page-break-before: always;
+                page-break-after: always;
+            }
+        }
+
+
+
+
+
+        /* Atur halaman baru sebelum dan setelah elemen dengan class .page-break */
+        .page-break {
+            page-break-before: always;
+            page-break-after: always;
+        }
+
+
+
+        body {
+            margin: 20px;
+            padding: 0;
+            background-color: #FAFAFA;
+            font: 10pt "Times New Roman";
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            .page {
+                margin: 0;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                min-height: initial;
+                box-shadow: initial;
+                background: initial;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: left;">PT. AKT INDONESIA</h2>
+    <h2 style="background: #c1e2b9;text-align: left;">FORM KETIDAKHADIRAN / ABSEN / IJIN / TELAT / PULANG AWAL</h2>
+    <H4 style="color: red; margin-top: 0px;margin-bottom: 0px;">(BUKAN FORM CUTI)</H4>
+    Tgl. Pengajuan / Date Requesting : ............................................
+    <table border="1" style="border: 1px solid black; text-align: center; border-collapse: collapse ;">
+        <tr>
+            <td style="width: 700px;">
+                <table>
+                    <tr>
+                        <td>Nama / Name</td>
+                        <td>:</td>
+                        <td>........................................................................................</td>
+                        <td>Dept.Bag</td>
+                        <td>:</td>
+                        <td>..........................................................</td>
+
+
+                    </tr>
+                    <tr>
+                        <td>NIK / ID</td>
+                        <td>:</td>
+                        <td>........................................................................................</td>
+
+
+                        <td>Position</td>
+                        <td>:</td>
+                        <td>..........................................................</td>
+
+
+
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4 style="margin: 0; text-align: left;">Waktu KetidakHadiran</h4>
+                <table border="1" style="text-align: left;">
+                    <tr>
+                        <td style="width: 350px;"></td>
+                        <td style="width: 350px;">1</td>
+
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4 style="margin: 0; text-align: left;">Alasan Pengajuan Cuti/Reason :</h4><br>
+                <table style="text-align: left;">
+                    <tr>
+                        <td>................................................................................................................................................................................................</td>
+                    </tr>
+                    <tr>
+                        <td>................................................................................................................................................................................................</td>
+
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <CENter>
+                    <table border="0">
+                        <tr>
+                            <td style="width: 200px;text-align: center;"><u>APPLICANT</u> <br> Pemohon</td>
+                            <td colspan="2" style="width: 300px;text-align: center;"><u>APPROVAL</u> <br>Persetujuan</td>
+                            <td style="width: 200px;text-align: center;"><u>ACKNOWLEDGE</u> <br>Mengetahui</td>
+
+                        </tr>
+                        <tr>
+                            <td style="height: 60px;"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">(...............................)</td>
+                            <td style="text-align: center;">(...............................)</td>
+                            <td style="text-align: center;">(...............................)</td>
+                            <td style="text-align: center;">(...............................)</td>
+
+
+                        </tr>
+                    </table>
+                </CENter>
+            </td>
+        </tr>
+    </table><br><br>
+    <hr>
+
+</body>
+
+</html>
+<script>
+    window.print();
+</script>

@@ -17,6 +17,8 @@ class Workingdays extends CI_Controller
         cek_login();
         $this->load->model('Admin_model', 'admin');
         $this->load->library('email');
+        $this->load->library('upload');
+
         // $this->load->library('PHPExcel'); $this->load->model('Admin_model', 'admin');
         $this->load->library('form_validation');
     }
@@ -102,27 +104,33 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
 
     public function upload_excel() {
 
-        include APPPATH.'third_party/PHPExcel/Classes/PHPExcel.php';
-
-
+        $this->load->library('session');
+            $this->load->helper(array('form', 'url'));
+        // Konfigurasi upload
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'xls|xlsx';
         $config['max_size'] = 10000;
-
+    
         $this->upload->initialize($config);
-
+    
         if (!$this->upload->do_upload('excel_file')) {
+            echo "Path: " . realpath('./uploads/') . "<br>";
+            echo "File exists: " . file_exists(realpath('./uploads/')) . "<br>";
+            echo "Is writable: " . is_writable(realpath('./uploads/')) . "<br>";
             $this->session->set_flashdata('message', $this->upload->display_errors());
-            redirect('payroll');
+            redirect('workingdays');
         } else {
             $fileData = $this->upload->data();
             $filePath = './uploads/' . $fileData['file_name'];
-
-            $this->load->library('excel');
+    
+            // Load PHPExcel library
+            require_once(APPPATH . 'third_party/PHPExcel/Classes/PHPExcel.php');
+            require_once(APPPATH . 'third_party/PHPExcel/Classes/PHPExcel/IOFactory.php');
+    
             $objPHPExcel = PHPExcel_IOFactory::load($filePath);
-
+    
             $sheetData = $objPHPExcel->getActiveSheet()->toArray(null, true, true, true);
-
+    
             $data = [];
             foreach ($sheetData as $row) {
                 $data[] = [
@@ -130,31 +138,29 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
                     'nama' => $row['B'],
                     'nik' => $row['C'],
                     'dept' => $row['D'],
-                    'status' => $row['E'],
-                    'gaji_pokok' => $row['F'],
-                    'gaji_tidak_full' => $row['G'],
-                    'uang_phl' => $row['H'],
-                    'tunjangan' => $row['I'],
-                    'sisa_cuti' => $row['J'],
-                    'lembur' => $row['K'],
-                    'koreksi_positif' => $row['L'],
-                    'jumlah_pendapatan' => $row['M'],
-                    'bpjs_tk' => $row['N'],
-                    'bpjs_kes' => $row['O'],
-                    'pph21' => $row['P'],
-                    'absensi' => $row['Q'],
-                    'koreksi_negatif' => $row['R'],
-                    'jumlah_potongan' => $row['S'],
-                    'take_home_pay' => $row['T'],
-                    'email' => $row['U'],
-                    'total_hari_kerja' => $row['V']
+                    'section' => $row['E'],
+                    'ijin' => $row['F'],
+                    'sakit' => $row['G'],
+                    'cuti' => $row['H'],
+                    'alpha' => $row['I'],
+                    'total_hari_kerja' => $row['J'],
+                    'total_hari_phl' => $row['K'],
+                    'jam1pertama' => $row['L'],
+                    'jam2lebih' => $row['M'],
+                    'hari_libur2x' => $row['N'],
+                    'harilibur8' => $row['O'],
+                    'total_overtime' => $row['P'],
+                    'email' => $row['Q']
+                    
                 ];
             }
-
-            $this->admin->insert_batch($data);
-
+            // var_dump($data);die();
+    
+            // Menggunakan insert_batch untuk memasukkan data ke dalam database
+            $this->db->insert_batch('workingdays', $data);
+    
             $this->session->set_flashdata('message', 'File berhasil diupload dan data dimasukkan ke database');
-            redirect('payroll/');
+            redirect('workingdays/');
         }
     }
 

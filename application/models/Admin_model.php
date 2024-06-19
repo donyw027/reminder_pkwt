@@ -46,6 +46,10 @@ class Admin_model extends CI_Model
         $this->db->insert_batch('payroll', $data);
     }
 
+    public function insert_batch1($data) {
+        $this->db->insert_batch('workingdays', $data);
+    }
+
     function get_payroll_by_id($id) {
         $this->db->where('id', $id);
         $query = $this->db->get('payroll');

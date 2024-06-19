@@ -111,7 +111,7 @@
 <div class="modal-content" >
   <span class="close">&times;</span>
   <h4>Upload Working Days Excel</h4>
-  <?php echo form_open_multipart('working_days/upload_excel'); ?>
+  <?php echo form_open_multipart('workingdays/upload_excel'); ?>
   <table style="margin-bottom: 50px;">
       <tr>
           <td><input class="form-control" type="file" name="excel_file" /></td>
