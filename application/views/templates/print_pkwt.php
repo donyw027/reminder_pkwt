@@ -172,7 +172,7 @@
     <div class="content">
         <center><h3>PERJANJIAN KERJA WAKTU TERTENTU (PKWT)</h3></center><hr>
 
-        <p>Pada hari ini, Selasa Tanggal 08 Mei 2024 para pihak telah bersepakat dan saling menyetujui untuk mengadakan perjanjian kerja waktu tertentu (PKWT) sebagai berikut :<br>
+        <p>Pada hari ini, <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> para pihak telah bersepakat dan saling menyetujui untuk mengadakan perjanjian kerja waktu tertentu (PKWT) sebagai berikut :<br>
 <ul>
     <li type="none">
     <table>
@@ -491,7 +491,7 @@ Para pihak setelah membaca isi perjanjian ini dengan teliti dan seksama maka mas
         <center>
             <table border="0">
                 <tr>
-                    <td colspan="3">Dibuat di Pasuruan pada <?= $tgl; ?> </td>
+                    <td colspan="3">Dibuat di Pasuruan pada <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> </td>
 
                 </tr>
                 <tr>

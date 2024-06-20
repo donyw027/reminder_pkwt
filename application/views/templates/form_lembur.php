@@ -109,7 +109,7 @@
                 <td style="width: 100px;">Pelaksanaan</td>
             </tr>
             <tr style="height: 23px;">
-                <td></td>
+                <td>1</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -118,15 +118,7 @@
                 <td></td>
             </tr>
             <tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>2</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -134,15 +126,7 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>3</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -150,15 +134,7 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>4</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -166,15 +142,7 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>5</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -182,7 +150,39 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
+                <td>6</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>9</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>10</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -222,7 +222,7 @@
                 <td style="width: 100px;">Pelaksanaan</td>
             </tr>
             <tr style="height: 23px;">
-                <td></td>
+                <td>1</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -231,15 +231,7 @@
                 <td></td>
             </tr>
             <tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>2</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -247,15 +239,7 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>3</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -263,15 +247,7 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>4</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -279,15 +255,7 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr><tr style="height: 23px;">
-                <td></td>
+                <td>5</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -295,7 +263,39 @@
                 <td></td>
                 <td></td>
             </tr><tr style="height: 23px;">
+                <td>6</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>7</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>8</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>9</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr><tr style="height: 23px;">
+                <td>10</td>
                 <td></td>
                 <td></td>
                 <td></td>

@@ -163,7 +163,7 @@
     <div class="content">
         <h2>PERJANJIAN KERJA HARIAN LEPAS</h2>
 
-        <p>Pada hari ini, <?= $hari; ?> tanggal <?= $tgl; ?> bertempat di Pasuruan, yang bertanda tangan di bawah ini:<br>
+        <p>Pada hari <?= $hari; ?> ,<?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> bertempat di Pasuruan, yang bertanda tangan di bawah ini:<br>
         <ul>
             <li type="none">
                 <table>
@@ -427,7 +427,7 @@
         <center>
             <table border="0">
                 <tr>
-                    <td colspan="3">Dibuat di Pasuruan pada <?= $tgl; ?> </td>
+                    <td colspan="3">Dibuat di Pasuruan pada <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> </td>
 
                 </tr>
                 <tr>
