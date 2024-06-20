@@ -132,7 +132,7 @@
 
         <table>
             <tr style="text-align: left; font-weight: bold; font-size: 18pt;">
-                <td>NAMA</td>
+                <td>Nama</td>
                 <td>:</td>
                 <td><p><?= set_value('nama', $karyawan['nama']); ?></p></td>
 
@@ -230,6 +230,11 @@
                         <td>No. ID</td>
                         <td>:</td>
                         <td><?= $karyawan['nik_akt']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>:</td>
+                        <td><?= $karyawan['alamat']; ?></td>
                     </tr>
                 </table>
 
