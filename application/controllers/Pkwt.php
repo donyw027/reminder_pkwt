@@ -91,6 +91,26 @@ class Pkwt extends CI_Controller
         }
     }
 
+    public function pengumumannext()
+    {
+
+        $data['title'] = "Pengumuman Next Month Reminder PKWT";
+        $role = $this->session->userdata('login_session')['role'];
+        $bulan = date('m');
+        $date = new DateTime();
+            $date->modify("+1 month");
+            $next_month = $date->format('m');
+
+        if (is_admin() == true) {
+            $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$next_month'");
+            $data['karyawan'] = $query_reminder->result_array();
+
+            $data['nama_hrd'] = $this->admin->getNamaHrd();
+
+            $this->template->load('templates/pengumuman', 'pkwt/pengumuman', $data);
+        }
+    }
+
 
 
     private function _validasi($mode)

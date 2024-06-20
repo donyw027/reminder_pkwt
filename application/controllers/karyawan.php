@@ -59,6 +59,29 @@ class Karyawan extends CI_Controller
         }
     }
 
+    public function reminder_pkwtnext()
+    {
+
+        $data['title'] = " Data Friday List";
+        $role = $this->session->userdata('login_session')['role'];
+        $bulan = date('m');
+        $tahun = date('Y');
+
+        $date = new DateTime();
+            $date->modify("+1 month");
+            $next_month = $date->format('m');
+
+
+        // var_dump($next_month);die();
+
+        if (is_admin() == true) {
+            $query_reminder = $this->db->query("SELECT * FROM karyawan WHERE status_karyawan='aktif' and MONTH(end_kontrak) = '$next_month' and YEAR(end_kontrak) = '$tahun' AND status_pkwt != 'PMNT' AND status_pkwt != 'PMNT-STAFF'");
+            $data['karyawan'] = $query_reminder->result_array();
+
+            $this->template->load('templates/dashboard', 'reminderpkwtnext/data', $data);
+        }
+    }
+
 
 
 

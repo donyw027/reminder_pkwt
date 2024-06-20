@@ -141,7 +141,7 @@
         <td><h4 style="margin: 0; text-align: left;">Keterangan Cuti</h4>
             <table style="text-align: left;">
             <tr>
-                <td>Jebis Cuti Diambil/Tahunan</td>
+                <td>Jenis Cuti Diambil/Tahunan</td>
                 <td>:</td>
                 <td>............................................................................................................</td>
             </tr>
@@ -254,7 +254,7 @@
         <td><h4 style="margin: 0; text-align: left;">Keterangan Cuti</h4>
             <table style="text-align: left;">
             <tr>
-                <td>Jebis Cuti Diambil/Tahunan</td>
+                <td>Jenis Cuti Diambil/Tahunan</td>
                 <td>:</td>
                 <td>............................................................................................................</td>
             </tr>
