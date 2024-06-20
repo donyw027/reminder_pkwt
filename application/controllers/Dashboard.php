@@ -22,9 +22,15 @@ class Dashboard extends CI_Controller
            $bulan=date('m');
         $tahun=date('Y');
         $hari=date('d');
+        $date = new DateTime();
+            $date->modify("+1 month");
+            $next_month = $date->format('m');
+
+
         $data['jumlah_karyawan_aktif'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif'")->row()->jumlah;
         $data['jumlah_karyawan_naktif'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='non-aktif'")->row()->jumlah;
-        $data['jumlah_reminder'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' AND MONTH(end_kontrak)='$bulan' and YEAR(end_kontrak) = '$tahun' AND status_pkwt != 'PMNT' AND status_pkwt != 'PMNT-STAFF' AND status_pkwt != 'PKWT-STAFF'")->row()->jumlah;
+        $data['jumlah_reminder'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' AND MONTH(end_kontrak)='$bulan' and YEAR(end_kontrak) = '$tahun' AND status_pkwt != 'PMNT' AND status_pkwt != 'PMNT-STAFF' AND status_pkwt != 'PMNT'")->row()->jumlah;
+        $data['jumlah_friday'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' AND MONTH(end_kontrak)='$next_month' and YEAR(end_kontrak) = '$tahun' AND status_pkwt != 'PMNT' AND status_pkwt != 'PMNT-STAFF' AND status_pkwt != 'PMNT'")->row()->jumlah;
         $data['jumlah_pkwt'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='PKWT'")->row()->jumlah;
         $data['jumlah_pmnt'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='PMNT'")->row()->jumlah;
         $data['jumlah_pkwts'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif' and status_pkwt ='PKWT-STAFF'")->row()->jumlah;

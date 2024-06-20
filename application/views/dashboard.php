@@ -5,13 +5,21 @@
     $p_bulann=date('m');
     $p_tahun=date('Y');
     $p_hari=date('d');
+
+    
+
  ?>
 
 
      <?php
         $bulan = format_bulan(date('Y-m-D'));
+        
         $role = $this->session->userdata('login_session')['role'];
         $yang_login = $this->session->userdata('login_session')['nama'];
+
+        $date = new DateTime('m');
+            $date->modify("+1 month");
+            $next_month = $date->format('M Y');
         ?>
      <div class="col-xl-12 ">
          <div class="card shadow mb-4">
@@ -23,13 +31,13 @@
 
          </div>
      </div>
-     <div class="col-xl-4 col-6 mb-4">
+     <div class="col-xl-3 col-6 mb-4">
                                <div class="card border-left-danger shadow h-100 py-2">
              <div class="card-body">
                  <div class="row no-gutters align-items-center">
                      <div class="col mr-2">
-                         <div class="text-md font-weight-bold text-success text-uppercase mb-1">Reminder End Contract (<?= $bulan; ?>) </div>
-                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_reminder; ?></div>
+                         <div class="text-md font-weight-bold text-success text-uppercase mb-1">End Contract <?= $bulan; ?> </div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_reminder; ?> Karyawan</div>
                      </div>
                      <div class="col-auto">
                          <i class="fas fa-folder fa-2x text-gray-300"></i>
@@ -39,7 +47,23 @@
          </div>
      </div>
 
-     <div class="col-xl-4 col-6 mb-4">
+     <div class="col-xl-3 col-6 mb-4">
+                               <div class="card border-left-danger shadow h-100 py-2">
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-md font-weight-bold text-success text-uppercase mb-1">Friday List <?= $next_month; ?> </div>
+                         <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_friday; ?> Karyawan</div>
+                     </div>
+                     <div class="col-auto">
+                         <i class="fas fa-folder fa-2x text-gray-300"></i>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+     <div class="col-xl-3 col-6 mb-4">
                                <div class="card border-left-primary shadow h-100 py-2">
              <div class="card-body">
                  <div class="row no-gutters align-items-center">
@@ -55,12 +79,12 @@
          </div>
      </div>
 
-     <div class="col-xl-4 col-6 mb-4">
-                               <div class="card border-left-warning shadow h-100 py-2">
+     <div class="col-xl-3 col-6 mb-4">
+                               <div class="card border-left-primary shadow h-100 py-2">
              <div class="card-body">
                  <div class="row no-gutters align-items-center">
                      <div class="col mr-2">
-                         <div class="text-md font-weight-bold text-success text-uppercase mb-1">Jumlah Karyawan Non-Aktif</div>
+                         <div class="text-md font-weight-bold text-danger text-uppercase mb-1">Jumlah Karyawan Non-Aktif</div>
                          <div class="h5 mb-0 font-weight-bold text-gray-800"> <?= $jumlah_karyawan_naktif; ?> </div>
                      </div>
                      <div class="col-auto">
