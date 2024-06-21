@@ -22,6 +22,17 @@ class User extends CI_Controller
         $this->template->load('templates/dashboard', 'user/data', $data);
     }
 
+    public function log()
+    {
+
+        $data['title'] = "Log Sistem";
+        $role = $this->session->userdata('login_session')['role'];
+
+            $data['log'] = $this->admin->get('log_s');
+
+            $this->template->load('templates/dashboard', 'log/data', $data);
+    }
+
     private function _validasi($mode)
     {
         $this->form_validation->set_rules('nama', 'Nama', 'required|trim');
@@ -114,6 +125,16 @@ class User extends CI_Controller
             set_pesan('data gagal dihapus.', false);
         }
         redirect('user');
+    }
+    public function logdelete($getId)
+    {
+        $id = encode_php_tags($getId);
+        if ($this->admin->delete('log_s', 'id', $id)) {
+            set_pesan('data berhasil dihapus.');
+        } else {
+            set_pesan('data gagal dihapus.', false);
+        }
+        redirect('user/log');
     }
 
     public function toggle($getId)

@@ -25,12 +25,26 @@
          <div class="card shadow mb-4">
              <!-- Card Header - Dropdown -->
              <div class="card-header bg-success py-3 d-flex flex-row align-items-center justify-content-between">
-                 <h3 class="m-0 font-weight-bold text-white">Selamat datang <font style="color:yellow;"><?= $yang_login ?></font> <br> di Sistem Reminder PKWT AKT Indonesia </h3>
+                 <h2 class="m-0 font-weight-bold text-white">Selamat datang <font style="color:yellow;"><?= $yang_login ?></font> <br> di Sistem Reminder PKWT AKT Indonesia </h2>
              </div>
              <!-- Card Body -->
 
          </div>
      </div>
+     <?php if ($this->session->userdata('login_session')['nama'] == 'Doni' || $this->session->userdata('login_session')['nama'] == 'Faiz') : ?>
+
+     <div class="col-xl-12">
+         <div class="card shadow mb-4">
+             <!-- Card Header - Dropdown -->
+             <div class="card-header bg-dark py-3 d-flex flex-row align-items-center justify-content-between">
+                 <h5 class="m-0 font-weight-bold text-white">Last Update Pada <?= $log->tanggal ?>  <br> <?= $log->aktor ?> Melakukan  <?= $log->aksi ?>      </h5>
+             </div>
+             <!-- Card Body -->
+
+         </div>
+     </div>
+     <?php endif; ?>
+
      <div class="col-xl-3 col-6 mb-4">
                                <div class="card border-left-danger shadow h-100 py-2">
              <div class="card-body">

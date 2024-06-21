@@ -26,6 +26,10 @@ class Dashboard extends CI_Controller
             $date->modify("+1 month");
             $next_month = $date->format('m');
 
+        $query_log = $this->db->query("SELECT tanggal, aksi ,aktor FROM log_s ORDER BY id DESC LIMIT 1");   
+        $data['log'] = $query_log->row();
+
+
 
         $data['jumlah_karyawan_aktif'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='aktif'")->row()->jumlah;
         $data['jumlah_karyawan_naktif'] = $this->db->query("SELECT COUNT(nik_akt) as jumlah FROM karyawan WHERE status_karyawan='non-aktif'")->row()->jumlah;

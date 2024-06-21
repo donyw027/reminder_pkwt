@@ -499,9 +499,9 @@ Para pihak setelah membaca isi perjanjian ini dengan teliti dan seksama maka mas
 
                 </tr>
                 <tr style="text-align: center;">
-                    <td style="width: 150px;">Para Pihak, <br>Pihak Pertama</td>
-                    <td style="width: 300px;"></td>
-                    <td style="width: 150px;">Pihak Kedua</td>
+                    <td style="width: 200px;">Para Pihak, <br>Pihak Pertama</td>
+                    <td style="width: 150px;"></td>
+                    <td style="width: 200px;">Pihak Kedua</td>
                 </tr>
 
                 <tr>

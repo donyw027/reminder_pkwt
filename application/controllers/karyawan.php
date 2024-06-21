@@ -8,6 +8,7 @@ class Karyawan extends CI_Controller
         parent::__construct();
         cek_login();
 
+        date_default_timezone_set('Asia/Jakarta');
 
         $this->load->model('Admin_model', 'admin');
         $this->load->library('form_validation');
@@ -153,7 +154,18 @@ class Karyawan extends CI_Controller
 
             ];
 
-            if ($this->admin->insert('karyawan', $input_data)) {
+            $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Add Data ( Nik : '. $input['nik_akt']. ', Nama : '. $input['nama'] . ', Dept : '. $input['dept']. ', Post : '. $input['post'] . ')',
+                'aktor'       => $yang_login
+            ];
+
+            // var_dump($data_log);die();
+
+
+            if ($this->admin->insert('karyawan', $input_data) and $this->admin->insert('log_s', $data_log)) {
                 set_pesan('data berhasil disimpan.');
                 redirect('karyawan');
             } else {
@@ -206,7 +218,17 @@ class Karyawan extends CI_Controller
 
             ];
 
-            if ($this->admin->update('karyawan', 'id', $id, $input_data)) {
+            $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+                $data_log = [
+                    'tanggal'       => $tgl,
+                    'aksi'       => 'Edit Data ( Nik : '. $input['nik_akt']. ', Nama : '. $input['nama'] . ', Dept : '. $input['dept']. ', Post : '. $input['post'] . ')',
+                    'aktor'       => $yang_login
+                ];
+
+            
+
+            if ($this->admin->update('karyawan', 'id', $id, $input_data) and  $this->admin->insert('log_s', $data_log)) {
                 set_pesan('data berhasil diubah.');
                 redirect('karyawan');
             } else {
@@ -319,7 +341,25 @@ class Karyawan extends CI_Controller
     public function delete($getId)
     {
         $id = encode_php_tags($getId);
-        if ($this->admin->delete('karyawan', 'id', $id)) {
+        $karyawan = $this->admin->get('karyawan', ['id' => $id]);
+        $nik_akt = $karyawan['nik_akt'];
+        $nama = $karyawan['nama'];
+        $dept = $karyawan['dept'];
+        $post = $karyawan['post'];
+
+
+        $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+                $data_log = [
+                    'tanggal'       => $tgl,
+                    'aksi'       => 'Delete Data ( Nik : '. $nik_akt. ', Nama : '. $nama . ' , Dept : '. $dept. ', Post : '. $post . ')',
+                    'aktor'       => $yang_login
+                ];
+
+                // var_dump($data_log);die();
+
+
+        if ($this->admin->delete('karyawan', 'id', $id) and  $this->admin->insert('log_s', $data_log)) {
             set_pesan('data berhasil dihapus.');
         } else {
             set_pesan('data gagal dihapus.', false);

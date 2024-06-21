@@ -192,31 +192,55 @@
             </li><br> -->
 
 
-            <?php if (is_admin() == true) : ?>
 
                 <hr class="sidebar-divider">
 
 
+                <?php if ($this->session->userdata('login_session')['nama'] == 'Doni' || $this->session->userdata('login_session')['nama'] == 'Faiz') : ?>
 
                 <!-- Heading -->
                 <div class="sidebar-heading">
                     Settings
                 </div>
+                    
+                <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('user/log'); ?>">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Log Sistem</span>
+                </a>
+            </li>
+            <?php if ($this->session->userdata('login_session')['nama'] == 'Doni') : ?>
 
-                <!-- Nav Item -->
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('user'); ?>">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>User Management</span>
+                </a>
+            </li>
+            <?php endif; ?>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('log'); ?>">
+                        <i class="fas fa-fw fa-user-plus"></i>
+                        <span>Logs Sistem</span>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('user'); ?>">
                         <i class="fas fa-fw fa-user-plus"></i>
                         <span>User Management</span>
                     </a>
-                </li>
+                </li> -->
+                <br>
+            <hr class="sidebar-divider d-none d-md-block">
+
             <?php endif; ?>
 
 
 
 
             <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+             <br>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
