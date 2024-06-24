@@ -74,6 +74,23 @@ class Pkwt extends CI_Controller
         }
     }
 
+    public function print_phl_pkwt($getId)
+    {
+
+        $data['title'] = "Print PHL";
+        $role = $this->session->userdata('login_session')['role'];
+        $id = encode_php_tags($getId);
+
+
+        if (is_admin() == true) {
+            $data['karyawan'] = $this->admin->get('karyawan', ['id' => $id]);
+            $data['pkwt'] = $this->admin->get('pkwt');
+
+
+            $this->template->load('templates/print_phl_pkwt', 'pkwt/print_phl_pkwt', $data);
+        }
+    }
+
     public function pengumuman()
     {
 

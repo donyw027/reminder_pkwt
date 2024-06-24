@@ -12,6 +12,12 @@ class Admin_model extends CI_Model
         }
     }
 
+    public function log_desc() {
+        $this->db->order_by('id', 'DESC');
+        $query = $this->db->get('log_s');
+        return $query->result_array();
+    }
+
     public function update($table, $pk, $id, $data)
     {
         $this->db->where($pk, $id);

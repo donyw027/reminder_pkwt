@@ -27,17 +27,18 @@
                     <th>nik_akt</th>
                     <th>nama</th>
                     
-                    <th>divisi</th>
                     <th>dept</th>
                     <th>post</th>
                     <th>status_pkwt</th>
 
                     <th style="background:#88FA88; color: white;">start_kontrak</th>
                     <th style="background: #F54E49; color: white;">end_kontrak</th>
+                    <th>divisi</th>
+
                     
 
 
-                    <th>Aksi</th>
+                    <!-- <th>Aksi</th> -->
                 </tr>
             </thead>
             <tbody>
@@ -51,31 +52,29 @@
                             <td><?=$row['nik_akt'] ?></td>
                             <td><?=$row['nama'] ?></td>
                             
-                            <td><?=$row['divisi'] ?></td>
                             <td><?=$row['dept'] ?></td>
                             <td><?=$row['post'] ?></td>
                             <td><?=$row['status_pkwt'] ?></td>
 
                             <td style="background: #88FA88; color: white;"><?=$row['start_kontrak'] ?></td>
                             <td style="background: #F54E49; color: white;"><?=$row['end_kontrak'] ?></td>
-                            
+                            <td><?=$row['divisi'] ?></td>
 
-                            <td>
+                            
+                            <!-- <td>
                             <a href="<?= base_url('karyawan/up_print_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-primary">Edit & Print PKWT</a>
                                 <a href="<?= base_url('karyawan/up_print_phl/') . $row['id'] ?>" class="btn  btn-sm btn-secondary">Edit & Print PHL</a>
                                 <a href="<?= base_url('pkwt/print_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-primary" target="_blank">Print PKWT</a>
                                 <a href="<?= base_url('pkwt/print_phl/') . $row['id'] ?>" class="btn  btn-sm btn-secondary" target="_blank">Print PHL</a>
-                                <!-- <a onclick="return confirm('Yakin ingin Simpan data PKWT?')" href="<?= base_url('pkwt/simpan_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-danger">Simpan PKWT</a>
-
-                                <a href="<?= base_url('pkwt/riwayat_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-warning" >Riwayat Kontrak</a> -->
                                 
-                            </td>
+                                
+                            </td> -->
                             
                         </tr>
                     <?php endforeach;
                 else : ?>
                     <tr>
-                        <td colspan="19" class="text-center">Silahkan tambahkan Karyawan baru</td>
+                        <td colspan="9" class="text-center">Silahkan tambahkan Karyawan baru</td>
                     </tr>
                 <?php endif; ?>
             </tbody>

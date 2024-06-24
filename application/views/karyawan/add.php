@@ -222,6 +222,22 @@
                     </div>
                 </div>
 
+                <div class="row form-group">
+                    <label class="col-4 text-md-right" for="tgl_join">tgl_join</label>
+                    <div class="col-md-8">
+                        <input value="<?= set_value('tgl_join'); ?>" type="date" id="tgl_join" name="tgl_join" class="form-control" placeholder=" Masukan tgl_join">
+                        <?= form_error('tgl_join', '<span class="text-danger small">', '</span>'); ?>
+                    </div>
+                </div>
+
+                        <!-- <div class="row form-group">
+                            <label class="col-4 text-md-right" for="tgl_keluar">tgl_keluar</label>
+                            <div class="col-md-8">
+                                <input value="<?= set_value('tgl_keluar'); ?>" type="date" id="tgl_keluar" name="tgl_keluar" class="form-control" placeholder=" Masukan tgl_keluar">
+                                <?= form_error('tgl_keluar', '<span class="text-danger small">', '</span>'); ?>
+                            </div>
+                        </div> -->
+
                 
 
                 <br>

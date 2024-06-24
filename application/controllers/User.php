@@ -28,7 +28,7 @@ class User extends CI_Controller
         $data['title'] = "Log Sistem";
         $role = $this->session->userdata('login_session')['role'];
 
-            $data['log'] = $this->admin->get('log_s');
+            $data['log'] = $this->admin->log_desc();
 
             $this->template->load('templates/dashboard', 'log/data', $data);
     }

@@ -43,7 +43,17 @@ class Workingdays extends CI_Controller
         $workingdays = $this->admin->get_workingdays_by_id($id);
         // var_dump($workingdayss->email); die();
 
+        
+
             $this->send_workingdays_email_by1($workingdays);
+            $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Pengiriman Slip Working Days ke '.$workingdays->nama .', NIK : '.$workingdays->nik,
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
 
         set_pesan('Email Berhasil Terkirim');
                 redirect('workingdays');
@@ -77,6 +87,14 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
             $this->send_workingdays_email($workingdays);
         }
         $this->email->clear(TRUE);
+        $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Pengiriman Semua Slip Working Days ke email karyawan',
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
 
         set_pesan('Email Berhasil Terkirim');
                 redirect('workingdays');
@@ -157,6 +175,14 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
             // var_dump($data);die();
     
             // Menggunakan insert_batch untuk memasukkan data ke dalam database
+            $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Import Data Working Days',
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
             $this->db->insert_batch('workingdays', $data);
     
             $this->session->set_flashdata('message', 'File berhasil diupload dan data dimasukkan ke database');
@@ -167,6 +193,14 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
     public function empty_workingdays()
     {
         // Execute truncate query
+        $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Menghapus semua data Working Days',
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
         $this->db->truncate('workingdays');
 
         // Set flashdata for success message

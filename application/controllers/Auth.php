@@ -47,6 +47,14 @@ class Auth extends CI_Controller
                             'role'  => $user_db['role'],
                             'timestamp' => time()
                         ];
+
+                        $tgl = date('d M Y | H:i');
+                        $data_log = [
+                            'tanggal'       => $tgl,
+                            'aksi'       => 'Login kedalam sistem informasi',
+                            'aktor'       => $user_db['nama']
+                        ];
+                        $this->admin->insert('log_s', $data_log);
                         $this->session->set_userdata('login_session', $userdata);
                         redirect('dashboard');
                     }
@@ -63,7 +71,17 @@ class Auth extends CI_Controller
 
     public function logout()
     {
+        $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Logout dari sistem informasi',
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
         $this->session->unset_userdata('login_session');
+
+        
 
         set_pesan('anda telah berhasil logout');
         redirect('auth');

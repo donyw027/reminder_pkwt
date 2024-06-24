@@ -47,6 +47,8 @@
                     
                     <th>status_karyawan</th>
                     <th>keterangan</th>
+                    <th>tgl_join</th>
+                    <th>tgl_keluar</th>
 
 
                     <th>Aksi</th>
@@ -82,6 +84,9 @@
                             
                             <td><?=$karyawani['status_karyawan'] ?></td>
                             <td><?=$karyawani['keterangan'] ?></td>
+                            <td><?=$karyawani['tgl_join'] ?></td>
+                            <td><?=$karyawani['tgl_keluar'] ?></td>
+
                             
 
                             <td>

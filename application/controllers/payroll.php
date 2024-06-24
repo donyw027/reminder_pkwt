@@ -34,9 +34,18 @@ class Payroll extends CI_Controller
         $id = encode_php_tags($getId);
 
         $payroll = $this->admin->get_payroll_by_id($id);
-        // var_dump($payrolls->email); die();
+        // var_dump($payroll->nama); die();
+        
 
             $this->send_payroll_email_by1($payroll);
+            $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Pengiriman Slip Gaji ke '.$payroll->nama .', NIK : '.$payroll->nik,
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
 
         set_pesan('Email Berhasil Terkirim');
                 redirect('payroll');
@@ -70,6 +79,15 @@ $bulan_sebelum = format_bulan($date1->format('Y-m-d'));
             $this->send_payroll_email($payroll);
         }
         $this->email->clear(TRUE);
+        $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Mengirim Semua Slip Gaji ke email karyawan',
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
+
 
         set_pesan('Email Berhasil Terkirim');
                 redirect('payroll');
@@ -155,6 +173,14 @@ public function upload_excel() {
         // var_dump($data);die();
 
         // Menggunakan insert_batch untuk memasukkan data ke dalam database
+        $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Import Data Slip Gaji',
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
         $this->db->insert_batch('payroll', $data);
 
         $this->session->set_flashdata('message', 'File berhasil diupload dan data dimasukkan ke database');
@@ -167,6 +193,14 @@ public function upload_excel() {
     public function empty_payroll()
     {
         // Execute truncate query
+        $yang_login = $this->session->userdata('login_session')['nama'];
+            $tgl = date('d M Y | H:i');
+            $data_log = [
+                'tanggal'       => $tgl,
+                'aksi'       => 'Menghapus semua data payroll',
+                'aktor'       => $yang_login
+            ];
+            $this->admin->insert('log_s', $data_log);
         $this->db->truncate('payroll');
 
         // Set flashdata for success message
