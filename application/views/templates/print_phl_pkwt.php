@@ -9,6 +9,9 @@
 
 
     <style>
+        
+        
+        /*--------------------------------------------------------------------------------- */
         h2,
         h4 {
             margin: 0;
@@ -39,10 +42,13 @@
             }
         }
 
+        .page-break  { display:block; page-break-before:always; }
+
         header {
             position: fixed;
             top: 0;
             left: 0;
+            display: ;
             right: 0;
             height: 50px;
             /* Adjust the height of your header */
@@ -114,8 +120,10 @@
     $hari =format_hari(date('Y-m-d'));
     $thn = date('Y');
 
-    $bl_th = date('M Y'); ?>
-    
+    $bl_th = date('M Y');
+    $page = 1;
+     ?>
+
     <header>
         <table>
             <tr>
@@ -124,10 +132,20 @@
                 <a href="<?= base_url('karyawan/reminder_pkwt') ?>"><img src="<?= base_url('assets/img/akt.png'); ?>" width="250" alt=""></a>
                 </td>
                 <td style="width: 280px;"></td>
-                <td><h1>PHL-<?= $karyawan['status_pkwt']; ?></h1></td>
+                <td style="display: none;">
+                    <?php if ($karyawan['status_pkwt'] == '1A' || $karyawan['status_pkwt'] == '2A' || $karyawan['status_pkwt'] == '3A') { ?>
+                        <h1>PHL-<?= $karyawan['status_pkwt']; ?></h1>
+                   <?php } else { ?>
+                    <h1 style="color: white;">PHL-<?= $karyawan['status_pkwt']; ?></h1>
+
+                    <?php }?>
+                </td>
             </tr>
         </table>
     </header>
+    
+
+   
 <br><br>
     <center><br><br>
         <h1> PERJANJIAN KERJA <br> HARIAN LEPAS
@@ -493,16 +511,15 @@
     <div style="page-break-after: always;">
         <!-- Konten yang akan diakhiri di halaman ini -->
     </div>
-    <div class="content">
-
-    <center><br><br>
+    
+    <center><br><br><br><br>
         <h3> PERJANJIAN KERJA WAKTU TERTENTU (PKWT)
 
         </h3> <br><br>
         
         <h3>NAMA JABATAN : <?= $karyawan['jabatan'] ?></h3><br><br>
 
-        <u><h2> PERIODE WAKTU : <?= format_indo(date("Y-m-d", strtotime($start_kontrak_pkwt))); ?> – <?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?> </h2> </u>
+        <u><h2> PERIODE WAKTU : <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> – <?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?> </h2> </u>
         Salary Per <?= $bl_th;?> : Rp. <?= number_format($karyawan['gaji'],0,',','.'); ?>
         <br><br><br><br><br>
         antara<br><br><br><br><br>
@@ -533,12 +550,11 @@
     <div style="page-break-after: always;">
         <!-- Konten yang akan diakhiri di halaman ini -->
     </div>
-
-
+    
     <div class="content">
         <center><h3>PERJANJIAN KERJA WAKTU TERTENTU (PKWT)</h3></center><hr>
 
-        <p>Pada hari ini, <?= format_indo(date("Y-m-d", strtotime($start_kontrak_pkwt))); ?> para pihak telah bersepakat dan saling menyetujui untuk mengadakan perjanjian kerja waktu tertentu (PKWT) sebagai berikut :<br>
+        <p>Pada hari ini, <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> para pihak telah bersepakat dan saling menyetujui untuk mengadakan perjanjian kerja waktu tertentu (PKWT) sebagai berikut :<br>
 <ul>
     <li type="none">
     <table>
@@ -627,9 +643,13 @@ Pasal 1</h4>
     <li>Pihak perusahaan berhak untuk melakukan mutasi / perpindahan tugas, transfer (pergeseran) ,penurunan jabatan (demosi), rotasi (perputaran tugas) pihak pekerja kebagian lain sesuai dengan kebijakan perusahaan;</li>
     <li>Pihak Pekerja di dalam pelaksanaan perjanjian ini akan bertindak sebagai pekerja yang baik yaitu untuk melakukan atau tidak melakukan segala sesuatu yang dalam keadaan yang sama seharusnya dilakukan atau tidak dilakukan oleh seorang pekerja yang baik;</li>
     <li>Pihak Pekerja selaku pekerja wajib menyampaikan segala laporan atas pekerjaan yang menjadi tugas dan kewenangannya dan selalu akan mengikuti petunjuk-petunjuk ataupun perintah kerja yang diberikan oleh atasan ataupun pimpinan;</li>
-    <li>Pihak Pekerja memahami dan menerima baik pekerjaan yang diberikan kepadanya dengan syarat-syarat sebagaimana ditentukan di dalam perjanjian kerja waktu tertentu (PKWT), peraturan perusahaan (PP), Standart  Operasional Prosedure (SOP) dan dengan ini pekerja berjanji serta mengikatkan diri untuk melakukan pekerjaan itu dengan sebaik-baiknya dan sejujur-jujurnya; untuk itu pekerja akan mencurahkan pula segala kegiatan dan kerajinannya;</li>
-</ol> <br><br><br><br><br><br>
-
+    <li>Pihak Pekerja memahami dan menerima baik pekerjaan yang diberikan kepadanya dengan syarat-syarat sebagaimana ditentukan di dalam perjanjian kerja waktu tertentu (PKWT), peraturan perusahaan (PP), Standart Operasional Prosedure (SOP) dan dengan ini pekerja berjanji serta mengikatkan diri untuk melakukan pekerjaan itu dengan sebaik-baiknya dan sejujur-jujurnya; untuk itu pekerja akan mencurahkan pula segala kegiatan dan kerajinannya;</li>
+</ol>
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
 <ol type="1" start="6">
     
     <li>Pihak Pekerja dengan ini menjamin kepada Pihak Perusahaan bahwa pada saat penandatangan perjanjian ini sampai dengan berakhirnya perjanjian ini atau selama berlangsungnya perjanjian kerja ini tidak sedang terikat oleh adanya hubungan kerja atau bekerja pada perusahaan/badan usaha/perorangan yang dapat mengganggu jalannya pekerjaan pihak Pekerja dan apabila terbukti Pihak Pekerja melanggar hal tersebut maka pekerja bersedia untuk mengundurkan diri dari seluruh tugas dan tanggungjawab seketika itu dan atau dikenakan sanksi pemutusan hubungan kerja (PHK) dengan tanpa diberikan ganti rugi atas sisa upah dari pejanjian kerja waktu terentu yang belum dijalani.</li>
@@ -638,7 +658,7 @@ Pasal 1</h4>
 <h4>BERLAKUNYA PERJANJIAN<br>
 Pasal 2</h4>
 <ol type="1">
-    <li>Para pihak telah sepakat dan saling setuju bahwa perjanjian kerja waktu tertentu (PKWT) ini mulai berlaku terhitung sejak tanggal <b><?= format_indo(date("Y-m-d", strtotime($start_kontrak_pkwt))); ?></b> sampai dengan <b><?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?></b> atau selama <b><?= $periode_pkwt;?>  Bulan</b> dan pengakhiran perjanjian ini tidak diperlukan adanya penetapan tertulis pemutusan hubungan kerja dari Lembaga Penyelesaian Perselisihan Hubungan Industrial;</li>
+    <li>Para pihak telah sepakat dan saling setuju bahwa perjanjian kerja waktu tertentu (PKWT) ini mulai berlaku terhitung sejak tanggal <b><?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?></b> sampai dengan <b><?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?></b> atau selama <b><?= $karyawan['periode'];?>  Bulan</b> dan pengakhiran perjanjian ini tidak diperlukan adanya penetapan tertulis pemutusan hubungan kerja dari Lembaga Penyelesaian Perselisihan Hubungan Industrial;</li>
     <li>Pihak pekerja telah sepakat dan setuju terhadap Pihak Perusahaan bahwa perjanjian kerja waktu tertentu ini akan berakhir demi hukum dengan selesainya jangka waktu yang diperjanjikan.</li>
 </ol>
 
@@ -665,7 +685,6 @@ Pasal 6</h4>
 </ol>
 
 
-
 <h4>SYARAT-SYARAT KERJA<br>
 Pasal 7</h4>
 <ol type="1">
@@ -681,8 +700,12 @@ Pasal 7</h4>
         <li>Melaksanakan pekerjaan sebagaimana yang diperjanjikan dengan sebaik-baiknya serta sejujur-jujurnya sesuai Standart Operasional Prosedur (SOP) / Job Description / Peraturan Perusahaan (PP) yang telah ditetapkan;</li> 
         
     </ol>
-</li></ol> <br><br><br><br>
-
+</li></ol>
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
 
 <ol type="1" start="2">
    
@@ -731,7 +754,11 @@ Pasal 8</h4>
         <li>Pihak pekerja bersedia bahwa dalam kurun waktu 3 (Tiga) bulan sejak ditandatanganinya perjanjian kerja ini untuk bekerja secara penuh dalam hari kerja efektif yang telah ditentukan oleh perusahaan, dan jika terdapat ketidakhadiran dalam bentuk apapun maka perusahaan hanya akan membayarkan gaji/upah sesuai dengan jumlah hari kehadiran pihak pekerja<br>
 Pihak pekerja tetap berkewajiban untuk mengajukan izin sebelumnya dan atau menginformasikan/melaporkan ketidakhadirannya kepada atasan langsung atau pihak perusahaan dan kemudian menyerahkan dokumen pendukung atau bukti yang diperlukan selambat-lambatnya pada saat pihak pekerja kembali hadir bekerja, semua bentuk ketidakhadiran pihak pekerja yang tidak mendapat izin, tidak dilaporkan dan atau tidak dilengkapi dokumen yang sah dan bisa dipertanggungjawabkan akan dianggap sebagai mangkir;</li>
 </ol>
-<br><br><br><br>
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
 <ol type="1" start="6">
         <li>Bila Pihak Pekerja melanggar peraturan disiplin kerja yang telah ditetapkan oleh Pihak Perusahaan seperti ; absen atau mangkir kerja, datang terlambat, pulang lebih awal, tidak melakukan check &ndash;clock atau kartu absensi dan lain-lain, maka Pihak Pekerja sanggup menerima sanksi dari Pihak Perusahaan berupa upah tidak akan dibayarkan berdasarkan ketentuan aturan Perusahaan maupun sanksi administrasi berupa surat peringatan tertulis.</li>
 
@@ -759,7 +786,6 @@ Pengakhiran perjanjian kerja oleh pihak pekerja :</p>
     </li>
 </ul>
 Pengakhiran perjanjian kerja oleh pihak pengusaha :</p>
-
 <ul>
     <li><p>9.1.6. Pihak Perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila pihak Pekerja telah melakukan pelanggaran peraturan perusahaan (PP), standart operasional prosedur (SOP) ataupun peraturan perundang-undangan yang berlaku yang dapat dikenakan sanksi pemutusan hubungan kerja;
 9.1.7. Pihak perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila menemukan bukti catatan dan atau rekam medis atas pihak pekerja mengenai kondisi kesehatannya dan pihak pekerja tidak melaporkan kondisi kesehatan yang sebenarnya atau sakit bawaannya kepada perusahaan pada saat penandatanganan perjanjian kerja ini yang berdampak pada ketidakhadiran pihak pekerja;<br>
@@ -771,8 +797,12 @@ Pengakhiran perjanjian kerja karena berakhirnya masa waktu perjanjian kerja :</p
     <p>9.3.1. Perjanjian ini dengan sendirinya berakhir demi hukum apabila waktu yang diperjanjikan telah terpenuhi sehingga tidak diperlukan adanya penetapan tertulis dari Lembaga penyelesaian Perselisihan Hubungan Industrial;
     </li>
 </ul>
-<br><br><br><br><br>
 
+</div>
+    <div style="page-break-after: always;">
+        <!-- Konten yang akan diakhiri di halaman ini -->
+    </div>
+    <div class="content">
 
 Pihak perusahaan dan pekerja dengan ini telah bersepakat dan menyetujui bahwa pada saat pengakhiran perjanjian kerja waktu tertentu ini, maka pihak pekerja bersedia melepaskan hak nya sebagai pekerja berupa kewajiban dari pihak perusahaan untuk memberikan kompensasi atas pengakhiran atau berakhirnya perjanjian kerja waktu tertentu yang telah dijalani sesuai dengan peraturan perundang-undangan ketenagakerjaan yang berlaku, dan membebaskan pihak perusahaan atas segala bentuk tuntutan secara hukum di kemudian hari.</p>
 
@@ -799,7 +829,7 @@ Pasal 11</h4>
 <ol type="1">
     <li>Pihak Perusahaan telah sepakat dan setuju untuk upah Pihak Pekerja diberikan Upah sebesar <b>Rp. <?= number_format($karyawan['gaji'],0,',','.'); ?>,-</b> yang akan dibayarkan Tanggal 15 setiap bulan.</li>
     <li>Pembayaran upah Pihak Pekerja akan dilakukan sesuai dengan ketentuan perusahaan setelah Pihak Pekerja melaksanakan pekerjaannya terlebih dahulu pada bulan tersebut.</li>
-    <li>Tata cara pembayaran atas upah Pihak Pekerja setiap bulannya akan dilakukan dengan cara pembayaran langsung dan atau cara transfer Bank kepada Pihak Pekerja.</li> 
+    <li>Tata cara pembayaran atas upah Pihak Pekerja setiap bulannya akan dilakukan dengan cara pembayaran langsung dan atau cara transfer Bank kepada Pihak Pekerja.</li>
     <li>Atas penerimaan upah sebagaimana tersebut diatas maka sesuai dengan ketentuan hukum pajak yang berlaku, apabila telah dapat dikenakan pembayaran wajib pajak penghasilan kepada pihak Pekerja yang besarnya sesuai dengan peraturan perundang-undangan yang berlaku maka akan dilakukan pemotongan langsung atas penerimaan upah setiap bulan dari Pihak pekerja tersebut .</li>
     <li>Apabila Pihak Pekerja tidak hadir bekerja di tempat kerjanya tanpa alasan yang sah (mangkir) , maka upah yang akan diterimanya selama pekerja tidak hadir bekerja sebagaimana tersebut diatas tidak akan dibayarkan oleh Perusahaan.</li>
     <li>Hak Cuti Tahunan Pihak Pekerja selama 12 hari kerja pada tahun itu baru akan timbul <b><u>SETELAH</u></b> Pihak Kedua bekerja selama 12 bulan secara terus menerus namun apabila ternyata Pihak Pengusaha tidak memperpanjang perjanjian ini sebagaimana tanggal yang tertera di dalam perjanjian ini maka hak cuti tahunan Pihak Pekerja pada tahun itu dengan sendirinya belum ada / belum timbul sebagaimana ditentukan di dalam pasal 79 ayat 2 huruf c UU No.13 Tahun 2003 Tentang Ketenagakerjaan sehingga tidak ada kewajiban hukum Pihak Perusahaan untuk memberikan hak cuti tahunan tersebut.</li>
@@ -812,7 +842,6 @@ Pasal 12</h4>
     <li>Pihak Pekerja dengan ini menjamin kepada Pihak Perusahaan bahwa di dalam pelaksanaan perjanjian kerja waktu tertentu ini tidak akan melakukan tuntutan untuk melakukan perubahan status pekerja dari pekerja waktu tertentu (kontrak) menjadi pekerja tetap;</li>
     <li>Pihak Pekerja dengan ini berjanji untuk selalu patuh dan taat serta mematuhi segala perintah pimpinan, peraturan perusahaan (PP), Standart Operasional Procedure (SOP) serta peraturan perundang-undangan di bidang ketenagakerjaan.</li>
 </ol>
-
 </div>
     <div style="page-break-after: always;">
         <!-- Konten yang akan diakhiri di halaman ini -->
@@ -844,7 +873,7 @@ Para pihak setelah membaca isi perjanjian ini dengan teliti dan seksama maka mas
         <center>
             <table border="0">
                 <tr>
-                    <td colspan="3">Dibuat di Pasuruan pada <?= format_indo(date("Y-m-d", strtotime($start_kontrak_pkwt))); ?> </td>
+                    <td colspan="3">Dibuat di Pasuruan pada <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> </td>
 
                 </tr>
                 <tr>
@@ -883,7 +912,6 @@ Para pihak setelah membaca isi perjanjian ini dengan teliti dan seksama maka mas
     </div>
 
 
-
     <footer style="font-size: 9pt;">
         PIER, Jalan Rembang Industri Raya, No. 45, Rembang, Pasuruan Indonesia</footer>
 
@@ -893,6 +921,7 @@ Para pihak setelah membaca isi perjanjian ini dengan teliti dan seksama maka mas
 </body>
 
 </html>
+
 <script>
     window.print();
 </script>

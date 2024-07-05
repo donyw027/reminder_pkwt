@@ -160,7 +160,7 @@
                         <div class="row form-group">
                             <label class="col-4 text-md-right" for="periode">periode</label>
                             <div class="col-md-8">
-                                <input value="12" type="text" id="periode" name="periode" class="form-control" placeholder=" Masukan periode" disabled>
+                                <input value="12" type="text" id="periode" name="periode" class="form-control" placeholder=" Masukan periode" readonly>
                                 <?= form_error('periode', '<span class="text-danger small">', '</span>'); ?>
                             </div>
                         </div>

@@ -31,6 +31,19 @@
                 /* Hindari memecah konten di tengah halaman */
             }
 
+            header.print-header {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 50px;
+                text-align: center;
+                background-color: #f8f8f8;
+                border-bottom: 1px solid #ddd;
+                padding: 10px 0;
+            }
+
             /* Atur halaman baru sebelum dan setelah elemen dengan class .page-break */
             .page-break {
                 page-break-before: always;
@@ -58,6 +71,9 @@
             /* Adjust the height of your footer */
             text-align: center;
             padding: 10px;
+        }
+        header.print-header {
+            display: none;
         }
 
 
@@ -104,6 +120,11 @@
 
 <body>
 <?= form_open('', [], ['id' => $karyawan['id']]); ?>
+<header class="print-header" id="1">
+    <br><br><br><br><br>
+    <button><a href="<?= base_url('karyawan/up_print_pkwt/') . $karyawan['id'] ?>" class="btn  btn-sm btn-primary">Edit & Print PKWT</a></button>
+    <button><a href="<?= base_url('pkwt/print_pkwt/') . $karyawan['id'] ?>" class="btn  btn-sm btn-primary" target="_blank">Print PKWT</a></button>
+    </header>
 
 <?php 
     $tgl = format_indo(date('Y-m-d'));
@@ -484,3 +505,27 @@
 <!-- <script>
     window.print();
 </script> -->
+
+<script>
+    window.addEventListener('beforeprint', function () {
+        const headers = document.querySelectorAll('header.print-header');
+        const pages = document.querySelectorAll('.page');
+        headers.forEach(header => header.style.display = 'none');
+
+        pages.forEach((page, index) => {
+            if (index < 6) { // Only for pages 1 to 6
+                const header = headers[index];
+                if (header) {
+                    const clonedHeader = header.cloneNode(true);
+                    clonedHeader.style.display = 'none';
+                    page.insertAdjacentElement('afterbegin', clonedHeader);
+                }
+            }
+        });
+    });
+
+    window.addEventListener('afterprint', function () {
+        const headers = document.querySelectorAll('header.print-header');
+        headers.forEach(header => header.style.display = 'block');
+    });
+</script>

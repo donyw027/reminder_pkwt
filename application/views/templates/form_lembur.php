@@ -191,6 +191,7 @@
                 <td></td>
             </tr>
         </table>
+        <b style="color: red;">Note : NIK Wajib Di isi, <br>Bila OT tidak terinput karena NIK tidak ditulis, maka tidak ada revisi OT</b>
         <table border="1" style="float: right; margin-top:3px ;border: 1px solid black; text-align: center; border-collapse: collapse ;">
             <tr >
                 <td>Pemohon, <br><br><br>Supervisor</td>
@@ -304,6 +305,7 @@
                 <td></td>
             </tr>
         </table>
+        <b style="color: red;">Note : NIK Wajib Di isi, <br>Bila OT tidak terinput karena NIK tidak ditulis, maka tidak ada revisi OT</b>
         <table border="1" style="float: right; margin-top:3px ; border: 1px solid black; text-align: center; border-collapse: collapse ;">
             <tr >
                 <td>Pemohon, <br><br><br>Supervisor</td>
