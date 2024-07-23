@@ -121,7 +121,7 @@
                     <div class="col-md-8">
                     <select value="<?= set_value('jk'); ?>" type="text" id="jk" name="jk" class="form-control" placeholder=" Masukan jk">
                             <option value="">--Pilih Jenis Kelamin--</option>
-                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>
                         <!-- <input value="<?= set_value('jk'); ?>" type="text" id="jk" name="jk" class="form-control" placeholder=" Masukan jk"> -->
