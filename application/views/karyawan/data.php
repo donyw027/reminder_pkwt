@@ -28,6 +28,8 @@
                     <th>nama</th>
                     <th>status_pkwt</th>
                     <th>jabatan</th>
+                    <th>status_karyawan</th>
+
                     <th>divisi</th>
                     <th>dept</th>
                     <th>post</th>
@@ -45,7 +47,6 @@
                     <th>bpjskes</th>
                     <th>bank</th>
                     
-                    <th>status_karyawan</th>
                     <th>keterangan</th>
                     <th>tgl_join</th>
                     <th>tgl_keluar</th>
@@ -63,9 +64,11 @@
                         <tr>
                             <td><?= $no++; ?></td>
                             <td><?=$karyawani['nik_akt'] ?></td>
-                            <td><?=$karyawani['nama'] ?></td>
+                            <td><a href="<?= base_url('karyawan/edit/') . $karyawani['id'] ?>" class=""><?=$karyawani['nama'] ?></a></td>
                             <td><?=$karyawani['status_pkwt'] ?></td>
                             <td><?=$karyawani['jabatan'] ?></td>
+                            <td><?=$karyawani['status_karyawan'] ?></td>
+
                             <td><?=$karyawani['divisi'] ?></td>
                             <td><?=$karyawani['dept'] ?></td>
                             <td><?=$karyawani['post'] ?></td>
@@ -82,7 +85,6 @@
                             <td><?=$karyawani['bpjskes'] ?></td>
                             <td><?=$karyawani['bank'] ?></td>
                             
-                            <td><?=$karyawani['status_karyawan'] ?></td>
                             <td><?=$karyawani['keterangan'] ?></td>
                             <td><?=$karyawani['tgl_join'] ?></td>
                             <td><?=$karyawani['tgl_keluar'] ?></td>
@@ -91,7 +93,7 @@
 
                             <td>
 
-                                <a href="<?= base_url('karyawan/edit/') . $karyawani['id'] ?>" class="btn btn-circle btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i></a>
+                                <!-- <a href="<?= base_url('karyawan/edit/') . $karyawani['id'] ?>" class="btn btn-circle btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i></a> -->
                                 <a onclick="return confirm('Yakin ingin menghapus data?')" href="<?= base_url('karyawan/delete/') . $karyawani['id'] ?>" class="btn btn-circle btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i></a>
                             </td>
                             
