@@ -149,6 +149,12 @@
                     <span>Friday List</span>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link pb-0" href="<?= base_url('paklaring'); ?>">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Paklaring</span>
+                </a>
+            </li>
             
 
             

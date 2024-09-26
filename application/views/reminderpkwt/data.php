@@ -69,9 +69,9 @@
 <!-- 
                                 <a href="<?= base_url('karyawan/up_print_phl_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-dark">Edit Print PHL & PKWT</a>
                                 <a href="<?= base_url('pkwt/print_phl_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-dark" target="_blank">Print PHL & PKWT</a> -->
-                                <!-- <a onclick="return confirm('Yakin ingin Simpan data PKWT?')" href="<?= base_url('pkwt/simpan_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-danger">Simpan PKWT</a>
+                                <br><br><a onclick="return confirm('Yakin ingin Simpan data PKWT?')" href="<?= base_url('pkwt/simpan_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-danger">Simpan PKWT</a>
 
-                                <a href="<?= base_url('pkwt/riwayat_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-warning" >Riwayat Kontrak</a> -->
+                                <a href="<?= base_url('pkwt/riwayat_pkwt/') . $row['id'] ?>" class="btn  btn-sm btn-warning" >Riwayat Kontrak</a>
                                 
                             </td>
                             

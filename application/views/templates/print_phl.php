@@ -159,7 +159,7 @@
 
             </tr>
             <tr style="text-align: left; font-weight: bold; font-size: 18pt;">
-                <td>ID</td>
+                <td>ID.</td>
                 <td>:</td>
                 <td><?= set_value('nik_akt', $karyawan['nik_akt']); ?></td>
 
@@ -307,9 +307,9 @@
         <h4>Pasal 5 <br>
             Tunjangan Hari Raya</h4>
         <ol>
-            <li>Tunjangan Hari Raya / THR hanya diberikan kepada pekerja dengan masa kerja lebih dari 1 bulan sebelum hari raya.</li>
-            <li>Tunjangan Hari Raya / THR bagi Pekerja dengan masa kerja lebih dari 1 bulan dan di bawah 1 Tahun,akan di hitung secara proporsional.</li>
-            <li>Tunjangan Hari Raya / THR bagi Pekerja 1 Tahun atau lebih dibayarkan sebesar 1 kali Gaji.</li>
+            <li>Tunjangan Hari Raya / THR hanya diberikan kepada pekerja dengan masa kerja lebih dari 30 hari setelah penandatanganan Perjanjian Kerja Waktu Tertentu yang sedang dijalaninya dan masa berlakunya Perjanjian kerja waktu tertentu tersebut tidak berakhir  sebelum pelaksanaan hari raya.</li>
+            <li>Tunjangan Hari Raya / THR bagi Pekerja dengan masa kerja lebih dari 30 hari dan di bawah 1 Tahun, akan di hitung secara proporsional sesuai masa kerja dari perjanjian kerja yang sedang dijalaninya.</li>
+            <li>Tunjangan Hari Raya / THR bagi Pekerja yang telah bekerja selama 1 Tahun atau lebih dibayarkan sebesar 1 kali Gaji.</li>
         </ol>
         </p>
 
@@ -386,24 +386,65 @@
         <h4>PENGAKHIRAN PERJANJIAN<br>
             Pasal 8</h4>
         Perjanjian kerja harian lepas ini akan berakhir apabila :
-        <ul>
-            <li>8.1. Salah satu dari 2 pihak (pihak perusahaan atau pihak pekerja) memutuskan perjanjian kerja ini;</li>
-            <li>8.2. Masa waktu berlakunya telah berakhir;</li>
-            <li>8.3. Pekerja meninggal dunia;</li>
-        </ul>
+        <ol>
+            <li type="none"><b>8.1.</b> Salah satu dari 2 pihak (pihak perusahaan atau pihak pekerja) memutuskan perjanjian kerja ini;
+                <ol>
+                    <li type="none"><b>8.1.1.</b> Pengakhiran perjanjian kerja oleh pihak pekerja :
+                            <ol>
+                                <li type="none">
+                                <b>8.1.1.1.</b>	Pihak Pekerja yang bekerja kurang dari 30 hari dan bermaksud mengundurkan diri, maka harus memberitahukan kepada Pihak Perusahaan minimal 14 hari kerja sebelum hari pengunduran diri, dan bersedia menerima sanksi administratif berupa pemotongan separuh (50%) atas upah yang seharusnya diterima dihitung dari hari kerja yang sudah dijalani sebelum pengunduran diri;
+                                </li> <br><br><br><br><br><br><br><br>
+                                <li type="none">
+                                <b>8.1.1.2.</b>	Pihak Pekerja dapat mengakhiri perjanjian ini sewaktu-waktu dengan cara mengajukan pengunduran diri secara tertulis dengan tenggang waktu 30 (tiga puluh) hari kerja komulatif tanpa memperhitungkan hari libur atau segala bentuk ketidakhadiran lainnya sebelum tanggal pekerja tersebut mengundurkan diri sebagaimana tertera di dalam suratnya;
+                                </li>
+                                <li type="none">
+                                <b>8.1.1.3.</b>	Apabila tanggal pengunduran diri telah ditentukan, sebagaimana dimaksud dalam pasal 8.1.1.1 dan/atau 8.1.1.2, perhitungan gaji akan menggunakan sistem “No Show No Pay”, perusahaan bersikeras untuk menerapkan sistem ini agar karyawan tetap bekerja sesuai dengan keinginannya. /Posisinya saat ini sementara perusahaan mempunyai cukup waktu untuk mencari pengganti dan menyerahkan seluruh pekerjaan;
+                                </li>
+                                <li type="none">
+                                <b>8.1.1.4.</b>	Pada saat tanggal pengunduran diri telah diserahkan atau diputuskan, seperti yang tercantum pada Pasal 8.1.1.1 dan 8.1.1.2. Maka sistem perhitungan gaji akan berdasarkan “no show, no pay”, pihak perusahaan bersikeras menerapkan hal ini agar pihak pekerja tetap melaksanakan pekerjaannya hingga tanggal tersebut di atas, dan memberi cukup waktu bagi perusahaan untuk mencari pengganti dan melakukan serah terima jabatan atau pekerjaan.
+                                </li>
+                                <li type="none">
+                                <b>8.1.1.5.</b>	Kegagalan pemenuhan kondisi Pengakhiran atas perjanjian kerja waktu tertentu oleh Pihak Pekerja sebagaimana tersebut di Pasal 8.1.1.2. diatas, berakibat Pihak Pekerja dikenakan sanksi administratif berupa pemotongan sisa upah yang belum dibayarkan sebesar kekurangan pemenuhan 30 (tiga puluh) hari kerja komulatif (pasal 8.1.1.2.), atau ganti rugi sebesar upah yang disepakati untuk sisa perjanjian kerja waktu tertentu yang belum dijalani;
+                                </li>
+                        </ol>
+                    </li>
+                    <li type="none"><b>8.1.2.</b>	Pengakhiran perjanjian kerja oleh pihak perusahaan :
+                            <ol>
+                                <li type="none"><b>8.1.2.1.</b>	Pihak Perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila pihak Pekerja telah melakukan pelanggaran peraturan perusahaan (PP), standart operasional prosedur (SOP) ataupun peraturan perundang-undangan yang berlaku yang dapat dikenakan sanksi pemutusan hubungan kerja;</li>
+                                <li type="none"><b>8.1.2.2.</b>	Pihak perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila menemukan bukti catatan dan atau rekam medis atas pihak pekerja mengenai kondisi kesehatannya dan pihak pekerja tidak melaporkan kondisi kesehatan yang sebenarnya atau sakit bawaannya kepada perusahaan pada saat penandatanganan perjanjian kerja ini yang berdampak pada ketidakhadiran pihak pekerja;</li>
+                                <li type="none"><b>8.1.2.3.</b>	Apabila pengakhiran perjanjian ini disebabkan oleh pelanggaran sebagaimana tercantum dalam pasal 8.1.1.4 dan atau 8.1.1.5. di atas, maka Pihak Pekerja tidak berhak atas sisa upah yang belum dibayarkan dan atau segala bentuk kompensasi lainnya yang seharusnya diterima oleh pekerja tersebut, seperti dan tidak terbatas pada uang pesangon, uang penghargaan masa kerja, uang pisah dan kompensasi lain sebagaimana diatur dalam undang-undang ketenagakerjaan yang berlaku. serta melepaskan pihak perusahaan atas segala bentuk gugatan dan atau konsekuensi hukum yang bisa ditimbulkan setelahnya;</li>
+                        </ol>
+                    </li>
+                        </ol>
+            </li>
+            <li type="none"><b>8.2.</b> Masa waktu berlakunya telah berakhir;
+            <ol>
+                    <li type="none"><b>8.2.1.</b>	Pengakhiran perjanjian kerja karena berakhirnya masa waktu perjanjian kerja :
+                            <ol>
+                                <li type="none">
+                                <b>8.2.1.1.</b>	Perjanjian ini dengan sendirinya berakhir demi hukum apabila waktu yang diperjanjikan telah terpenuhi sehingga tidak diperlukan adanya penetapan tertulis dari Lembaga penyelesaian Perselisihan Hubungan Industrial;<br>
+Apabila pihak pekerja berniat untuk tidak melanjutkan/menerima kontrak baru dan atau perubahan jenis perjanjian kerja baru yang mungkin akan diberikan oleh perusahaan setelah berakhirnya perjanjian kerja ini, maka pihak pekerja wajib memberitahukan kepada pihak manajemen perusahaan minimal 30 (Tiga Puluh) hari kerja sebelum berakhirnya perjanjian kerja ini,<br>
+Keterlambatan pemberitahuan seperti tersebut di atas, akan mengakibatkan pihak pekerja dikategorikan sebagai pengunduran diri secara sepihak atau pengunduran diri yang tidak mengikuti regulasi yang seharusnya, dan akan dikenai sanksi administratif sesuai jenis perjanjian kerja yang berlaku saat ini.
 
-        Pengakhiran perjanjian kerja oleh pihak pekerja :
-        </div>
+                                </li>
+                        </ol>
+                    </li>
+                    
+                        </ol>
+            </li>
+            <li type="none"><b>8.3.</b> Pekerja meninggal dunia;</li>
+                        </ol>
+
+        <!-- </div>
     <div style="page-break-after: always;">
-        <!-- Konten yang akan diakhiri di halaman ini -->
     </div>
-    <div class="content">
-        <ul>
-            <li>8.1.1. Pihak Pekerja yang bekerja kurang dari 30 hari dan bermaksud mengundurkan diri, maka harus memberitahukan kepada Pihak Perusahaan minimal 7 hari kerja sebelum hari pengunduran diri, dan bersedia menerima sanksi administratif berupa pemotongan separuh (50%) atas upah yang seharusnya diterima dihitung dari hari kerja yang sudah dijalani sebelum pengunduran diri;</li>
-            <li>8.1.2. Pihak Pekerja dapat mengakhiri perjanjian ini sewaktu-waktu dengan cara mengajukan pengunduran diri secara tertulis dengan tenggang waktu 30 (tiga puluh) hari kerja komulatif tanpa memperhitungkan hari libur atau segala bentuk ketidakhadiran lainnya sebelum tanggal pekerja tersebut mengundurkan diri sebagaimana tertera di dalam suratnya;</li>
-            <li>8.1.3. Apabila tanggal pengunduran diri telah ditentukan, sebagaimana dimaksud dalam pasal 8.1.1 dan/atau 8.1.2, perhitungan gaji akan menggunakan sistem &quot;No Show No Pay&quot;, perusahaan bersikeras untuk menerapkan sistem ini agar karyawan tetap bekerja sesuai dengan keinginannya. /Posisinya saat ini sementara perusahaan  mempunyai cukup waktu untuk mencari pengganti dan menyerahkan seluruh pekerjaan;</li>
-            <li>8.1.4. Pada saat tanggal pengunduran diri telah diserahkan atau diputuskan, seperti yang tercantum pada Pasal 8.1.1 dan 8.1.2. Maka sistem perhitungan gaji akan berdasarkan &ldquo;no show, no pay&rdquo;, pihak perusahaan bersikeras menerapkan hal ini agar pihak pekerja tetap melaksanakan pekerjaannya hingga tanggal tersebut di atas, dan memberi cukup waktu bagi perusahaan untuk mencari pengganti dan melakukan serah terima jabatan atau pekerjaan;</li>
-            <li>8.1.5. Kegagalan pemenuhan kondisi Pengakhiran atas perjanjian kerja harian lepas ini oleh Pihak Pekerja sebagaimana tersebut di Pasal 8.1.1. diatas, berakibat Pihak Pekerja dikenakan sanksi administratif berupa pemotongan sisa upah yang belum dibayarkan sebesar kekurangan pemenuhan 30 (tiga puluh) hari kerja komulatif (pasal 8.1.2.), atau ganti rugi sebesar upah yang disepakati untuk sisa perjanjian kerja waktu tertentu yang belum dijalani;<br>
+    <div class="content"> -->
+        <!-- <ol>
+            <li type="none">8.1.1.1 Pihak Pekerja yang bekerja kurang dari 30 hari dan bermaksud mengundurkan diri, maka harus memberitahukan kepada Pihak Perusahaan minimal 7 hari kerja sebelum hari pengunduran diri, dan bersedia menerima sanksi administratif berupa pemotongan separuh (50%) atas upah yang seharusnya diterima dihitung dari hari kerja yang sudah dijalani sebelum pengunduran diri;</li>
+            <li type="none">8.1.1.2 Pihak Pekerja dapat mengakhiri perjanjian ini sewaktu-waktu dengan cara mengajukan pengunduran diri secara tertulis dengan tenggang waktu 30 (tiga puluh) hari kerja komulatif tanpa memperhitungkan hari libur atau segala bentuk ketidakhadiran lainnya sebelum tanggal pekerja tersebut mengundurkan diri sebagaimana tertera di dalam suratnya;</li>
+            <li type="none">8.1.1.3. Apabila tanggal pengunduran diri telah ditentukan, sebagaimana dimaksud dalam pasal 8.1.1 dan/atau 8.1.2, perhitungan gaji akan menggunakan sistem &quot;No Show No Pay&quot;, perusahaan bersikeras untuk menerapkan sistem ini agar karyawan tetap bekerja sesuai dengan keinginannya. /Posisinya saat ini sementara perusahaan  mempunyai cukup waktu untuk mencari pengganti dan menyerahkan seluruh pekerjaan;</li>
+            <li type="none">8.1.1.4. Pada saat tanggal pengunduran diri telah diserahkan atau diputuskan, seperti yang tercantum pada Pasal 8.1.1 dan 8.1.2. Maka sistem perhitungan gaji akan berdasarkan &ldquo;no show, no pay&rdquo;, pihak perusahaan bersikeras menerapkan hal ini agar pihak pekerja tetap melaksanakan pekerjaannya hingga tanggal tersebut di atas, dan memberi cukup waktu bagi perusahaan untuk mencari pengganti dan melakukan serah terima jabatan atau pekerjaan;</li>
+            <li type="none">8.1.1.5. Kegagalan pemenuhan kondisi Pengakhiran atas perjanjian kerja harian lepas ini oleh Pihak Pekerja sebagaimana tersebut di Pasal 8.1.1. diatas, berakibat Pihak Pekerja dikenakan sanksi administratif berupa pemotongan sisa upah yang belum dibayarkan sebesar kekurangan pemenuhan 30 (tiga puluh) hari kerja komulatif (pasal 8.1.2.), atau ganti rugi sebesar upah yang disepakati untuk sisa perjanjian kerja waktu tertentu yang belum dijalani;<br>
                 Pengakhiran perjanjian kerja oleh pihak pengusaha :</li>
             <li>8.1.6. Pihak Perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila pihak Pekerja telah melakukan pelanggaran peraturan perusahaan (PP), standart operasional prosedur (SOP) ataupun peraturan perundang-undangan yang berlaku yang dapat dikenakan sanksi pemutusan hubungan kerja;</li>
             <li>8.1.7. Pihak perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila menemukan bukti catatan dan atau rekam medis atas pihak pekerja mengenai kondisi kesehatannya dan pihak pekerja tidak melaporkan kondisi kesehatan yang sebenarnya atau sakit bawaannya kepada perusahaan pada saat penandatanganan perjanjian kerja ini yang berdampak pada ketidakhadiran pihak pekerja;</li>
@@ -416,7 +457,7 @@
             <li>
                 8.2. Perjanjian ini dengan sendirinya berakhir demi hukum apabila waktu yang diperjanjikan telah terpenuhi sehingga tidak diperlukan adanya penetapan tertulis dari Lembaga penyelesaian Perselisihan Hubungan Industrial;
             </li>
-        </ul>
+        </ul> -->
 
 
         <h4>Pasal 9<br>
@@ -502,9 +543,9 @@
 </body>
 
 </html>
-<!-- <script>
+<script>
     window.print();
-</script> -->
+</script>
 
 <script>
     window.addEventListener('beforeprint', function () {
