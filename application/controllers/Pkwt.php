@@ -227,7 +227,10 @@ class Pkwt extends CI_Controller
 
         $this->admin->insert('riwayat_pkwt', $input_data);
         set_pesan('data berhasil disimpan.');
-        redirect('karyawan/data_pkwt');
+        // redirect('karyawan/data_pkwt');
+        // redirect('karyawan/up_print_phl/'.$id);
+
+        redirect('karyawan/up_print_pkwt/'.$id);
     }
 
     public function delete($getId)

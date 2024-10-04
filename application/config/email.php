@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config['protocol']  = 'smtp';
-$config['smtp_host'] = 'srv26.niagahoster.com';
+$config['smtp_host'] = 'srv177.niagahoster.com';
 $config['smtp_port'] = 465;
 $config['smtp_user'] = 'aktindonesia@akt-id.com';
 $config['smtp_pass'] = '@ktindonesi@';
