@@ -159,7 +159,7 @@
         <u>
             <h2> PERIODE WAKTU : <?= format_indo(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> – <?= format_indo(date("Y-m-d", strtotime($karyawan['end_kontrak']))); ?> </h2>
         </u>
-        Salary Per <?= $bl_th; ?> : Rp. <?= number_format($karyawan['gaji'], 0, ',', '.'); ?>
+        Salary Per <?= format_bulan(date("Y-m-d", strtotime($karyawan['start_kontrak']))); ?> : Rp. <?= number_format($karyawan['gaji'], 0, ',', '.'); ?>
         <br><br><br><br><br>
         ANTARA<br><br><br><br><br>
 
@@ -419,8 +419,66 @@
             Pasal 9</h4>
         </p>
 
+        
+
         <p>Perjanjian kerja waktu tertentu ini akan berakhir apabila :</p>
+
         <ul>
+            <li type="none"><b>9.1.</b>	Salah satu dari 2 pihak (pihak perusahaan atau pihak pekerja) memutuskan perjanjian kerja waktu tertentu ini;
+                <ul>
+                    <li type="none"><b>9.1.1.</b>	Pengakhiran perjanjian kerja oleh pihak pekerja :
+                        <ul>
+                            <li type="none">
+                            <b>9.1.1.1.</b>	Pihak Pekerja yang bekerja kurang dari 30 hari dan bermaksud mengundurkan diri, maka harus memberitahukan kepada Pihak Perusahaan minimal 7 hari kerja sebelum hari pengunduran diri, dan bersedia menerima sanksi administratif berupa pemotongan separuh (50%) atas upah yang seharusnya diterima dihitung dari hari kerja yang sudah dijalani sebelum pengunduran diri;
+                            </li>
+                            <li type="none">
+                            <b>9.1.1.2.</b>	Pihak Pekerja dapat mengakhiri perjanjian ini sewaktu-waktu dengan cara mengajukan pengunduran diri secara tertulis dengan tenggang waktu 30 (tiga puluh) hari kerja komulatif tanpa memperhitungkan hari libur atau segala bentuk ketidakhadiran lainnya sebelum tanggal pekerja tersebut mengundurkan diri sebagaimana tertera di dalam suratnya;
+                            </li>
+                            <li type="none">
+                            <b>9.1.1.3.</b>	Apabila tanggal pengunduran diri telah ditentukan, sebagaimana dimaksud dalam pasal 9.1.1.1 dan/atau 9.1.1.2, perhitungan gaji akan menggunakan sistem “No Show No Pay”, perusahaan bersikeras untuk menerapkan sistem ini agar karyawan tetap bekerja sesuai dengan keinginannya. /Posisinya saat ini sementara perusahaan mempunyai cukup waktu untuk mencari pengganti dan menyerahkan seluruh pekerjaan;
+                            </li>
+                            <li type="none">
+                            <b>9.1.1.4.</b>	Pada saat tanggal pengunduran diri telah diserahkan atau diputuskan, seperti yang tercantum pada Pasal 9.1.1.1 dan 9.1.1.2. Maka sistem perhitungan gaji akan berdasarkan “no show, no pay”, pihak perusahaan bersikeras menerapkan hal ini agar pihak pekerja tetap melaksanakan pekerjaannya hingga tanggal tersebut di atas, dan memberi cukup waktu bagi perusahaan untuk mencari pengganti dan melakukan serah terima jabatan atau pekerjaan.
+                            </li>
+                            <li type="none">
+                            <b>9.1.1.5.</b>	Kegagalan pemenuhan kondisi Pengakhiran atas perjanjian kerja waktu tertentu oleh Pihak Pekerja sebagaimana tersebut di Pasal 9.1.1.2. diatas, berakibat Pihak Pekerja dikenakan sanksi administratif berupa pemotongan sisa upah yang belum dibayarkan sebesar kekurangan pemenuhan 30 (tiga puluh) hari kerja komulatif (pasal 9.1.1.2.), atau ganti rugi sebesar upah yang disepakati untuk sisa perjanjian kerja waktu tertentu yang belum dijalani;
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li type="none">9.1.2.	Pengakhiran perjanjian kerja oleh pihak perusahaan :
+                        <ul>
+                            <li type="none">
+                            <b>9.1.2.1.</b>	Pihak Perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila pihak Pekerja telah melakukan pelanggaran peraturan perusahaan (PP), standart operasional prosedur (SOP) ataupun peraturan perundang-undangan yang berlaku yang dapat dikenakan sanksi pemutusan hubungan kerja;
+                            </li>
+                            <li type="none">
+                            <b>9.1.2.2.</b>	Pihak perusahaan dapat mengakhiri perjanjian ini sewaktu-waktu apabila menemukan bukti catatan dan atau rekam medis atas pihak pekerja mengenai kondisi kesehatannya dan pihak pekerja tidak melaporkan kondisi kesehatan yang sebenarnya atau sakit bawaannya kepada perusahaan pada saat penandatanganan perjanjian kerja ini yang berdampak pada ketidakhadiran pihak pekerja;
+                            </li>
+                            <li type="none">
+                            <b>9.1.2.3.</b>	Apabila pengakhiran perjanjian ini disebabkan oleh pelanggaran sebagaimana tercantum dalam pasal 9.1.1.4 dan atau 9.1.1.5. di atas, maka Pihak Pekerja tidak berhak atas sisa upah yang belum dibayarkan dan atau segala bentuk kompensasi lainnya yang seharusnya diterima oleh pekerja tersebut, seperti dan tidak terbatas pada uang pesangon, uang penghargaan masa kerja, uang pisah dan kompensasi lain sebagaimana diatur dalam undang-undang ketenagakerjaan yang berlaku. serta melepaskan pihak perusahaan atas segala bentuk gugatan dan atau konsekuensi hukum yang bisa ditimbulkan setelahnya;
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+
+            <li type="none"><b>9.2.</b>	Masa waktu berlakunya telah berakhir;
+                <ul>
+                    <li type="none"><b>9.2.1.</b>	Pengakhiran perjanjian kerja karena berakhirnya masa waktu perjanjian kerja :
+                        <ul>
+                            <li type="none"><b>9.2.1.1.</b>	Perjanjian ini dengan sendirinya berakhir demi hukum apabila waktu yang diperjanjikan telah terpenuhi sehingga tidak diperlukan adanya penetapan tertulis dari Lembaga penyelesaian Perselisihan Hubungan Industrial;</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+            
+
+
+            <li type="none"><b>9.3.</b>	Pekerja meninggal dunia;</li>
+
+        </ul>
+        <!-- <ul>
             <li>
                 <p>9.1. Salah satu dari 2 pihak (pihak perusahaan atau pihak pekerja) memutuskan perjanjian kerja waktu tertentu ini;<br>
                     9.2. Masa waktu berlakunya telah berakhir;<br>
@@ -450,7 +508,7 @@
             <li>
                 <p>9.2.1. Perjanjian ini dengan sendirinya berakhir demi hukum apabila waktu yang diperjanjikan telah terpenuhi sehingga tidak diperlukan adanya penetapan tertulis dari Lembaga penyelesaian Perselisihan Hubungan Industrial;
             </li>
-        </ul>
+        </ul> -->
 
     </div>
     <div style="page-break-after: always;">
