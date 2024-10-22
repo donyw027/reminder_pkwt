@@ -26,6 +26,10 @@
                     <th width="30">No.</th>
                     <th>nik_akt</th>
                     <th>nama</th>
+                    <th>email</th>
+                    <th>ttl</th>
+
+
                     <th>status_pkwt</th>
                     <th>jabatan</th>
                     <th>status_karyawan</th>
@@ -40,9 +44,7 @@
                     <th>gaji</th>
                     <th>nik_kk</th>
                     <th>jk</th>
-                    <th>ttl</th>
                     <th>alamat</th>
-                    <th>email</th>
                     <th>bpjstk</th>
                     <th>bpjskes</th>
                     <th>bank</th>
@@ -65,6 +67,10 @@
                             <td><?= $no++; ?></td>
                             <td><?=$karyawani['nik_akt'] ?></td>
                             <td><a href="<?= base_url('karyawan/edit/') . $karyawani['id'] ?>" class=""><?=$karyawani['nama'] ?></a></td>
+                            <td><?=$karyawani['email'] ?></td>
+                            <td><?=$karyawani['ttl'] ?></td>
+
+
                             <td><?=$karyawani['status_pkwt'] ?></td>
                             <td><?=$karyawani['jabatan'] ?></td>
                             <td><?=$karyawani['status_karyawan'] ?></td>
@@ -78,9 +84,7 @@
                             <td>Rp. <?= number_format($karyawani['gaji'],0,',','.'); ?> </td>
                             <td><?=$karyawani['nik_kk'] ?></td>
                             <td><?=$karyawani['jk'] ?></td>
-                            <td><?=$karyawani['ttl'] ?></td>
                             <td><?=$karyawani['alamat'] ?></td>
-                            <td><?=$karyawani['email'] ?></td>
                             <td><?=$karyawani['bpjstk'] ?></td>
                             <td><?=$karyawani['bpjskes'] ?></td>
                             <td><?=$karyawani['bank'] ?></td>

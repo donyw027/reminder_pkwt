@@ -27,6 +27,58 @@ class Karyawan extends CI_Controller
         }
     }
 
+    public function paklaring()
+    {
+
+        $data['title'] = "Paklaring";
+        $role = $this->session->userdata('login_session')['role'];
+
+        if (is_admin() == true) {
+            $data['karyawan'] = $this->admin->get('karyawan');
+
+            $this->template->load('templates/dashboard', 'paklaring/data', $data);
+        }
+    }
+
+    public function submit_paklaring() {
+
+        
+        $nik_akt = $this->input->post('nik_akt');
+        $tgl_join = $this->input->post('tgl_join');
+        $tgl_keluar = $this->input->post('tgl_keluar');
+        $alasan_keluar = $this->input->post('alasan_keluar');
+
+         // Simpan data sementara di session untuk diteruskan ke halaman cetak
+    $this->session->set_flashdata('tgl_join', $tgl_join);
+    $this->session->set_flashdata('tgl_keluar', $tgl_keluar);
+    $this->session->set_flashdata('alasan_keluar', $alasan_keluar);
+    
+        // Lakukan penyimpanan data sesuai kebutuhan ke database atau lainnya
+        // Setelah data tersimpan, redirect ke halaman cetak paklaring
+        redirect('karyawan/print_paklaring/' . $nik_akt);
+    }
+
+    public function print_paklaring($nik_akt)
+    {
+
+        $data['title'] = "Print Paklaring";
+        $role = $this->session->userdata('login_session')['role'];
+        $bulan = date('m');
+
+        
+            $data['karyawan'] = $this->admin->get('karyawan', ['nik_akt' => $nik_akt]);
+
+            $data['tgl_join'] = $this->session->flashdata('tgl_join');
+    $data['tgl_keluar'] = $this->session->flashdata('tgl_keluar');
+    $data['alasan_keluar'] = $this->session->flashdata('alasan_keluar');
+
+            
+            $data['nama_hrd'] = $this->admin->getNamaHrd();
+
+            $this->template->load('templates/paklaring', 'paklaring/paklaring', $data);
+        
+    }
+
     public function data_pkwt()
     {
 

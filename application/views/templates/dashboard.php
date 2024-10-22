@@ -150,7 +150,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link pb-0" href="<?= base_url('paklaring'); ?>">
+                <a class="nav-link pb-0" href="<?= base_url('karyawan/paklaring'); ?>">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Paklaring</span>
                 </a>
