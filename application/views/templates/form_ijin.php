@@ -232,7 +232,7 @@
             </td>
         </tr>
     </table>
-    <h4 style="color: red; margin: 5px;">FORM DISERAHKAN KE SECURITY SETELAH DITANDATANGANI HRD DAN SCAN ABSENSI</h4><br><br>
+    <h4 style="color: red; margin: 5px;">FORM DISERAHKAN KE SECURITY SETELAH DITANDATANGANI HRD DAN SCAN ABSENSI</h4><br><br><br><br>
     <hr>
 
     <h2 style="text-align: left;">PT. AKT INDONESIA</h2>

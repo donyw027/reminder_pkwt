@@ -212,7 +212,7 @@
             </table></CENter>
         </td>
     </tr>
-</table><br>
+</table><br><br>
 <hr>
 <h2 style="text-align: left; margin: 0;">PT. AKT INDONESIA</h2>
 <h2 style="background: yellow;text-align: left;margin: 0;">FORM CUTI /PERSONAL HOLIDAY</h2>
