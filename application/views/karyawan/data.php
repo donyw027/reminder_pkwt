@@ -82,12 +82,12 @@
                             <td><?=$karyawani['start_kontrak'] ?></td>
                             <td><?=$karyawani['end_kontrak'] ?></td>
                             <td>Rp. <?= number_format($karyawani['gaji'],0,',','.'); ?> </td>
-                            <td><?=$karyawani['nik_kk'] ?></td>
+                            <td>'<?=$karyawani['nik_kk'] ?></td>
                             <td><?=$karyawani['jk'] ?></td>
                             <td><?=$karyawani['alamat'] ?></td>
-                            <td><?=$karyawani['bpjstk'] ?></td>
-                            <td><?=$karyawani['bpjskes'] ?></td>
-                            <td><?=$karyawani['bank'] ?></td>
+                            <td>'<?=$karyawani['bpjstk'] ?></td>
+                            <td>'<?=$karyawani['bpjskes'] ?></td>
+                            <td>'<?=$karyawani['bank'] ?></td>
                             
                             <td><?=$karyawani['keterangan'] ?></td>
                             <td><?=$karyawani['tgl_join'] ?></td>
