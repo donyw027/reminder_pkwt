@@ -33,5 +33,11 @@ class Cetak extends CI_Controller
         $this->template->load('templates/form_ijin', 'print/form_ijin');
     }
 
+    public function maintenance()
+    {
+        $data['title'] = "Form maintenance";
+        $this->template->load('templates/form_maintenance', 'print/form_maintenance');
+    }
+
     
 }

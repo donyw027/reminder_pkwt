@@ -273,7 +273,7 @@
 
                          <span class="text">
                         PRINT FORM : 
-                    </span>
+                    </span><br><br>
 
                          <a href="<?= base_url('cetak/cuti') ?>" target="_blank" class="btn btn-sm btn-secondary btn-icon-split">
                     <span class="icon">
@@ -298,6 +298,15 @@
                     </span>
                     <span class="text">
                         Print Form Ijin
+                    </span>
+                </a>
+
+                <a href="<?= base_url('cetak/maintenance') ?>" target="_blank" class="btn btn-sm btn-secondary btn-icon-split">
+                    <span class="icon">
+                        <i class="fa fa-print"></i>
+                    </span>
+                    <span class="text">
+                        Print Form Maintenance
                     </span>
                 </a>
                 <br><br>
