@@ -89,7 +89,7 @@
 
 <body>
         <h2 style="text-align: left;margin: 0;">PT. AKT INDONESIA</h2> 
-        <h2 style="text-align: left; margin: 0px; background-color: #67f5e4;">MAINTENANCE DAILY WORKING REPORT</h2> 
+        <h2 style="text-align: left; margin: 0px; background-color: #3debe9;">MAINTENANCE DAILY WORKING REPORT</h2> 
         <table>
             <tr>
                 <td >NAMA</td>
@@ -111,80 +111,106 @@
        
         <table  border="1" style="border: 1px solid black; text-align: center; border-collapse: collapse ;">
             <tr>
-                <td >NO</td>
-                <td  style="width: 500px;">DESKRIPSI PEKERJAAN</td>
+                <td rowspan="2" style="width: 30px;">NO</td>
+                <td colspan="2" >JAM KERJA</td>
+                <td rowspan="2"  style="width: 500px;">DESKRIPSI PEKERJAAN</td>
                 
-                <td style="width: 70px;">STATUS</td>
-                <td style="width: 85px;">KONFIRMASI</td>
-                <td style="width: 70px;">USER</td>
+                <td rowspan="2" style="width: 70px;">STATUS</td>
+                <td rowspan="2" style="width: 90px;">KONFIRMASI</td>
+                <td rowspan="2" style="width: 70px;">USER</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td style="width: 60px;">START</td>
+                <td style="width: 60px;">FINISH</td>
+                
+                
             </tr>
             
-            <tr style="height: 30px;">
+            <tr style="height: 28px;">
                 <td>1</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td><td></td>
                 
             </tr>
-            <tr style="height: 30px;">
+            <tr style="height: 28px;">
                 <td>2</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>3</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>4</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>5</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>6</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>7</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>8</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>9</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>10</td>
+                <td></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -195,7 +221,7 @@
         <b >Remarks :</b>
         <table border="1" style="float: right; margin-top:3px ;border: 1px solid black; text-align: center; border-collapse: collapse ;">
             <tr>
-                <td colspan="3">Report Checking</td>
+                <td colspan="3"><b>Report Checking</b></td>
             </tr>
             <tr >
                 <td style="width: 50px;"><b>HRD</b> <hr> <br><br></td>
@@ -207,7 +233,7 @@
         <hr>
 
         <h2 style="text-align: left;margin: 0;">PT. AKT INDONESIA</h2> 
-        <h2 style="text-align: left; margin: 0; background-color: #67f5e4;">MAINTENANCE DAILY WORKING REPORT</h2> 
+        <h2 style="text-align: left; margin: 0; background-color: #3debe9;">MAINTENANCE DAILY WORKING REPORT</h2> 
         <table>
             <tr>
                 <td >NAMA</td>
@@ -228,80 +254,106 @@
         </table>
         <table  border="1" style="border: 1px solid black; text-align: center; border-collapse: collapse ;">
             <tr>
-            <td >NO</td>
-                <td  style="width: 500px;">DESKRIPSI PEKERJAAN</td>
+                <td rowspan="2" style="width: 30px;">NO</td>
+                <td colspan="2" >JAM KERJA</td>
+                <td rowspan="2"  style="width: 500px;">DESKRIPSI PEKERJAAN</td>
                 
-                <td style="width: 70px;">STATUS</td>
-                <td style="width: 85px;">KONFIRMASI</td>
-                <td style="width: 70px;">USER</td>
+                <td rowspan="2" style="width: 70px;">STATUS</td>
+                <td rowspan="2" style="width: 90px;">KONFIRMASI</td>
+                <td rowspan="2" style="width: 70px;">USER</td>
+            </tr>
+            <tr style="height: 30px;">
+                <td style="width: 60px;">START</td>
+                <td style="width: 60px;">FINISH</td>
+                
+                
             </tr>
             
-            <tr style="height: 30px;">
+            <tr style="height: 28px;">
                 <td>1</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td><td></td>
                 
             </tr>
-            <tr style="height: 30px;">
+            <tr style="height: 28px;">
                 <td>2</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>3</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>4</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>5</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>6</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>7</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>8</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>9</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
+                <td></td>
+                <td></td>
                 
-            </tr><tr style="height: 30px;">
+            </tr><tr style="height: 28px;">
                 <td>10</td>
+                <td></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -312,7 +364,7 @@
         <b >Remarks : </b>
         <table border="1" style="float: right; margin-top:3px ; border: 1px solid black; text-align: center; border-collapse: collapse ;">
         <tr>
-                <td colspan="3">Report Checking</td>
+                <td colspan="3"><b>Report Checking</b></td>
             </tr>
             <tr >
                 <td style="width: 50px;"><b>HRD</b> <hr> <br><br></td>
