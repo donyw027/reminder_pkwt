@@ -226,7 +226,11 @@
             <td>
             Pasuruan , <?= format_indo(date("Y-m-d", strtotime($tgl_keluar))); ?>
 
-            <br><br><br><br><br><br>
+            <br><br>
+            <a href=""><img src="<?= base_url('assets/img/ttd.png'); ?>" width="110" alt=""></a>
+            <br><br>
+
+
 
             <?php foreach ($nama_hrd as $hrd) : ?>
             <?php echo $hrd->nama_hrd; ?>

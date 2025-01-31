@@ -123,8 +123,10 @@ class Karyawan extends CI_Controller
         $date = new DateTime();
             $date->modify("+1 month");
             $next_month = $date->format('m');
+        
+        // var_dump($date->format('m'));
 
-
+        // var_dump($next_month);
         // var_dump($next_month);die();
 
         if (is_admin() == true) {
